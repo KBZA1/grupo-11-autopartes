@@ -1,8 +1,8 @@
-"Autopartes: DistriParts <br>
+Autopartes: DistriParts <br>
 
-Cliente al que apunta: "COMERCIO MAYORISTA" <br>
+Cliente al que apunta: "COMERCIO MINORISTA" <br>
 
-Nuestra idea es un ecommerce de autopartes apuntando a la venta mayorista. <br>
+Nuestra idea es un ecommerce de autopartes apuntando a la venta minorista. <br>
 Vamos a ofrecer los productos mas vendidos, entre los cuales estarian: <br>
 
 ARBOLES DE LEVA <br>
