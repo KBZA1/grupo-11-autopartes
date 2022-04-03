@@ -11,10 +11,10 @@ BIELAS <br>
 ENFRIADORES DE ACEITE <br>
 TAPA DE CILINDRO <br>
 
-El equipo esta integrado por:
-Cristian Mussi de 30 años oriundo de la ciudad de Rafael Calzada. Cristian actualmente trabaja en Banco Provincia como Gestor de Recupero de Deudas. Cristian se interesó por este curso para poder crecer profesionalmente de dentro de la empresa a la que esta actualmente.
-Osman Godoy tiene 26 años y es oriundo de la ciudad de Mendoza. Osman trabaja como encargado de deposito en una distribuidora de energia electrica. Osman se metió a este curso para aprender mas sobre diseño de paginas web.
-Bruno Dalberto tiene 33 años, vive actualmente en la ciudad de Mar Del Plata. Bruno trabaja en una empresa IT como implementador/soporte a empresas y esta estudiando esto para poder hacer un cambio de area dentro de la empresa donde está actualmente.
+El equipo esta integrado por: <br>
+Cristian Mussi de 30 años oriundo de la ciudad de Rafael Calzada. Cristian actualmente trabaja en Banco Provincia como Gestor de Recupero de Deudas. Cristian se interesó por este curso para poder crecer profesionalmente de dentro de la empresa a la que esta actualmente. <br>
+Osman Godoy tiene 26 años y es oriundo de la ciudad de Mendoza. Osman trabaja como encargado de deposito en una distribuidora de energia electrica. Osman se metió a este curso para aprender mas sobre diseño de paginas web. <br>
+Bruno Dalberto tiene 33 años, vive actualmente en la ciudad de Mar Del Plata. Bruno trabaja en una empresa IT como implementador/soporte a empresas y esta estudiando esto para poder hacer un cambio de area dentro de la empresa donde está actualmente. <br>
 
 Enlaces de referencia <br>
 https://mipol.com.ar/ <br>
