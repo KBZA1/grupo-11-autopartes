@@ -1,0 +1,10 @@
+.imagenes{
+width: 35%;
+padding: 5px;
+border: 1px solid black;
+text-align: left;
+}
+
+.precio{
+    display: inline-block;
+}
