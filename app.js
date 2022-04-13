@@ -10,3 +10,13 @@ app.get("/", (req, res) =>{
 app.listen(3050, () =>{
 console.log("arriba");
 })
+app.get("/carrito", (req, res) =>{
+    res.sendFile(path.join(__dirname, "./views/carritoCompra.html"));
+})
+app.get("/registro", (req, res) =>{
+    res.sendFile(path.join(__dirname, "./views/register.html"));
+})
+app.get("/acceso", (req, res) =>{
+    res.sendFile(path.join(__dirname, "./views/login.html"));
+})
+
