@@ -1,19 +1,82 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>REGISTRO</title>
+    <link rel="stylesheet" href="css\register.css">
+    <script src="https://kit.fontawesome.com/f863c75dec.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-
+        <div class='top-header'>
+            <img src="images\logo-v2.jpeg" alt="DistriParts">
+            <div class="form" action="#" method="GET">
+                <div class="input" ><i class="fa fa-search"></i> ¿Que repuesto estas buscando? </div>
+            </div>
+            <div class="user-cart">
+            <a href="/login"><i class="fa-solid fa-user"></i></a>
+            <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+        <div class="menu">
+            <p class="menu-p">PRODUCTOS</p>
+            <p class="menu-p">MARCAS</p>
+            <p class="menu-p">OFERTAS</p>
+            <p class="menu-p">NOSOTROS</p>
+            <p class="menu-p">CONTACTO</p>
+        </div>
+        <div class="header-sp">
+            <a href="/"><i class="fa-solid fa-house"></i></a>
+        </div>
     </header>
-    <main>
-
-    </main>
-    <footer>
-        
-    </footer>
+   <main>
+       <h2>Crear nueva cuenta</h2>
+       <p>Si tiene una cuenta, <a href="/login">inicie sesión</a> con su direccion de correo electrónico.</p>
+       
+       <section class="form-reg">
+           <h4>Ingrese los siguientes datos: </h4>
+           <form action="/register" method="post">
+                <div class="registro">
+                    <input class="campos" type="text" name="nombre-apellido" id="nombre-apellido" placeholder="Nombre y Apellido">
+                    <input class="campos" type="email" name="email" id="mail-r" placeholder="E-mail">
+                    <input class="campos" type="password" name="contra" id="contra" placeholder="Ingrese Constraseña">
+                    <input class="campos" type="password" name="conf-contra" id="conf-contra" placeholder="Confirme su contraseña">
+                    </div>
+                    <button class="crear-cuenta" type="submit">CREAR CUENTA</button>
+                    <button class="borrar" type="reset">Borrar datos</button>
+                    </div>
+                </div>
+           </form>
+        </section>
+        <p class="seguinos">SEGUINOS EN REDES SOCIALES...</p>
+        <div class="redes">
+            <div class="logo-rs">
+               <img src="images/facebook.png" alt="Facebook">
+            </div>
+            <div class="logo-rs">
+                <img src="images\logo-instagram-icon.webp" alt="Instagram">
+            </div>
+       </div>
+   </main> 
+   <footer>
+       <div class=footer-izq>
+           <p>ATENCION AL CLIENTE</p>
+           <p>Lunes a Viernes 9:00 a 18:00</p>
+           <p>ventas@distriparts.com</p>        
+       </div>
+       <div class="footer-centr">
+           <p>SEGUINOS EN REDES SOCIALES...</p>
+           <br>
+           <i class="fa-brands fa-facebook-square"></i>
+           <i class="fa-brands fa-instagram"></i>
+       </div>
+       <div class="footer-der">
+           <p>Medios de Pago</p>
+           <br>
+           <p> Preguntas Frecuentes</p>
+       </div>
+   </footer>
 </body>
 </html>
