@@ -44,3 +44,41 @@ footer{
     height: 26px;
     flex-grow: 50%;
 }
+
+body{
+    background-color: rgba(0, 0, 255, 0.819) ;
+    font-family:sans-serif;
+}
+
+.login-box{
+    width: 360px;
+    height: 280px;
+    margin:auto;
+    border-radius: 3px;
+    background-color:white;
+}
+
+h1{
+    text-align: center;
+    padding-top: 15px;
+}
+
+form{
+    width:360px;
+    margin-left: 20px;
+}
+
+form label{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+form input{
+    width: 100%;
+    padding:7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+}
