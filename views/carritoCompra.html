@@ -4,42 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/carrito.css">
+    <title>Carrito de compra</title>
 </head>
 <body>
-    <header>
-
-    </header>
     <main>
         <div>
-            <h3>Tu Carrito</h3>
+            <h3>Tu Carrito(2)</h3>
         </div>
         <section>
-            <article>
-                <img src="/images/biela.jpg" alt="Producto">
-                <h3>Nombre del prducto</h3>
-                <div>
-                    <p>Cantidad</p>
-                    <p>Contador</p>
-                    <p>Subtotal</p>
-                    <p>Espacio para precio</p>
+            <article class="contenedor-padre">
+                <img src="/images/biela.jpg" alt="Producto" class= "imagen">
+                <div class="dif2">
+                    <h3>Nombre del prducto</h3>
+                    <div class="dif">
+                            <div>
+                                    <p>Cantidad</p>
+                                    <p>Contador</p>
+                            </div>
+                            <div>
+                                    <p>Subtotal</p>
+                                    <p >Espacio para precio</p>
+                                    <button type="reset">Limpiar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </article>
+            <article class="contenedor-padre">
+                <img src="/images/bomba-aceite.jpg" alt="Producto" class= "imagen">
+                <div class="dif2">
+                    <h3>Nombre del prducto</h3>
+                    <div class="dif">
+                            <div>
+                                    <p>Cantidad</p>
+                                    <p>Contador</p>
+                            </div>
+                            <div>
+                                    <p>Subtotal</p>
+                                    <p>Espacio para precio</p>
+                                    <button type="reset">ELIMINAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section >
+            <article class="dif3">
+                <div>TOTAL DE COMPRA</div>
+                <div> Espacio total de compra</div>
+            </article>
+            <article >
+                <form action="/productDetail.html" method="get" class="dif3">
+                    <button type="menu" id="kassy2">Elegir mas productos</button>
+                    <button type="submit" id="kassy">Continuar compra</button>
+                </form>
+            </article>
+        </section>
+        <section>
             <article>
-                <img src="/images/bomba-aceite.jpg" alt="Producto">
-                <h3>Nombre del prducto</h3>
                 <div>
-                    <p>Cantidad</p>
-                    <p>Contador</p>
-                    <p>Subtotal</p>
-                    <p>Espacio para precio</p>
+                    <h2>¿TENES UN CUPON?</h2>
+                    <form action="/codigo" method="post" class=" dif3">
+                        <label for="codigo" >INGRESAR CODIGO</label>
+                        <input type="text" name="codigo" id="codigo">
+                    </form>
                 </div>
             </article>
         </section>
     </main>
     <footer>
-
+        <div class=footer-izq>
+            <p>ATENCION AL CLIENTE</p>
+            <p>Lunes a Viernes 9:00 a 18:00</p>
+            <p>ventas@distriparts.com</p>        
+        </div>
+        <div class="footer-centr">
+            <p>SEGUINOS EN REDES SOCIALES...</p>
+            <br>
+            <i class="fa-brands fa-facebook-square"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="footer-der">
+            <p>Medios de Pago</p>
+            <br>
+            <p> Preguntas Frecuentes</p>
+        </div>
     </footer>
 </body>
 </html>
