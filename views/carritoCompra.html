@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/carrito.css">
+    <title>Carrito de compra</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/f863c75dec.js" crossorigin="anonymous"></script>
-    <title>Document</title>
 </head>
 <body>
     <header>
         <div class='top-header'>
-            <img src="images\logo-v2.jpeg" alt="DistriParts">
+            <a href="/"><img src="images\logo-v3.jpeg" alt="DistriParts"></a>
             <div class="form" action="#" method="GET">
                 <div class="input" ><i class="fa fa-search"></i> ¿Que repuesto estas buscando? </div>
             </div>
             <div class="user-cart">
             <a href="/acceso"><i class="fa-solid fa-user"></i></a>
-            <i class="fa-solid fa-cart-shopping"></i>
+            <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
         <div class="menu">
@@ -33,31 +34,81 @@
     </header>
     <main>
         <div>
-            <h3>Tu Carrito</h3>
+            <h3>Tu Carrito(2)</h3>
         </div>
         <section>
-            <article>
-                <img src="/images/biela.jpg" alt="Producto">
-                <h3>Nombre del prducto</h3>
-                <div>
-                    <p>Cantidad</p>
-                    <p>Contador</p>
-                    <p>Subtotal</p>
-                    <p>Espacio para precio</p>
+            <article class="contenedor-padre">
+                <img src="/images/biela.jpg" alt="Producto" class= "imagen">
+                <div class="dif2">
+                    <h3>Nombre del prducto</h3>
+                    <div class="dif">
+                            <div >
+                                    <p>Cantidad</p>
+                                    <p id="cajita"> <i class="fa-solid fa-sort"></i>    1</p>
+                                    
+                                    
+                            </div>
+                            <div>
+                                    <p>Subtotal</p>
+                                    <p id="cajita">$4.999</p>
+                                    <button type="reset">ELIMINAR</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </article>
+            <article class="contenedor-padre">
+                <img src="/images/bomba-aceite.jpg" alt="Producto" class= "imagen">
+                <div class="dif2">
+                    <h3>Nombre del prducto</h3>
+                    <div class="dif">
+                            <div>
+                                    <p>Cantidad</p>
+                                    <p id="cajita"> <i class="fa-solid fa-sort"></i>    1</p>
+                            </div>
+                            <div>
+                                    <p>Subtotal</p>
+                                    <p id="cajita">$4.999</p>
+                                    <button type="reset">ELIMINAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section >
+            <article class="dif3">
+                <div>TOTAL DE COMPRA</div>
+                <div class="cajita3">$9998</div>
+            </article>
+            <article >
+                <form action="/productDetail.html" method="get" class="dif3">
+                    <button type="menu" id="kassy2">Elegir mas productos</button>
+                    <button type="submit" id="kassy">Continuar compra</button>
+                </form>
+            </article>
+        </section>
+        <section>
             <article>
-                <img src="/images/bomba-aceite.jpg" alt="Producto">
-                <h3>Nombre del prducto</h3>
                 <div>
-                    <p>Cantidad</p>
-                    <p>Contador</p>
-                    <p>Subtotal</p>
-                    <p>Espacio para precio</p>
+                    <h2>¿TENES UN CUPON?</h2>
+                    <form action="/codigo" method="post" class=" dif3">
+                        <label for="codigo" >INGRESAR CODIGO</label>
+                        <input type="text" name="codigo" id="codigo">
+                    </form>
                 </div>
             </article>
         </section>
     </main>
+    <p class="seguinos">SEGUINOS EN REDES SOCIALES...</p>
+    <div class="redes">
+        <div class="logo-rs">
+        <img src="images/facebook.png" alt="Facebook">
+        </div>
+        <div class="logo-rs">
+            <img src="images\logo-instagram-icon.webp" alt="Instagram">
+        </div>
+    </div>
     <footer>
         <div class=footer-izq>
             <p>ATENCION AL CLIENTE</p>
