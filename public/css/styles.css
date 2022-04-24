@@ -122,6 +122,13 @@ h4{
     border: solid 1px #3f51b5;
 
 }
+.ingresar{
+    margin-top: 30px;
+}
+.para-registrarse{
+    margin-bottom: 30px;
+}
+
 .borrar{
     width: 60%;
     margin-bottom: 10px;
@@ -134,7 +141,8 @@ h4{
     border: solid 1px #3f51b5;
 }
 .top-header img{
-    width: 250px;
+    width: 100px;
+    margin: 5px 20px;
 }
 .top-header{
     display: none;
@@ -154,6 +162,8 @@ h4{
     border: 1.5px solid white;
     margin: 7px;
     padding: 5px;
+    background-color: white;
+    color: #566573;
 }
 .form .input i{
     font-size: 0.75em;
