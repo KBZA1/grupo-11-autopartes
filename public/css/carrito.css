@@ -2,12 +2,9 @@
     box-sizing: border-box;
     box-sizing: content-box;
 }
-body{
-    width: 480px;
-}
-section{
-    margin: auto;
-    width: none;
+main section{
+    margin: 20px;;
+    
 }
 article{
     text-align: center;
@@ -22,6 +19,12 @@ article{
     border: solid 5px black;
     max-width: 40%;
     max-height: 30%;
+    border-radius: 2%;
+    opacity: 75%;
+    transition: opacity 750ms;
+}
+.imagen:hover {
+    opacity: 100%;
 }
 footer {
     width: 95%;
@@ -66,19 +69,46 @@ footer {
 #kassy{
     background-color: blue;
     color: white;
-    font-weight: bold;
+    font-weight: "Roboto";
     text-align: center;
+    border: 3px solid black;
     border-radius: 10%;
+    width: 40%;
 }
 #kassy2{
     background-color: white;
-    color: blueviolet;
-    font-weight: bold;
+    color: black;
+    font-weight: "Roboto";
     text-align: center;
     border-color: blueviolet;
     border: 3px solid;
-    transition: border-radius 5s;
+    transition: border-radius 750ms;
+    width: 40%;
 }
 #kassy2:hover{
     border-radius: 20%;
 }
+#cajita{
+    border:solid 2px black;
+    border-radius: 10%;
+    font-weight: bold;
+}
+.relative{
+    position: relative;
+}
+div .relative i {
+    position: absolute;
+    left: 3px;
+}
+.flecha{
+    display: flex;
+    flex-direction: row;
+}
+.cajita3{
+    border:solid 2px black;
+    border-radius: 10%;
+    font-weight: bold;
+    width: 40%;
+    color: black;
+}
+
