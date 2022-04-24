@@ -280,7 +280,54 @@ footer{
 .barra-home i{
     font-size: 1.5em;
 }
-
+.banner-temp{
+    display: flex;
+    position: relative;
+}
+.img-banner-oferta{
+    display: flex;
+    position: relative;
+}
+.flecha-izq{
+    display: flex;
+    position: absolute;
+    left: 25px;
+    bottom: 95px;
+    font-size: 2em;
+    opacity: 0;
+}
+.flecha-der{
+    display: flex;
+    position: absolute;
+    right: 25px;
+    bottom: 95px;
+    font-size: 2em;
+}
+.banner-temp:hover .flecha-izq{
+    opacity: 100%;
+}
+.flecha-izq:hover{
+    color: #3321c5;
+    font-size: 3em;
+    bottom: 85px;
+    transition: 0.5s;
+}
+.flecha-der:hover{
+    color: #3321c5;
+    font-size: 3em;
+    bottom: 85px;
+    transition: 0.5s;
+}
+.mini-circle{
+    display: flex;
+    position: absolute;
+    bottom: 10;
+    margin: 0 45%;
+}
+.mini-circle i{
+    margin: 0 25px;
+    font-size: 0.75em;
+}
 @media (min-width: 769px) {
     footer {
         display:flex;
