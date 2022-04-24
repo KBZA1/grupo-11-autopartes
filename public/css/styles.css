@@ -250,6 +250,65 @@ footer{
     color: white;
     margin: 15px 30px;
 }
+.barra-home{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #3321c5;
+    justify-content: space-between;
+    margin: 5px;
+}
+.icono-tc{
+    display: flex;
+    flex-wrap: wrap;
+    width: 49%;
+    padding: 5px;
+    justify-content: center;
+}
+.icono-tc:hover i{
+    color: #3321c5;
+    font-size: 2em;
+    transition: all 0.5s;
+}
+.barra-envios{
+    display: flex;
+    flex-wrap: wrap;
+    width: 49%;
+    justify-content: center;
+    padding: 5px;
+
+}
+.barra-envios:hover .camion1,
+.barra-envios:hover .camion2,
+.barra-envios:hover .camion3{
+    color: #3321c5;
+    font-size: 22px;
+    transition: all 0.5s;
+}
+.camion1{
+    display: flex;
+    padding: 0 1%;
+    opacity: 25%;
+}
+.camion2{
+    display: flex;
+    padding: 0 1%;
+    opacity: 50%;
+}
+.camion3{
+    display: flex;
+    padding: 0 1%;
+    opacity: 100%;
+}  
+.barra-home p ,
+.barra-home i{
+    padding: 0 1%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.barra-home i{
+    font-size: 1.5em;
+}
 
 @media (min-width: 769px) {
     footer {
@@ -272,3 +331,4 @@ footer{
         display: flex;
     }    
 }
+

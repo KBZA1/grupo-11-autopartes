@@ -67,23 +67,42 @@ footer {
     justify-content: space-around;
 }
 #kassy{
-    background-color: blue;
-    color: white;
-    font-weight: "Roboto";
-    text-align: center;
-    border: 3px solid black;
-    border-radius: 10%;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
     width: 40%;
+    text-align: center;
 }
 #kassy2{
-    background-color: white;
-    color: black;
-    font-weight: "Roboto";
-    text-align: center;
-    border-color: blueviolet;
-    border: 3px solid;
-    transition: border-radius 750ms;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
     width: 40%;
+    text-align: center;
 }
 #kassy2:hover{
     border-radius: 20%;
