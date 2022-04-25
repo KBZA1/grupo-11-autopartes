@@ -317,6 +317,9 @@ footer{
     display: flex;
     position: relative;
 }
+.img-banner-oferta img{
+    width: 1672px;
+}
 .flecha-izq{
     display: flex;
     position: absolute;
@@ -350,7 +353,7 @@ footer{
 .mini-circle{
     display: flex;
     position: absolute;
-    bottom: 10;
+    bottom: 10px;
     margin: 0 45%;
 }
 .mini-circle i{
