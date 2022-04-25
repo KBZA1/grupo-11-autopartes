@@ -381,25 +381,52 @@ footer{
         display: flex;
     }    
 }
-.articulos {
+section .wrapper{
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 75px;
-
 }
-.articulos article {
+section .wrapper article {
     width: 300px;
-    height: 350px;
     border:#3f51b5 solid 2px;
-    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin-left: 16px;
     margin-right: 16px;
     border-radius: 7%;
 }
-.articulos article img{
+section .wrapper article .row {
+    flex-direction: row;
+    justify-content: space-around; 
+
+}
+section .wrapper article .nombre-producto {
+    font-size: 2em;
+
+}
+section .wrapper article .row .before{
+    text-decoration: line-through;
+    font-size: 30px;
+    color: red;
+}
+section .wrapper article .row .label-antes{
+    color: black;
+    font-size: 30px;
+}
+section .wrapper article .row .label-ahora{
+    color: black;
+    font-size: 30px;
+}
+section .wrapper article .row .precio-ahora{
+    color: black;
+    font-size: 30px;
+}
+section .wrapper article .cuotas{
+    color: #3321c5;
+    font-size: 30px;
+}
+section .wrapper article img{
     width: 60%;
     height: 30%;
     margin: 20%;
@@ -410,17 +437,14 @@ footer{
     border:rgba(0, 0, 255, 0.819) solid 1px;
     border-radius: 10%;
 }
-.articulos article div p{
+section .wrapper article div p{
     border-radius: 14%;
+    color: #3321c5;
+    font-size: 20px;
 }
-.articulos article div .div1 {
+section .wrapper article div .div1 {
     display: flex;
     flex-direction: row;
-}
-.articulos article #row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around
 }
 
 
