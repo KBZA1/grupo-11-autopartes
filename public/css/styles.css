@@ -1,13 +1,42 @@
+.ficha{
+    box-sizing: border-box;
+}
+
+.ruta{
+    text-align: left;
+    margin-top: 50px;
+    padding: 15px;
+}
+
 .imagenes{
 width: 35%;
+/*height: 50px;*/
 padding: 5px;
 border: 1px solid black;
 text-align: left;
+margin-left: 150px;
+margin-bottom: 250px;
+display: flex;
 }
 
-.precio{
+.descripcionProducto{
+    position: relative;
     display: inline-block;
+    text-align: right;
 }
+
+.nombreProducto{
+    text-align: right;
+    position: relative;
+    margin-top: 100px;
+    margin-right: 300px;
+
+}
+
+/*.precio{
+    display: inline-block;
+    position: relative;
+}*/
 
 .logo{
     display: flex;
@@ -280,7 +309,54 @@ footer{
 .barra-home i{
     font-size: 1.5em;
 }
-
+.banner-temp{
+    display: flex;
+    position: relative;
+}
+.img-banner-oferta{
+    display: flex;
+    position: relative;
+}
+.flecha-izq{
+    display: flex;
+    position: absolute;
+    left: 25px;
+    bottom: 95px;
+    font-size: 2em;
+    opacity: 0;
+}
+.flecha-der{
+    display: flex;
+    position: absolute;
+    right: 25px;
+    bottom: 95px;
+    font-size: 2em;
+}
+.banner-temp:hover .flecha-izq{
+    opacity: 100%;
+}
+.flecha-izq:hover{
+    color: #3321c5;
+    font-size: 3em;
+    bottom: 85px;
+    transition: 0.5s;
+}
+.flecha-der:hover{
+    color: #3321c5;
+    font-size: 3em;
+    bottom: 85px;
+    transition: 0.5s;
+}
+.mini-circle{
+    display: flex;
+    position: absolute;
+    bottom: 10;
+    margin: 0 45%;
+}
+.mini-circle i{
+    margin: 0 25px;
+    font-size: 0.75em;
+}
 @media (min-width: 769px) {
     footer {
         display:flex;
