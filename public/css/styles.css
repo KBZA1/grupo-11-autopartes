@@ -567,31 +567,6 @@ section .wrapper article div .div1 {
     display: flex;
     flex-direction: row;
 }
-@media (min-width: 769px) {
-    footer {
-        display:flex;
-    }
-    .seguinos ,
-    .redes{
-        display: none;
-    }
-    .menu{
-        display: flex;
-    }
-    .banner-temp{
-        display: flex;
-    }
-    
-}
-@media (min-width: 481px) {
-    .header-sp{
-        display: none;
-    }
-    .top-header{
-        display: flex;
-    }    
-}
-
 .contenedor-padre1{
     text-align: center;
     width: 100%;
@@ -711,4 +686,28 @@ section .wrapper article div .div1 {
 }
 #kassy2:hover{
     border-radius: 20%;
+}
+@media (min-width: 769px) {
+    footer {
+        display:flex;
+    }
+    .seguinos ,
+    .redes{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    .banner-temp{
+        display: flex;
+    }
+    
+}
+@media (min-width: 481px) {
+    .header-sp{
+        display: none;
+    }
+    .top-header{
+        display: flex;
+    }    
 }
