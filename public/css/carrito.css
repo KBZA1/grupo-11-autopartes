@@ -9,17 +9,12 @@ footer {
     width: 95%;
     background-color: blue; 
 }
-.contenedor-padre {
-    
-}
 .margin {
     margin-left: 5%;
 }
 .caja2{
     flex-grow: 1;
 }
-
-
 .relative{
     position: relative;
 }
