@@ -93,10 +93,16 @@ body{
 
 }
 main h2{
-    color:black;
+    color:#e7e7e7;
+    -webkit-text-stroke: 0.0002px black;
     font-size: 40px;
     margin-bottom: 30px;
-    margin-top: 15px;
+    margin-top:0px;
+    background-image: url(https://thumbs.dreamstime.com/b/llamas-azules-del-fuego-49856938.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: 65% 65%;    
 }
 .form-reg{
     width: 400px;
@@ -252,7 +258,7 @@ footer{
     flex-wrap: wrap;
     border: 2px solid #3321c5;
     justify-content: space-between;
-    margin: 5px;
+    margin: 0px;
 }
 .icono-tc{
     display: flex;
@@ -489,5 +495,6 @@ section .wrapper article div .div1 {
         display: flex;
     }    
 }
+
 
 
