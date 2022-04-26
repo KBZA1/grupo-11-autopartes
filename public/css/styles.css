@@ -32,12 +32,6 @@ display: flex;
     margin-right: 300px;
 
 }
-
-/*.precio{
-    display: inline-block;
-    position: relative;
-}*/
-
 .logo{
     display: flex;
     flex-direction: column;
@@ -380,7 +374,12 @@ section .wrapper article {
     border-radius: 3%;
     box-shadow: 0 2px 3px 0 rgb(0 0 0 / 20%);
     display: flex;
-
+    transition: box-shadow widht height 950ms;
+}
+section .wrapper article:hover{
+    box-shadow: 0 5px 7px 0 rgb(0 0 0 / 35%);
+    width: 285px;
+    height: 455px;
 }
 section .wrapper article .row {
     display: flex;
@@ -450,6 +449,11 @@ section .wrapper article img{
     margin: 1px;
     border-bottom:rgba(0, 0, 255, 0.3) solid 1px;
     border-radius: 3% 3% 0 0;
+    opacity: 90%;
+    transition: opacity 750ms;
+}
+section .wrapper article img:hover {
+    opacity: 100%;
 }
 section .wrapper article div p{
     border-radius: 14%;
