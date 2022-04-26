@@ -393,9 +393,14 @@ footer{
 .img-banner-oferta{
     display: flex;
     position: relative;
+    width: 100%;
 }
 .img-banner-oferta img{
-    width: 1672px;
+    width: 100%;
+}
+.banner-inferior{
+    width: 100%;
+    height: 65%;
 }
 .flecha-izq{
     display: flex;
