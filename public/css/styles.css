@@ -87,14 +87,21 @@ float: left;
     height: 26px;
     flex-grow: 50%;
 }
-
+.hambur{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 2em;
+    background-color: #3321c5;
+    color: white;
+    padding-bottom: 10px;
+}
 
 .login-box{
     width: 360px;
     height: 280px;
     margin:auto;
     border-radius: 3px;
-    background-color:white;
 }
 
 h1{
@@ -190,6 +197,10 @@ h4{
     border: solid 1px #3f51b5;
 
 }
+.crear-cuenta:hover{
+    background-color: #3321c5;
+    transition: 0.65s;
+}
 .agregar-compra{
     width: 55%;
     height: 5%;
@@ -217,6 +228,10 @@ h4{
 }
 .ingresar{
     margin-top: 30px;
+    background-color: #3321c5;
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
 }
 .para-registrarse{
     margin-bottom: 30px;
@@ -277,12 +292,15 @@ h4{
     margin-bottom: 10px;
     width: 140px;
     margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .top-header a{
     color: white;
 }
 
-footer{
+.footer-principal{
     background-color: #3321c5;
     color: white;
     justify-content: space-around;
@@ -290,6 +308,9 @@ footer{
     align-items: center;
     display: none;
     clear: both;
+}
+footer{
+    background-color: #e7e7e7;
 }
 .footer-izq{
     text-align: left;
@@ -566,31 +587,6 @@ section .wrapper article div .div1 {
     display: flex;
     flex-direction: row;
 }
-@media (min-width: 769px) {
-    footer {
-        display:flex;
-    }
-    .seguinos ,
-    .redes{
-        display: none;
-    }
-    .menu{
-        display: flex;
-    }
-    .banner-temp{
-        display: flex;
-    }
-    
-}
-@media (min-width: 481px) {
-    .header-sp{
-        display: none;
-    }
-    .top-header{
-        display: flex;
-    }    
-}
-
 .contenedor-padre1{
     text-align: center;
     width: 100%;
@@ -710,4 +706,31 @@ section .wrapper article div .div1 {
 }
 #kassy2:hover{
     border-radius: 20%;
+}
+@media (min-width: 769px) {
+    .footer-principal {
+        display:flex;
+    }
+    .seguinos ,
+    .redes{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    .banner-temp{
+        display: flex;
+    }
+    .hambur{
+        display: none;
+    } 
+    
+}
+@media (min-width: 481px) {
+    .header-sp{
+        display: none;
+    }
+    .top-header{
+        display: flex;
+    }    
 }
