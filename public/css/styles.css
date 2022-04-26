@@ -118,7 +118,7 @@ h4{
     margin-bottom: 16px;
     font-size: 15px;
     text-align: center;
-    background-color:  #e5e7e9 ;
+    background-color:  white ;
 }
 .redes{
     display: flex;
@@ -136,7 +136,8 @@ h4{
     font-weight: bold;
 }
 .crear-cuenta{
-    width: 90%;
+    width: 80%;
+    margin-top: 8px;
     margin-bottom: 15px;
     padding: 15px;
     background-color:  #3f51b5 ;
