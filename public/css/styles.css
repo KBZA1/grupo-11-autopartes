@@ -370,6 +370,19 @@ section .wrapper{
     justify-content: center;
     margin-bottom: 75px;
 }
+article .relleno {
+    background-color: green;
+    width: 50%;
+    margin-right: 15%;
+    color:#e7e7e7;
+    font-weight: bold;
+    border-radius: 1%;
+    margin-left: 6%;
+    margin-top: 2px;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 20%);
+    font-size: 8px;
+}
 section .wrapper article {
     background-color: white;
     width: 280px;
