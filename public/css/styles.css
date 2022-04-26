@@ -1,36 +1,72 @@
 .ficha{
     box-sizing: border-box;
 }
-
-.ruta{
+.miga{
     text-align: left;
-    margin-top: 50px;
-    padding: 15px;
+    padding: 30px;
 }
-
 .imagenes{
 width: 35%;
-/*height: 50px;*/
-padding: 5px;
+padding: 10px;
 border: 1px solid black;
-text-align: left;
 margin-left: 150px;
 margin-bottom: 250px;
-display: flex;
+float: left;
 }
-
-.descripcionProducto{
-    position: relative;
-    display: inline-block;
-    text-align: right;
+.imagenes img{
+    width: 80%;
+    height: auto;
 }
-
-.nombreProducto{
-    text-align: right;
-    position: relative;
-    margin-top: 100px;
-    margin-right: 300px;
-
+.contenido{
+    width: 48%;
+    float: right;
+    text-align: left;
+}
+.titulo{
+    font-size: 30px;
+    color: #3321c5;
+}
+.descripcion{
+    font-size: 20px;
+}
+.precio-anterior{
+    font-size: 20px;
+    text-decoration: line-through;
+}
+.precio-nuevo{
+    font-size: 30px;
+    color: red;
+}
+.simbolos{
+    width: 38px;
+    height: 38px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.7;
+    background-color: white;
+}
+.cuadro-cantidad{
+    height: 38px;
+    width: 50px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.cantidad{
+    display: flex;
+    gap: 7px;
+}
+.agregar{
+    width: 40%;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #3f51b5;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 7px;
+    border: solid 1px #3f51b5;
 }
 .logo{
     display: flex;
@@ -228,6 +264,7 @@ footer{
     height: 100px;
     align-items: center;
     display: none;
+    clear: both;
 }
 .footer-izq{
     text-align: left;
@@ -241,6 +278,18 @@ footer{
 .footer-centr i{
     font-size: 1.7em;
     margin: 0 15px;
+}
+.guasap{
+   position: fixed;
+   padding: 15px;
+   bottom: 20px;
+   right: 20px;
+   background-color: #00a82d;
+   border-radius: 100%;
+}
+.guasap i{
+    font-size: 30px;
+    color: white;
 }
 .header-sp{
     background-color: #3321c5;
