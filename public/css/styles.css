@@ -166,7 +166,13 @@ h4{
     border: solid 1px #3f51b5;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    transition: all 450ms;
+}
+.agregar-compra:hover{
+    width: 57%;
+    background-color: green;
+    border: solid 1px green;
 }
 #sa{
     display: flex;
