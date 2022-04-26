@@ -102,7 +102,7 @@ main h2{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    background-position: 65% 65%;    
+    background-position: 65% 65%;  
 }
 .form-reg{
     width: 400px;
@@ -496,5 +496,123 @@ section .wrapper article div .div1 {
     }    
 }
 
+.contenedor-padre1{
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    border-bottom: solid 1px black;
+    border-top: solid 1px black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
+}
+.textoh3{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 10%;
+    color: black;
+    -webkit-text-stroke: 1px white;    
+}
+.imagen1{
+    opacity: 88%;
+    transition: opacity box-shadow 750ms;
+    margin-left: 0%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 0%;
+    width: 25%;
+    height: 25%;
+}
+.imagen1:hover {
+    opacity: 100%;
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 20%);
+}
+.dif2 h3{
+    color: black;
+    font-size: 28px;
+    margin-bottom: 30%;
+}
+.dif2{
+    display: flex;
+    margin-left: 5%;
+    flex-direction: column;
+    margin:7% 0% 7% 0%;
+    content: 30%
+}
+.dif {
+    display: flex;
+    margin-left: 5%;
+    flex-direction:row;   
+}
+.dif2 button{
+    width: 50;
+}
+#cajita{
+    border:solid 2px black;
+    border-radius: 10%;
+    font-weight: bold;
+}
+.dif2 div div {
+    margin: 7% 0% 7% 0%;
+}
+.dif2 h5 {
+    margin-bottom: 90%;
+}
+#espacio{
+    margin-bottom: 90%;
+}
+#kassy{
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    width: 40%;
+    text-align: center;
+}
+.dif3{
+    border: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: blue;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+}
 
+#kassy2{
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    width: 40%;
+    text-align: center;
+}
+#kassy2:hover{
+    border-radius: 20%;
+}

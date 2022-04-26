@@ -2,47 +2,15 @@
     box-sizing: border-box;
     box-sizing: content-box;
 }
-main section{
-    margin: 20px;;
-    
-}
-article{
-    text-align: center;
-    margin: none;
-    padding: 5%;
-    width: 90%;
-    background-color: white;
-    border-bottom: solid 3px black;
-    border-top: solid 3px black;
-}
-.imagen{
-    border: solid 5px black;
-    max-width: 40%;
-    max-height: 30%;
-    border-radius: 2%;
-    opacity: 75%;
-    transition: opacity 750ms;
-}
-.imagen:hover {
-    opacity: 100%;
-}
+
+
+
 footer {
     width: 95%;
     background-color: blue; 
 }
 .contenedor-padre {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-.dif2{
-    display: flex;
-    margin-left: 5%;
-    padding: auto;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: baselin
+    
 }
 .margin {
     margin-left: 5%;
@@ -50,68 +18,8 @@ footer {
 .caja2{
     flex-grow: 1;
 }
-.dif {
-    display: flex;
-    margin-left: 5%;
-    flex-direction:row;   
-}
-.dif3{
-    border: 3px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: blue;
-    margin-top: 5%;
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-around;
-}
-#kassy{
-    writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: internal-light-dark(black, white);
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    appearance: auto;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
-    width: 40%;
-    text-align: center;
-}
-#kassy2{
-    writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: internal-light-dark(black, white);
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    appearance: auto;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
-    width: 40%;
-    text-align: center;
-}
-#kassy2:hover{
-    border-radius: 20%;
-}
-#cajita{
-    border:solid 2px black;
-    border-radius: 10%;
-    font-weight: bold;
-}
+
+
 .relative{
     position: relative;
 }
