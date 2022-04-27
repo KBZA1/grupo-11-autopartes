@@ -23,11 +23,5 @@ div .relative i {
     display: flex;
     flex-direction: row;
 }
-.cajita3{
-    border:solid 2px black;
-    border-radius: 10%;
-    font-weight: bold;
-    width: 40%;
-    color: black;
-}
+
 

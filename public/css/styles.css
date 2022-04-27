@@ -104,17 +104,19 @@ h1{
 
 form label{
     display: flex;
+    width: 25%;
     margin-top: 20px;
     font-size: 18px;
 }
 
 form input{
-    width: 100%;
+    width: 30%;
     padding:7px;
     border: none;
     border: 1px solid gray;
     border-radius: 6px;
     outline: none;
+    margin-bottom: 2%;
 }
 *{
     margin: 0;
@@ -564,6 +566,21 @@ section .wrapper article div .div1 {
     display: flex;
     flex-direction: row;
 }
+#cupon {
+    margin-bottom: 0%;
+}
+#form {
+    border: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: blue;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
+
 @media (min-width: 769px) {
     footer {
         display:flex;
@@ -656,25 +673,6 @@ section .wrapper article div .div1 {
 #espacio{
     margin-bottom: 90%;
 }
-#kassy{
-    writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: internal-light-dark(black, white);
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    appearance: auto;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
-    width: 40%;
-    text-align: center;
-}
 .dif3{
     border: 3px;
     font-family: Arial, Helvetica, sans-serif;
@@ -686,26 +684,62 @@ section .wrapper article div .div1 {
     align-items: baseline;
     justify-content: space-around;
 }
+#eleccionP {
+    width: 30%;
+    background-color: white;
+    color: #3321c5;
+    opacity: 95%;
+    transition: all 450ms;
 
-#kassy2{
-    writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: internal-light-dark(black, white);
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    appearance: auto;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
-    width: 40%;
-    text-align: center;
 }
-#kassy2:hover{
-    border-radius: 20%;
+#eleccionP:hover{
+    width: 32%;
+    opacity: 100%;
+    font-size: 16px;
+}
+#continuarC{
+    width: 30%;
+    opacity: 95%;
+    transition: all 450ms;
+}
+#continuarC:hover{
+    width: 32%;
+    opacity: 100%;
+    font-size: 16px;
+}
+
+#totales{
+    background-color: white;
+    margin: 0%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-bottom: solid black 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: blue;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-end
+}
+#total{
+    margin-right: 8%;
+    color: #7b7d7d;
+    -webkit-text-stroke: 0.001px black;
+    font-size: 18px;
+}
+#margend{
+    margin-right: 2%;
+    width: 10%;
+    font-weight: bold;
+    color:white;
+    -webkit-text-stroke: 0.0001px black;
+    border-color: gray;
+    background-color: #3f51b5;
+    border: solid 1px black;
+    font-size: 18px;
+}
+#eliminado{
+    width: 45%;
+    background-color: #3f51b5;
 }
