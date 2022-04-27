@@ -24,3 +24,5 @@ https://www.undercar.com.ar/  Las forma de destacar las ofertas actuales.<br>
 https://www.autodo.com.ar/  El head nos parecio adecuado para diseño de nuestra web.<br>
 http://www.autoparteschapauno.com.ar/  Es una pagina dinamica que a futuro nos ayuda a incorporar nuevas ideas.<br>
 
+
+Link al tablero de trabajo: https://trello.com/b/sqx42uBp/proyecto-integrador

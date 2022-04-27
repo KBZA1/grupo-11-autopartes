@@ -6,3 +6,4 @@ Luego, teniendo estos conceptos claros, empezamos a buscar referencias en las cu
 Por ultimo, realizamos el diseño de wireframes.
 Error que tuvimos en el primer sprint fue de no hacer el wireframe para mobile primero. Nos ganó la ansiedad y entregamos solo el boceto para desktop, luego hicimos mobile.
 A nivel grupal deberiamos trabajar un poco mas juntos entre semana, para despejar dudas y una reunion los fines de semana (donde la mayoria tiene libre) para avanzar con el sprint corriente.
+Consideramos que el formulario de registro en la web debe ser breve, pidiendo la cantidad minima de datos al cliente para que pueda realizar su compra de una manera mas rapida. El resto de los datos que guardariamos en la cuenta del cliente, los extraemos de cuando finaliza la primer compra.

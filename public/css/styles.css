@@ -87,14 +87,21 @@ float: left;
     height: 26px;
     flex-grow: 50%;
 }
-
+.hambur{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 2em;
+    background-color: #3321c5;
+    color: white;
+    padding-bottom: 10px;
+}
 
 .login-box{
     width: 360px;
     height: 280px;
     margin:auto;
     border-radius: 3px;
-    background-color:white;
 }
 
 h1{
@@ -192,6 +199,10 @@ h4{
     border: solid 1px #3f51b5;
 
 }
+.crear-cuenta:hover{
+    background-color: #3321c5;
+    transition: 0.65s;
+}
 .agregar-compra{
     width: 55%;
     height: 5%;
@@ -219,6 +230,10 @@ h4{
 }
 .ingresar{
     margin-top: 30px;
+    background-color: #3321c5;
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
 }
 .para-registrarse{
     margin-bottom: 30px;
@@ -279,12 +294,15 @@ h4{
     margin-bottom: 10px;
     width: 140px;
     margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .top-header a{
     color: white;
 }
 
-footer{
+.footer-principal{
     background-color: #3321c5;
     color: white;
     justify-content: space-around;
@@ -292,6 +310,9 @@ footer{
     align-items: center;
     display: none;
     clear: both;
+}
+footer{
+    background-color: #e7e7e7;
 }
 .footer-izq{
     text-align: left;
@@ -403,6 +424,8 @@ footer{
 .banner-inferior{
     width: 100%;
     height: 65%;
+    margin-top: 40px;
+    margin-bottom: 0px;
 }
 .flecha-izq{
     display: flex;
@@ -566,6 +589,7 @@ section .wrapper article div .div1 {
     display: flex;
     flex-direction: row;
 }
+<<<<<<< HEAD
 #cupon {
     margin-bottom: 0%;
 }
@@ -606,6 +630,8 @@ section .wrapper article div .div1 {
     }    
 }
 
+=======
+>>>>>>> 9baac3041a5c90a52b8b2c1a7ab167ee8176f52e
 .contenedor-padre1{
     text-align: center;
     width: 100%;
@@ -697,49 +723,30 @@ section .wrapper article div .div1 {
     opacity: 100%;
     font-size: 16px;
 }
-#continuarC{
-    width: 30%;
-    opacity: 95%;
-    transition: all 450ms;
+@media (min-width: 769px) {
+    .footer-principal {
+        display:flex;
+    }
+    .seguinos ,
+    .redes{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    .banner-temp{
+        display: flex;
+    }
+    .hambur{
+        display: none;
+    } 
+    
 }
-#continuarC:hover{
-    width: 32%;
-    opacity: 100%;
-    font-size: 16px;
-}
-
-#totales{
-    background-color: white;
-    margin: 0%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    border-bottom: solid black 1px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: blue;
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: flex-end
-}
-#total{
-    margin-right: 8%;
-    color: #7b7d7d;
-    -webkit-text-stroke: 0.001px black;
-    font-size: 18px;
-}
-#margend{
-    margin-right: 2%;
-    width: 10%;
-    font-weight: bold;
-    color:white;
-    -webkit-text-stroke: 0.0001px black;
-    border-color: gray;
-    background-color: #3f51b5;
-    border: solid 1px black;
-    font-size: 18px;
-}
-#eliminado{
-    width: 45%;
-    background-color: #3f51b5;
+@media (min-width: 481px) {
+    .header-sp{
+        display: none;
+    }
+    .top-header{
+        display: flex;
+    }    
 }
