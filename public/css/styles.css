@@ -1,33 +1,52 @@
 .ficha{
     box-sizing: border-box;
+    margin: 0%;
 }
 .miga{
-    text-align: left;
+    text-align: center;
     padding: 30px;
 }
 .imagenes{
-width: 35%;
+width: 70%;
 padding: 10px;
 border: 1px solid black;
-margin-left: 150px;
-margin-bottom: 250px;
-float: left;
+margin-left: 80px;
+margin-bottom: 50px;
 }
 .imagenes img{
     width: 80%;
     height: auto;
 }
 .contenido{
-    width: 48%;
-    float: right;
-    text-align: left;
+    width: 100%;
+    /*margin-left: 135px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .titulo{
-    font-size: 30px;
+    font-size: 50px;
     color: #3321c5;
+    float: center;
 }
 .descripcion{
     font-size: 20px;
+    margin-bottom: 15px;
+}
+.botones-ficha{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    float: left;
+    margin: 3px;
+}
+.guasap-ficha{
+    margin-top: 20px;
+}
+.icono-ficha{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 .precio-anterior{
     font-size: 20px;
@@ -55,6 +74,7 @@ float: left;
 .cantidad{
     display: flex;
     gap: 7px;
+    justify-content: center;
 }
 .agregar{
     width: 40%;
@@ -630,6 +650,12 @@ section .wrapper article div .div1 {
     .header-sp{
         display: none;
     }
+    .top-header{
+        display: flex;
+    }    
+}
+@media (max-width: 480px){
+
     .logo-1{
         display:none;
     }

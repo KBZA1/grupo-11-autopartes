@@ -35,19 +35,24 @@ main #textoh3{
 }
 .detallePC{
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly
+    flex-direction: row;
+    align-items: center;
+    
+}
+#modificacion{
+    width: 480px;
 }
 .detallePC h3{
     color: black;
-    width: 375px;
+    width: 100%;
     font-size: 25px;
     border-radius: 3%;
     background-color: white;
-    text-align: left;
+    text-align: center;
+    margin: 0% 0% 15% 0%;
 }
 .eliminarP {
-    width: 15%;
+    width: 50%;
     height: min-content;
     padding: 5px 6px 5px 5px;
     background-color: red;
@@ -58,7 +63,6 @@ main #textoh3{
     box-shadow: 1px 1px 1px 0 black;
     transition: all 550ms;
     opacity: 80%;
-    
 }
 .eliminarP:hover {
     font-size: medium;
@@ -68,8 +72,7 @@ main #textoh3{
     color: white;
 }
 #cantsub{
-    display: block;
-    margin-top: 7%;
+    margin-left: 7%;
 }
 
 .dif {
@@ -187,4 +190,3 @@ form #aplicar:hover{
     background-color: blue;
     font-weight: bold;
 }
-
