@@ -170,7 +170,7 @@ main h2{
     background-position: 65% 65%;  
 }
 .form-reg{
-    width: 400px;
+    width: 80%;
     padding: 30px 0px;
     margin: auto;
     border: solid 5 px black;
@@ -271,22 +271,29 @@ h4{
     border: solid 1px #3f51b5;
 }
 .top-header img{
-    width: 100px;
+    width: 50px;
     margin: 5px 20px;
 }
-.top-header{
+.logo-1{
+    display: flex;
+}
+.logo-2{
     display: none;
+}
+.top-header{
+    display: flex;
     background-color: #3321c5;
     color: white;
     align-items: center;
     justify-content: space-between;
 }
 .user-cart{
-    font-size: 2.5em;
+    font-size: 1.2em;
     margin-right: 15px;
 }
 .form{
-    display:flex
+    display:flex;
+    width: 45%;
 }
 .input {
     border: 1.5px solid white;
@@ -294,11 +301,15 @@ h4{
     padding: 5px;
     background-color: white;
     color: #566573;
+    width: 100%;
 }
 .form .input i{
     font-size: 0.75em;
     margin-right: 9px;
     margin-left: 2px;
+}
+.form .input p{
+    font-size: auto;
 }
 .menu{
     display: none;
@@ -609,6 +620,9 @@ section .wrapper article div .div1 {
     display: flex;
     flex-direction: row;
 }
+.login-box form{
+    margin-top: 20px;
+}
 @media (min-width: 769px) {
     .footer-principal {
         display:flex;
@@ -638,4 +652,21 @@ section .wrapper article div .div1 {
 }
 @media (max-width: 480px){
 
+    .logo-1{
+        display:none;
+    }
+    .logo-2{
+        display:flex;
+    }
+    .user-cart{
+        font-size: 2.3em;
+        margin-right: 15px;
+    }
+    .top-header img{
+        width: 130px;
+        margin: 5px 20px;
+    }
+    .form-reg{
+        width: 400px;
+    }
 }
