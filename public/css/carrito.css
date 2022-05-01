@@ -2,26 +2,189 @@
     box-sizing: border-box;
     box-sizing: content-box;
 }
-footer {
-    width: 95%;
-    background-color: blue; 
+main #textoh3{
+    background-color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: left;
+    margin: 1% 0% 0% 0%;
+    padding: 1% 0% 1% 10%;
+    color: black;
+    -webkit-text-stroke: 1.2px white;
+    border-top: black solid 1px;
+    border-bottom: black solid 1px;    
 }
-.margin {
+.contenedor-padre1{
+    background-color: white;
+    border-bottom: solid 1px black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.imagen1{
+    opacity: 88%;
+    transition: opacity box-shadow 750ms;
+    margin: 5% 4% 5% 0%;
+    width: 25%;
+    height: 25%;
+}
+.imagen1:hover {
+    opacity: 100%;
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 20%);
+}
+.detallePC{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+.detallePC h3{
+    color: black;
+    width: 375px;
+    font-size: 25px;
+    border-radius: 3%;
+    background-color: white;
+    text-align: left;
+}
+.eliminarP {
+    width: 15%;
+    height: min-content;
+    padding: 5px 6px 5px 5px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;;
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px 0 black;
+    transition: all 550ms;
+    opacity: 80%;
+    
+}
+.eliminarP:hover {
+    font-size: medium;
+    font-size: 20px;
+    box-shadow: 1.5px 1.5px 1.5px black;
+    opacity: 100%;
+    color: white;
+}
+#cantsub{
+    display: block;
+    margin-top: 7%;
+}
+
+.dif {
+    display: flex;
     margin-left: 5%;
+    flex-direction:row;   
 }
-.caja2{
-    flex-grow: 1;
+#espacio{
+    color: black;
+    background-color: white;
+    width: 110px;
+    font-size: 120%;
+    margin-top: 6%;
+    margin-bottom: 50%;
+    
 }
-.relative{
-    position: relative;
+.cajita{
+    box-shadow: 1.5px 1.5px 1.5px 1px black;;
+    font-weight: bold;
+    width: 110px;
+    font-size: 20px;
+    color: black;
+    background-color: white;
 }
-div .relative i {
-    position: absolute;
-    left: 3px;
+
+.totales{
+    background-color: white;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: black;
+    font-weight: bold;
+    padding-top: 7px;
+    border-bottom: #3321c5 1px solid;
+    padding-top: 1.5%;
 }
-.flecha{
+.totales h4  {
+    text-align: center;
+    padding: 3px;
+    font-size: 24px;
+    border:none;
+}     
+#pTotal{
+    font-size: 28px;
+    color: #3321c5;
+    font-weight: bold;
+    margin-left: 3%;
+    margin-right: 4%;
+    box-shadow: none;
+    border: none;
+}
+#botones {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;   
+}
+#eleccionP {
+    
+    background-color: white;
+    color: #3321c5;
+    opacity: 95%;
+    transition: all 450ms;
+    margin-left: 3px;
+    margin-right: 3px;
+
+}
+#eleccionP:hover{
+    opacity: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 20%);
+}
+
+#continuarC {
+    background-color: #3321c5;
+    color: white;
+    opacity: 95%;
+    transition: all 450ms;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+#continuarC:hover{
+    opacity: 100%;
+    font-size: 18Px;
+    font-weight: bold;
+    box-shadow: 0 2px 3px 0 rgba(2, 95, 138, 0.2);
+}
+article .form1 form {
     display: flex;
     flex-direction: row;
 }
+article .form1 form input{
+    width: 30%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 2%;
+    height: 8%;
+}
 
+form #aplicar{
+    width: 30%;
+    height: 32px;
+    background-color: #3321c5;
+    color: white;
+    background-color: rgb(26, 103, 219);
+    transition: 550ms all;
+}
+form #aplicar:hover{
+    font-size: 16px;
+    background-color: blue;
+    font-weight: bold;
+}
 
