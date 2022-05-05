@@ -22,3 +22,5 @@ app.get("/acceso", (req, res) =>{
 app.get("/ficha", (req, res) =>{
     res.sendFile(path.join(__dirname, "./views/productDetail.html"));
 })
+
+app.set('view engine', 'ejs');
