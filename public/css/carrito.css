@@ -14,62 +14,41 @@ main #textoh3{
     border-top: black solid 1px;
     border-bottom: black solid 1px;    
 }
-.contenedor-padre1{
+.contenedor-padre1 {
     background-color: white;
     border-bottom: solid 1px black;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
+    align-items: center;
+    width: 100%;
 }
-.imagen1{
+.imagen1 {
     opacity: 88%;
     transition: opacity box-shadow 750ms;
-    margin: 5% 4% 5% 0%;
     width: 25%;
-    height: 25%;
+    height: 15%;
 }
 .imagen1:hover {
     opacity: 100%;
     box-shadow: 0 2px 3px 0 rgb(0 0 0 / 20%);
 }
-.detallePC{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly
+
+#modificacion{
+    width: 100%;
 }
-.detallePC h3{
+.detallePC h3 {
     color: black;
-    width: 375px;
-    font-size: 25px;
+    width: 100%;
+    font-size: 150%;
     border-radius: 3%;
     background-color: white;
-    text-align: left;
+    justify-content: space-around;
+    margin: 0% 0% 5% 0%;
 }
-.eliminarP {
-    width: 15%;
-    height: min-content;
-    padding: 5px 6px 5px 5px;
-    background-color: red;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;;
-    border-radius: 7px;
-    box-shadow: 1px 1px 1px 0 black;
-    transition: all 550ms;
-    opacity: 80%;
-    
-}
-.eliminarP:hover {
-    font-size: medium;
-    font-size: 20px;
-    box-shadow: 1.5px 1.5px 1.5px black;
-    opacity: 100%;
-    color: white;
-}
+
 #cantsub{
-    display: block;
-    margin-top: 7%;
+    margin-left: 2%;
 }
 
 .dif {
@@ -80,16 +59,15 @@ main #textoh3{
 #espacio{
     color: black;
     background-color: white;
-    width: 110px;
+    width: 40%;
     font-size: 120%;
-    margin-top: 6%;
     margin-bottom: 50%;
     
 }
 .cajita{
     box-shadow: 1.5px 1.5px 1.5px 1px black;;
     font-weight: bold;
-    width: 110px;
+    width: 80%;
     font-size: 20px;
     color: black;
     background-color: white;
@@ -109,16 +87,15 @@ main #textoh3{
 }
 .totales h4  {
     text-align: center;
-    padding: 3px;
-    font-size: 24px;
+    padding-right: 5%;
+    font-size: 16px;
     border:none;
+    width: 100%;
 }     
 #pTotal{
     font-size: 28px;
     color: #3321c5;
     font-weight: bold;
-    margin-left: 3%;
-    margin-right: 4%;
     box-shadow: none;
     border: none;
 }
@@ -163,8 +140,8 @@ article .form1 form {
     display: flex;
     flex-direction: row;
 }
-article .form1 form input{
-    width: 30%;
+article .form1 form input {
+    width: 50%;
     padding: 7px;
     border: none;
     border: 1px solid gray;
@@ -173,7 +150,9 @@ article .form1 form input{
     margin-bottom: 2%;
     height: 8%;
 }
-
+form#botones {
+    width: 100%;
+}
 form #aplicar{
     width: 30%;
     height: 32px;
@@ -187,4 +166,102 @@ form #aplicar:hover{
     background-color: blue;
     font-weight: bold;
 }
+main{
+    width: 100%;
+}
 
+#flex {
+    display: flex;
+    flex-direction: row;
+    margin-right: 12%;
+    margin-left: 12%;
+}
+
+.eliminarPe{
+    width: 148%;
+    height: min-content;
+    padding: revert;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px 0 black;
+    transition: all 550ms;
+    opacity: 80%;
+    margin-top: 19%;
+    display: none;
+}
+
+.eliminarP {
+    width: 50%;
+    height: min-content;
+    padding: 5px 6px 5px 5px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px 0 black;
+    transition: all 550ms;
+    opacity: 80%;
+}
+
+.detallePC {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+@media (max-width: 480px){
+    .eliminarP {
+        width: 50%;
+        height: min-content;
+        padding: 5px 6px 5px 5px;
+        background-color: red;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;;
+        border-radius: 7px;
+        box-shadow: 1px 1px 1px 0 black;
+        transition: all 550ms;
+        opacity: 80%;
+        display: none;
+    }
+    .eliminarP:hover {
+        font-size: medium;
+        font-size: 20px;
+        box-shadow: 1.5px 1.5px 1.5px black;
+        opacity: 100%;
+        color: white;
+    }
+    .detallePC {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    } 
+    .eliminarPe{
+        width: 65%;
+        height: min-content;
+        padding: revert;
+        background-color: red;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 7px;
+        box-shadow: 1px 1px 1px 0 black;
+        transition: all 550ms;
+        opacity: 80%;
+        margin-top: 19%;
+        display: block;
+    }
+    .totales h4 {
+        text-align: center;
+        padding-right: 4%;
+        font-size: 16px;
+        border: none;
+        width: 100%;
+    }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head") %>
+<body>
+    <%- include("../partials/header") %>
+    <div class="login-box">
+        <h1>Ingresá</h1>
+        <form>
+            <input class="campos" type="email" placeholder="Email">
+            <input class="campos" type="password" placeholder="Contraseña">
+            <input class="ingresar" type="button" value="Ingresar">
+        </form>
+    </div>
+    <p class="para-registrarse">No tenes cuenta?<a href="/registro"> Registrate aqui </a> </p>
+    <p class="recuperar-pass" >¿Olvidaste tu clave? Hace click <a href="#">AQUI</a></p>
+
+    <!--FOOTER PARTIAL-->
+    <%- include ("../partials/footer") %>
+    
+    <div class="guasap"><a href="https://api.whatsapp.com/send/?phone=%2B5492235049312&text&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a></div>
+</body>
+</html>

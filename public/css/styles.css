@@ -256,6 +256,9 @@ h4{
     font-size: 20px;
 }
 .para-registrarse{
+    margin-bottom: 15px;
+}
+.recuperar-pass{
     margin-bottom: 30px;
 }
 
@@ -650,9 +653,6 @@ section .wrapper article div .div1 {
     .top-header{
         display: flex;
     }    
-}
-@media (max-width: 480px){
-
     .logo-1{
         display:none;
     }

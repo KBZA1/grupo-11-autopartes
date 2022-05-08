@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/KBZA1/grupo-11-autopartes#readme",
   "dependencies": {
+    "ejs": "^3.1.7",
     "express": "^4.17.3"
   }
 }
