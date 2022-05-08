@@ -4,8 +4,8 @@ const path = require ("path");
 app.set('view engine', 'ejs');
 app.use(express.static(path.join (__dirname, '/public')));
 
-const productsRouter = require("./routes/productosRuta")
-const mainRoutes = require("./routes/main")
+const productsRouter = require("./src/routes/productosRuta")
+const mainRoutes = require("./src/routes/main")
 
 
 app.use("/", mainRoutes)
