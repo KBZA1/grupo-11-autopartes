@@ -652,9 +652,6 @@ section .wrapper article div .div1 {
     .top-header{
         display: flex;
     }    
-}
-@media (max-width: 480px){
-
     .logo-1{
         display:none;
     }
