@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include("../partials/head") %>
+    <link rel="stylesheet" href="css/abm.css">
+</head>
 <body id="clase">
 <main >    
         <h1>Administrador de Productos</h1>
@@ -14,10 +16,12 @@
             <textarea name="descripcion" rows="10" cols="50">Añada aqui la descripcion del Producto</textarea>
             <input id="forma" type="file" placeholder="Imagen" accept=".jpeg"> -->
             <p>Seleccione</p>
-            <div>
+            <div id="caca">
                 <input id="forma" type="radio" id="contactChoice1" name="contact" value="email"><label for="contactChoice1">Agregar Producto</label>
-                <input id="forma" type="radio" id="contactChoice2" name="contact" value="phone"><label for="contactChoice2">Modificar Producto</label>
-              </div>           
+            </div>
+            <div id="caca">
+                <input id="forma" type="radio" id="contactChoice2" name="contact" value="phone"><label for="contactChoice2">Modificar Producto</label>           
+            </div>
             <select name="Categoria">
                 <option value="Arbol de Leva">Arbol de Leva</option>
                 <option value="Bomba de aceite" selected="">Bomba de aceite</option>
