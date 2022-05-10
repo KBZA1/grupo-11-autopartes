@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include("../partials/head") %>
+    <link rel="stylesheet" href="css/abm.css">
+</head>
 <body id="clase">
 <main >    
         <h1>Administrador de Productos</h1>
@@ -9,22 +11,26 @@
             <!-- <label for="Agregar/Modificar">
                 <input id="forma" type="radio" name="Agregar/Modificar" value="Agregar" checked="">Agregar
                 <input id="forma" type="radio" name="Agregar/Modificar" value="Modificar">Modificar
-            </label>
+            </label> -->
+            <h2>Seleccione:</h2>
+            <div id="caca">
+                <input type="radio" id="contactChoice1" name="producto" value="Agregar Producto"><label for="contactChoice1">Agregar Producto</label>
+            </div>
+            <div id="caca2">
+                <input type="radio" id="contactChoice2" name="producto" value="Modificar Producto"><label for="contactChoice2">Modificar Producto</label>           
+            </div>
             <input id="forma" type="text" placeholder="Nombre de Producto">
-            <textarea name="descripcion" rows="10" cols="50">Añada aqui la descripcion del Producto</textarea>
-            <input id="forma" type="file" placeholder="Imagen" accept=".jpeg"> -->
-            <p>Seleccione</p>
-            <div>
-                <input id="forma" type="radio" id="contactChoice1" name="contact" value="email"><label for="contactChoice1">Agregar Producto</label>
-                <input id="forma" type="radio" id="contactChoice2" name="contact" value="phone"><label for="contactChoice2">Modificar Producto</label>
-              </div>           
-            <select name="Categoria">
+            <select id="forma" name="Categoria">
                 <option value="Arbol de Leva">Arbol de Leva</option>
                 <option value="Bomba de aceite" selected="">Bomba de aceite</option>
                 <option value="Biela">Biela</option>
                 <option value="Enfriador de aceite">Enfriador de aceite</option>
                 <option value="Tapa de cilindro">Tapa de cilindro</option>
-              </select><input id="forma" type="text" placeholder="Marca">
+            </select>
+            <textarea id="forma" name="descripcion" rows="10" cols="50" placeholder="Añada aqui la descripcion del Producto"></textarea>
+            <div><p>Añada imagen del producto: </p></div>
+            <input id="forma" type="file" placeholder="Imagen" accept=".jpeg">
+            <input id="forma" type="text" placeholder="Marca">
             <input id="forma" type="text" placeholder="Precio">
             <input id="forma" type="text" placeholder="Precio Oferta">
             <input id="forma" type="text" placeholder="Codigo de Producto">
