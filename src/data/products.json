@@ -1,0 +1,52 @@
+[
+{
+    "identificador": 1,
+    "nombre del producto": "Arbol de Leva",
+    "descripcion": "xxxxxxx",
+    "imagen": "img.png",
+    "categoria": "bielas",
+    "marca": "Ford",
+    "precio": 6770,
+    "precio oferta": 6093
+},
+{
+    "identificador": 2,
+    "nombre del producto": "Biela",
+    "descripcion": "xxxxxxx",
+    "imagen": "img.png",
+    "categoria": "bielas",
+    "marca": "Ford",
+    "precio": 12459,
+    "precio oferta": 9967
+},
+{
+    "identificador": 3,
+    "nombre del producto": "Bomba de Aceite",
+    "descripcion": "xxxxxxx",
+    "imagen": "img.png",
+    "categoria": "bielas",
+    "marca": "Ford",
+    "precio": 17699,
+    "precio oferta": 12389
+},
+{
+    "identificador": 4,
+    "nombre del producto": "Tapa de Cilindro",
+    "descripcion": "xxxxxxx",
+    "imagen": "img.png",
+    "categoria": "bielas",
+    "marca": "Ford",
+    "precio": 15999,
+    "precio oferta": 14399
+},
+{
+    "identificador": 5,
+    "nombre del producto": "Enfriador de Aceite",
+    "descripcion": "xxxxxxx",
+    "imagen": "img.png",
+    "categoria": "bielas",
+    "marca": "Ford",
+    "precio": 10999,
+    "precio oferta": 9349
+}
+]

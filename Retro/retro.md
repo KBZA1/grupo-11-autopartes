@@ -16,3 +16,9 @@ Algo para hacer menos, aunque no tan menos porque la parte para distenderse esta
 Fuera de estos puntos creo que nos vemos bastante bien como equipo, logramos una buena dinamica entre los 3 que nos gustaria seguir manteniendo para lograr la entrega de un buen proyecto.
 
 Link a tablero de Trello: https://trello.com/b/sqx42uBp/proyecto-integrador
+
+Retrospectiva Sprint 3
+
+En este sprint estuvimos un poco mas perdidos en cuanto a lo visto para implementar en el proyecto, la parte de controllers y rutas nos mareo bastante pero pudimos sacarlo adelante, nos faltan reforzar conceptos y seguir practicando. Como grupo estamos mas afianzados, tratando de dividir las tareas de una mejor manera y encarando, como seria nuestra politica, el tema mas dificil entre todos. A nivel proyecto nos faltan varias cosas porque vamos tocando y cambiando a medida que vamos avanzando y que podemos dedicarle mas tiempo.
+Ya para este punto del proyecto notamos que cada uno se va haciendo fuerte en lo que mas le gusta o el tema que mas entiende, lo cual es beneficioso para otro integrante que no haya entendido y nos lo puede hacer entender desde otro punto de vista.
+Como punto de mejora tendriamos que terminar de definir algunas cuestiones de que cosa queremos agregar y sacar de nuestro proyecto, tambien en mantener nuestro tablero de trabajo mas organizado.
