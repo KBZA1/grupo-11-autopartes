@@ -7,7 +7,7 @@
     "categoria": "bielas",
     "marca": "Ford",
     "precio": 6770,
-    "precio oferta": 6093
+    "descuento": 10
 },
 {
     "identificador": 2,
@@ -17,7 +17,7 @@
     "categoria": "bielas",
     "marca": "Ford",
     "precio": 12459,
-    "precio oferta": 9967
+    "descuento": 10
 },
 {
     "identificador": 3,
@@ -27,7 +27,7 @@
     "categoria": "bielas",
     "marca": "Ford",
     "precio": 17699,
-    "precio oferta": 12389
+    "descuento": 10
 },
 {
     "identificador": 4,
@@ -37,7 +37,7 @@
     "categoria": "bielas",
     "marca": "Ford",
     "precio": 15999,
-    "precio oferta": 14399
+    "descuento": 10
 },
 {
     "identificador": 5,
@@ -47,6 +47,6 @@
     "categoria": "bielas",
     "marca": "Ford",
     "precio": 10999,
-    "precio oferta": 9349
+    "descuento":10
 }
 ]
