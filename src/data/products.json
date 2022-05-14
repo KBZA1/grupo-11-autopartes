@@ -1,13 +1,15 @@
 [
 {
     "identificador": 1,
-    "nombre del producto": "Arbol de Leva",
+    "nombre": "Arbol de Leva",
     "descripcion": "xxxxxxx",
     "imagen": "img.png",
     "categoria": "bielas",
     "marca": "Ford",
     "precio": 6770,
-    "descuento": 10
+    "descuento": 10,
+    "codigo": 1,
+    "stock": 10
 },
 {
     "identificador": 2,
@@ -17,7 +19,9 @@
     "categoria": "bielas",
     "marca": "Ford",
     "precio": 12459,
-    "descuento": 10
+    "descuento": 10,
+    "codigo": 2,
+    "stock": 10
 },
 {
     "identificador": 3,
@@ -27,7 +31,9 @@
     "categoria": "bielas",
     "marca": "Ford",
     "precio": 17699,
-    "descuento": 10
+    "descuento": 10,
+    "codigo": 3,
+    "stock": 10
 },
 {
     "identificador": 4,
@@ -37,7 +43,9 @@
     "categoria": "bielas",
     "marca": "Ford",
     "precio": 15999,
-    "descuento": 10
+    "descuento": 10,
+    "codigo": 4,
+    "stock": 10    
 },
 {
     "identificador": 5,
@@ -47,6 +55,8 @@
     "categoria": "bielas",
     "marca": "Ford",
     "precio": 10999,
-    "descuento":10
+    "descuento":10,
+    "codigo": 5,
+    "stock": 10
 }
 ]
