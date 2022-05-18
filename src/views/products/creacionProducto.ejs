@@ -6,7 +6,7 @@
 <body id="clase">
 <main >    
         <h1>Administrador de Productos</h1>
-        <form action="" method="POST">
+        <form action="/abm" method="POST" enctype="multipart/form-data">
             <!-- Los espacios te mataran y el signo de exclamacion tambien -->
             <!-- <label for="Agregar/Modificar">
                 <input id="forma" type="radio" name="Agregar/Modificar" value="Agregar" checked="">Agregar
@@ -19,8 +19,8 @@
             <div id="caca2">
                 <input type="radio" id="contactChoice2" name="producto" value="Modificar Producto"><label for="contactChoice2">Modificar Producto</label>           
             </div>
-            <input id="forma" type="text" placeholder="Nombre de Producto">
-            <select id="forma" name="Categoria">
+            <input id="forma" type="text" placeholder="Nombre de Producto" name="nombre">
+            <select id="forma" name="categoria">
                 <option value="Arbol de Leva">Arbol de Leva</option>
                 <option value="Bomba de aceite" selected="">Bomba de aceite</option>
                 <option value="Biela">Biela</option>
@@ -29,12 +29,12 @@
             </select>
             <textarea id="forma" name="descripcion" rows="10" cols="50" placeholder="Añada aqui la descripcion del Producto"></textarea>
             <div><p>Añada imagen del producto: </p></div>
-            <input id="forma" type="file" placeholder="Imagen" accept=".jpeg">
-            <input id="forma" type="text" placeholder="Marca">
-            <input id="forma" type="text" placeholder="Precio">
-            <input id="forma" type="text" placeholder="Precio Oferta">
-            <input id="forma" type="text" placeholder="Codigo de Producto">
-            <input id="forma" type="text" placeholder="Stock">
+            <input id="forma" type="file" placeholder="Imagen" name="imagen" accept=".jpeg">
+            <input id="forma" type="text" placeholder="Marca" name="marca">
+            <input id="forma" type="text" placeholder="Precio" name="precio">
+            <input id="forma" type="text" placeholder="Descuento" name="descuento">
+            <input id="forma" type="text" placeholder="Codigo de Producto" name="codigo">
+            <input id="forma" type="text" placeholder="Stock" name="stock">
             
             <button type="submit">Guardar datos de Producto</button>
             <button type="reset">Eliminar Campos</button>

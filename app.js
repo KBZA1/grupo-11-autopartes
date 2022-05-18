@@ -1,20 +1,26 @@
+/*-------REQUIRE-------*/
 const express = require("express");
-const app = express();
 const path = require ("path");
+/*-------EXPRESS-------*/
+const app = express();
+/*-------TEMPLATE-------*/
 app.set('view engine', 'ejs');
+app.listen(3050, () =>{console.log("arriba")})
+/*-------MIDDLEWARES-------*/
 app.use(express.static(path.join (__dirname, '/public')));
-
+/*-------REQUIRE DE RUTAS-------*/
 const productsRouter = require("./src/routes/productosRuta")
 const mainRoutes = require("./src/routes/main")
-
-
+/*-------RUTAS-------*/
 app.use("/", mainRoutes)
-
 app.use("/", productsRouter)
+
+/*-----PROCESAR INFORMACION-----*/
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 //app.use(methodOverride("_method"));
 //app.use((req, res, next) =>{
 //res.status(404).render("not-found") crear archivo de vista con el html para mostrar con pagina de error
 //})
 
 
-app.listen(3050, () =>{console.log("arriba")})
