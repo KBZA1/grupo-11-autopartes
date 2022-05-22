@@ -1,62 +1,74 @@
 [
-{
-    "identificador": 1,
-    "nombre": "Arbol de Leva",
-    "descripcion": "xxxxxxx",
-    "imagen": "img.png",
-    "categoria": "bielas",
-    "marca": "Ford",
-    "precio": 6770,
-    "descuento": 10,
-    "codigo": 1,
-    "stock": 10
-},
-{
-    "identificador": 2,
-    "nombre del producto": "Biela",
-    "descripcion": "xxxxxxx",
-    "imagen": "img.png",
-    "categoria": "bielas",
-    "marca": "Ford",
-    "precio": 12459,
-    "descuento": 10,
-    "codigo": 2,
-    "stock": 10
-},
-{
-    "identificador": 3,
-    "nombre del producto": "Bomba de Aceite",
-    "descripcion": "xxxxxxx",
-    "imagen": "img.png",
-    "categoria": "bielas",
-    "marca": "Ford",
-    "precio": 17699,
-    "descuento": 10,
-    "codigo": 3,
-    "stock": 10
-},
-{
-    "identificador": 4,
-    "nombre del producto": "Tapa de Cilindro",
-    "descripcion": "xxxxxxx",
-    "imagen": "img.png",
-    "categoria": "bielas",
-    "marca": "Ford",
-    "precio": 15999,
-    "descuento": 10,
-    "codigo": 4,
-    "stock": 10    
-},
-{
-    "identificador": 5,
-    "nombre del producto": "Enfriador de Aceite",
-    "descripcion": "xxxxxxx",
-    "imagen": "img.png",
-    "categoria": "bielas",
-    "marca": "Ford",
-    "precio": 10999,
-    "descuento":10,
-    "codigo": 5,
-    "stock": 10
-}
+ {
+  "id": 1,
+  "nombre": "Arbol de Leva",
+  "descripcion": "xxxxxxx",
+  "imagen": "img.png",
+  "categoria": "bielas",
+  "marca": "Ford",
+  "precio": 6770,
+  "descuento": 10,
+  "codigo": 1,
+  "stock": 10
+ },
+ {
+  "id": 2,
+  "nombre del producto": "Biela",
+  "descripcion": "xxxxxxx",
+  "imagen": "img.png",
+  "categoria": "bielas",
+  "marca": "Ford",
+  "precio": 12459,
+  "descuento": 10,
+  "codigo": 2,
+  "stock": 10
+ },
+ {
+  "id": 3,
+  "nombre del producto": "Bomba de Aceite",
+  "descripcion": "xxxxxxx",
+  "imagen": "img.png",
+  "categoria": "bielas",
+  "marca": "Ford",
+  "precio": 17699,
+  "descuento": 10,
+  "codigo": 3,
+  "stock": 10
+ },
+ {
+  "id": 4,
+  "nombre del producto": "Tapa de Cilindro",
+  "descripcion": "xxxxxxx",
+  "imagen": "img.png",
+  "categoria": "bielas",
+  "marca": "Ford",
+  "precio": 15999,
+  "descuento": 10,
+  "codigo": 4,
+  "stock": 10
+ },
+ {
+  "id": 5,
+  "nombre del producto": "Enfriador de Aceite",
+  "descripcion": "xxxxxxx",
+  "imagen": "img.png",
+  "categoria": "bielas",
+  "marca": "Ford",
+  "precio": 10999,
+  "descuento": 10,
+  "codigo": 5,
+  "stock": 10
+ },
+ {
+  "id": 6,
+  "nombre": "bruno",
+  "categoria": "Enfriador de aceite",
+  "descripcion": "asdfasf nahuel trabaja desde su auto ay ay ay",
+  "marca": "corvent",
+  "precio": "10000",
+  "descuento": "5",
+  "codigo": "52421",
+  "stock": "10",
+  "imagen": "imagen-1653259310333"
+ }
 ]

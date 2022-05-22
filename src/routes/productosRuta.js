@@ -1,6 +1,7 @@
 /*------REQUIRE------*/
 const express = require ("express");
 const multer = require ("multer");
+const path = require ("path")
 /*------APLICAR ROUTER--------*/
 const router = express.Router();
 /*-------CONTROLLERS-------*/
@@ -10,7 +11,7 @@ const productosControllers = require("../controllers/productosControllers");
 /*-----CONFIGURACION MULTER------*/
 const storage =multer.diskStorage({
     destination:(req,file,cb)=>{
-        cb (null,path.join(__dirname,"images" ))},
+        cb (null, path.join(__dirname,"../../public/images" ))},
     filename: (req,file,cb)=>{
         cb (null, file.fieldname + "-" + Date.now() + path.extname("image"/*provisorio*/))},
 });
@@ -22,7 +23,7 @@ router.get("/carrito", productosControllers.carrito);
 /*-----APLICAR FICHA------*/
 router.get("/ficha", productosControllers.detalle);
 /*-----APLICAR ABM------*/   
-router.get("/abm", productosControllers.crear);
+router.get("/create", productosControllers.crear);
 router.post("/", upload.single("imagen"),productosControllers.crearProducto);      
 
 
