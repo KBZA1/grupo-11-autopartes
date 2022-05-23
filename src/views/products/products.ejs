@@ -6,17 +6,17 @@
 </head>
 <body>
     <%- include("../partials/header") %>
+    
     <main class="ficha">
-        <p class="miga">ACA VA EL BREADCRUM</p>
-        
-    <div class="imagenes"><img src="images/" alt=""></div>
-    <div class="imagenes"><img src="images/<%=productos.imagen%>" alt=""></div>
+        <% for(let i=0; i < products.length; i++) { %>
+        <div id="bruno">
+    <div class="imagenes"><img src="images/<%=products[i].imagen%>" alt=""></div>
     <div class="contenido">
-        <p class="titulo"><%=productos.nombre%></p>
-        <P class="codigo"><%=productos.codigo%></P>
-        <p class="descripcion"><%=productos.descripcion%></p>
-        <p class="precio-anterior">$<%=productos.precio%></p>
-        <p class="precio-nuevo">Oferta $<%= productos.precio - (productos.precio * (productos.descuento /100))%></p>
+        <a href="/<%=products[i].id%>"><p class="titulo"><%=products[i].nombre%></p></a>
+        <P class="codigo"><%=products[i].codigo%></P>
+        <p class="descripcion"><%=products[i].descripcion%></p>
+        <p class="precio-anterior">$<%=products[i].precio%></p>
+        <p class="precio-nuevo">Oferta $<%= products[i].precio - (products[i].precio * (products[i].descuento /100))%></p>
         <div class="cantidad">
             <div class="simbolos"><span>-</span></div>
         <input class="cuadro-cantidad" type="text">
@@ -42,8 +42,10 @@
     </div>
     </div>
     </div>
-    
+</div>
+<% } %>
 </main>
+
 <!--FOOTER PARTIAL-->
 <%- include ("../partials/footer") %>
 

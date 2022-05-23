@@ -19,11 +19,14 @@ const storage =multer.diskStorage({
 const upload = multer({storage});
 /*-----APLICAR CARRITO------*/
 router.get("/carrito", productosControllers.carrito); 
-/*-----APLICAR FICHA------*/
-router.get("/ficha", productosControllers.detalle);
-/*-----APLICAR ABM------*/   
+/*-----APLICAR CREATE------*/   
 router.get("/create", productosControllers.crear);
 router.post("/", upload.single("imagen"),productosControllers.crearProducto);      
-
+/*-----PRODUCT------*/
+router.get("/products", productosControllers.products);
+/*-----PRODUCT DETAILS------*/
+router.get("/:id", productosControllers.detalle);
+/*-----APLICAR EDIT ONE PRODUCT------*/
+//router.patch("/:id", productosControllers.edit);
 
 module.exports = router;

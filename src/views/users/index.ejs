@@ -32,18 +32,20 @@
         </div >
     <section>
         <h2>NUESTRAS OFERTAS</h2>  
-        <div class="wrapper">    
+        <div class="wrapper" >  
+            <!-- <a class="logo-1" href="/"><img src="images/DistriPart movile.png" alt="DistriParts"></a> -->  
             <% for(let i=0; i < products.length; i++){%>
             <article >
                     <img src="\images\<%=products[i].imagen%>" alt="arbol-de-leva ">
                     <div class="relleno">NUEVAS OFERTAS</div>
-                    <div class="nombre-producto"><p><%=products[i].nombre%></p></div>
+                    <div class="nombre-producto"><a href="/:<%=products[i].id%>"><p ><%=products[i].nombre%></p></a></div>
                     <div class="row"><span class="before">$<%=products[i].precio%></span></div>
                     <div class="row"><span class="precio-ahora"><%= products[i].precio - (products[i].precio * (products[i].descuento /100))%> <strong class="descuento" ><%=products[i].descuento%>% OFF</strong></span> </div>
                     <span class="cuotas">12 CUOTAS SIN INTERES  <i class="fa-solid fa-credit-card"></i></span>
                     <div id="sa"><button class="agregar-compra" type="submit">AGREGAR + <i class="fa-solid fa-cart-shopping"></i> </button></div>
            </article>
            <% } %>
+           <H2><a href="/products">MIRA TODOS NUESTROS PRODUCTOS</a></H2>
         </div>
         </section>
         

@@ -6,7 +6,7 @@ const app = express();
 /*-------TEMPLATE-------*/
 app.set('view engine', 'ejs');
 app.set("views");
-app.listen(3050, () =>{console.log("arriba que la musica no pare")})
+app.listen(3081, () =>{console.log("arriba que la musica no pare")});
 /*-------MIDDLEWARES-------*/
 app.use(express.static(path.join (__dirname, '/public')));
 /*-------REQUIRE DE RUTAS-------*/
