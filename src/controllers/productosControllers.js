@@ -1,3 +1,4 @@
+const res = require("express/lib/response");
 const fs = require ("fs");
 const path = require ("path");
 const productsFilePath =  path.join(__dirname, "../data/products.json")

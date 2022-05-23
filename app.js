@@ -5,7 +5,8 @@ const path = require ("path");
 const app = express();
 /*-------TEMPLATE-------*/
 app.set('view engine', 'ejs');
-app.listen(3050, () =>{console.log("arriba")})
+app.set("views");
+app.listen(3050, () =>{console.log("arriba que la musica no pare")})
 /*-------MIDDLEWARES-------*/
 app.use(express.static(path.join (__dirname, '/public')));
 /*-------REQUIRE DE RUTAS-------*/

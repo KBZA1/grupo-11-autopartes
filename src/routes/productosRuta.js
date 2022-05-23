@@ -17,7 +17,6 @@ const storage =multer.diskStorage({
 });
 /*-----APLICAR MULTER------*/
 const upload = multer({storage});
-
 /*-----APLICAR CARRITO------*/
 router.get("/carrito", productosControllers.carrito); 
 /*-----APLICAR FICHA------*/
