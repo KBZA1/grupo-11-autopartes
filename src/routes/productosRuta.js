@@ -25,8 +25,9 @@ router.post("/", upload.single("imagen"),productosControllers.crearProducto);
 /*-----PRODUCT------*/
 router.get("/products", productosControllers.products);
 /*-----PRODUCT DETAILS------*/
-router.get("/:id", productosControllers.detalle);
+//router.get("/:id", productosControllers.detalle);
 /*-----APLICAR EDIT ONE PRODUCT------*/
-//router.patch("/:id", productosControllers.edit);
+router.get("/:id/edit", productosControllers.edit);
+router.put("/:id/edit", productosControllers.update);
 
 module.exports = router;

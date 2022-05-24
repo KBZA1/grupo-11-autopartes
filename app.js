@@ -1,6 +1,7 @@
 /*-------REQUIRE-------*/
 const express = require("express");
 const path = require ("path");
+const methodOverride = require("method-override");
 /*-------EXPRESS-------*/
 const app = express();
 /*-------TEMPLATE-------*/
@@ -19,7 +20,7 @@ app.use("/", productsRouter)
 /*-----PROCESAR INFORMACION-----*/
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-//app.use(methodOverride("_method"));
+app.use(methodOverride("_method"));
 //app.use((req, res, next) =>{
 //res.status(404).render("not-found") crear archivo de vista con el html para mostrar con pagina de error
 //})

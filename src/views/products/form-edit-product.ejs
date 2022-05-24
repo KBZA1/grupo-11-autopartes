@@ -6,31 +6,26 @@
 <body id="clase">
 <main >    
         <h1>Administrador de Productos</h1>
-        <form action="/" method="POST" enctype="multipart/form-data">
-            <h2>Seleccione:</h2>
-           <!-- <div id="caca">
-                <input type="radio" id="contactChoice1" name="producto" value="Agregar Producto"><label for="contactChoice1">Agregar Producto</label>
-            </div>
-            <div id="caca2">
-                <input type="radio" id="contactChoice2" name="producto" value="Modificar Producto"><label for="contactChoice2">Modificar Producto</label>           
-            </div> -->
-            <input ide="forma" type="number" name="id" placeholder="ID del producto a modificar" >
-            <input id="forma" type="text" placeholder="Nombre de Producto" name="nombre">
+        <form action="/<%=productToEdit.id%>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+          
+            <input id="forma" type="text" placeholder="<%= productToEdit.nombre %>" name="nombre">
+            
             <select id="forma" name="categoria">
+                <option disabled selected><%=productToEdit.categoria%></option>
                 <option value="Arbol de Leva">Arbol de Leva</option>
-                <option value="Bomba de aceite" selected="">Bomba de aceite</option>
+                <option value="Bomba de aceite">Bomba de aceite</option>
                 <option value="Biela">Biela</option>
                 <option value="Enfriador de aceite">Enfriador de aceite</option>
                 <option value="Tapa de cilindro">Tapa de cilindro</option>
             </select>
-            <textarea id="forma" name="descripcion" rows="10" cols="50" placeholder="Añada aqui la descripcion del Producto"></textarea>
+            <textarea id="forma" name="descripcion" rows="10" cols="50"> <%= productToEdit.descripcion %></textarea>
             <div><p>Añada imagen del producto: </p></div>
             <input id="forma" type="file" placeholder="Imagen" name="imagen" >
-            <input id="forma" type="text" placeholder="Marca" name="marca">
-            <input id="forma" type="text" placeholder="Precio" name="precio">
-            <input id="forma" type="text" placeholder="Descuento" name="descuento">
-            <input id="forma" type="text" placeholder="Codigo de Producto" name="codigo">
-            <input id="forma" type="text" placeholder="Stock" name="stock">
+            <input id="forma" type="text" placeholder="<%= productToEdit.marca %>" name="marca">
+            <input id="forma" type="text" placeholder="<%= productToEdit.precio %>" name="precio">
+            <input id="forma" type="text" placeholder="<%= productToEdit.descuento %>" name="descuento">
+            <input id="forma" type="text" placeholder="<%= productToEdit.codigo %>" name="codigo">
+            <input id="forma" type="text" placeholder="<%= productToEdit.stock %>" name="stock">
             
             <button type="submit">Guardar datos de Producto</button>
             <button type="reset">Eliminar Campos</button>
