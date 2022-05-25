@@ -6,15 +6,42 @@
 </head>
 <body>
     <%- include("../partials/header") %>
-    <main>
-        <section>
-            <article>
-                <div>
-                    BRUNO ACA SOS VOS... METELE ESTILO Y FORMATO A LOCO MAN... LOS BR TE MATARAN
-                </div>
-            </article>
-        </section>
-    </main>
+    <main class="ficha">
+        <p class="miga">ACA VA EL BREADCRUM</p>
+        
+    <div class="imagenes"><img src="images/" alt=""></div>
+    <div class="imagenes"><img src="images/<%=productos.imagen%>" alt=""></div>
+    <div class="contenido">
+        <p class="titulo"><%=productos.nombre%></p>
+        <P class="codigo"><%=productos.codigo%></P>
+        <p class="descripcion"><%=productos.descripcion%></p>
+        <p class="precio-anterior">$<%=productos.precio%></p>
+        <p class="precio-nuevo">Oferta $<%= productos.precio - (productos.precio * (productos.descuento /100))%></p>
+        <div class="cantidad">
+            <div class="simbolos"><span>-</span></div>
+        <input class="cuadro-cantidad" type="text">
+        <div class="simbolos"><span>+</span></div>
+    </div>
+    <div>
+        <button class="agregar" type="submit">Agregar</button>
+    </div>
+    <div class="icono-ficha">
+    <div class="botones-ficha">
+        <img src="images/icono-sucursal.png" alt="">
+        <div>
+            <h3>RETIRO GRATIS</h3>
+            <p>en sucursal</p>
+        </div>
+    </div>
+    <div class="botones-ficha">
+        <img style="width: 100%;" src="images/WP-peque.png" alt="">
+        <div class="guasap-ficha">
+            <h3>2235049312</h3>
+            <p>Consultanos</p>
+        </div>
+    </div>
+    </div>
+    </div>
 <%- include ("../partials/footer") %>
 
 <div class="guasap"><a href="https://api.whatsapp.com/send/?phone=%2B5492235049312&text&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a></div>
