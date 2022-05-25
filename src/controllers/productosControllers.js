@@ -31,7 +31,7 @@ const controller = {
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
         res.redirect('/');
     },
-    products: (req, res) =>{res.render(path.join(__dirname,"../views/products/BRUNO"),/*{products:products}*/)
+    products: (req, res) =>{res.render(path.join(__dirname,"../views/products/BRUNO"),{products:products})
     },
 
     update: (req, res) => {
