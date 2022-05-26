@@ -5,13 +5,8 @@
 </head>
 <body id="clase">
 <main >    
-<<<<<<< HEAD
-        <h1>Administrador de Productos</h1>
-        <form action="/<%=productToEdit.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
-=======
         <h1>Edición de Productos</h1>
         <form action="/<%=productToEdit.id%>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
->>>>>>> a858a009e090d26bd0da61d09a5226478cdb0940
           
             <input id="forma" type="text" placeholder="<%= productToEdit.nombre %>" name="nombre">
             
@@ -32,11 +27,7 @@
             <input id="forma" type="text" placeholder="<%= productToEdit.codigo %>" name="codigo">
             <input id="forma" type="text" placeholder="<%= productToEdit.stock %>" name="stock">
             
-<<<<<<< HEAD
-            <button type="submit">Editar producto</button>
-=======
             <button type="submit">Editar datos de Producto</button>
->>>>>>> a858a009e090d26bd0da61d09a5226478cdb0940
             <button type="reset">Eliminar Campos</button>
         </form>
         <form action="/delete/<%=productToEdit.id%>?_method=DELETE" method="POST">

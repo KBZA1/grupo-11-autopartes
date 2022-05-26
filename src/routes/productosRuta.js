@@ -31,7 +31,7 @@ router.get("/:id", productosControllers.detalle);  // No se puede poner '/produc
 router.get("/:id", productosControllers.detalle);
 /*-----APLICAR EDIT ONE PRODUCT------*/
 router.get("/:id/edit", productosControllers.edit);
-router.put("/:id/", productosControllers.update);
+router.put("/:id/edit", productosControllers.update);
 
 /* ---- APLICAR DELETE ONE PRODUCT ---- */
  router.delete("/delete/:id", productosControllers.destroy);
