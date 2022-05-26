@@ -24,6 +24,9 @@ router.get("/create", productosControllers.crear);
 router.post("/", upload.single("imagen"),productosControllers.crearProducto);      
 /*-----PRODUCT------*/
 router.get("/products", productosControllers.products);
+/*-----PRODUCT DETAILS Probando by Cris------*/
+router.get("/:id", productosControllers.detalle);  // No se puede poner '/productos/:id'porque no toma los CSS con estilos.
+
 /*-----PRODUCT DETAILS------*/
 router.get("/:id", productosControllers.detalle);
 /*-----APLICAR EDIT ONE PRODUCT------*/
