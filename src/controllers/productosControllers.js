@@ -7,10 +7,10 @@ const products= JSON.parse(productsJson)
 
 const controller = {
     carrito:  (req, res) =>{res.render(path.join(__dirname,"../views/products/carritoCompra"), console.log(category))},
-    /*detalle: (req, res) =>{
+    detalle: (req, res) =>{
         const productos = products.find(element => element.id == req.params.id);
         res.render(path.join(__dirname,"../views/products/productDetail"),{productos:productos})
-    },*/
+    },
     crear: (req, res) =>{res.render(path.join(__dirname,"../views/products/creacionProducto"))
     },
     crearProducto: (req, res)=>{
@@ -31,7 +31,14 @@ const controller = {
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
         res.redirect('/');
     },
-    products: (req, res) =>{res.render(path.join(__dirname,"../views/products/BRUNO"),/*{products:products}*/)
+    
+    products: (req, res) =>{res.render(path.join(__dirname,"../views/products/BRUNO"),{products:products})
+    },
+
+    edit: (req, res) =>{
+        let id = req.params.id
+        let productToEdit = products.find(product => product.id == id)
+        res.render(path.join(__dirname,"../views/products/form-edit-product"),{productToEdit})
     },
 
     update: (req, res) => {
@@ -48,6 +55,7 @@ const controller = {
             ...req.body,
             imagen : image,
         }
+        //console.log(productToEdit);
         let editProducts = products.map(product => { 
             if (product.id == productToEdit.id) {
                 return product = {...productToEdit}
@@ -58,11 +66,12 @@ const controller = {
         res.redirect("/");
 
     },
-    
-    edit: (req, res) =>{
-        let id = req.params.id
-        let productToEdit = products.find(product => product.id == id)
-        res.render(path.join(__dirname,"../views/products/form-edit-product"),{productToEdit})
+    destroy: (req, res) => {
+        let id = req.params.id;
+        let finalProducts = products.filter (product => product.id != id);
+        fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ""));
+        res.redirect ("/");
     },
+       
 }
 module.exports = controller; 

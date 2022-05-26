@@ -25,9 +25,13 @@ router.post("/", upload.single("imagen"),productosControllers.crearProducto);
 /*-----PRODUCT------*/
 router.get("/products", productosControllers.products);
 /*-----PRODUCT DETAILS------*/
-//router.get("/:id", productosControllers.detalle);
+router.get("/:id", productosControllers.detalle);
 /*-----APLICAR EDIT ONE PRODUCT------*/
 router.get("/:id/edit", productosControllers.edit);
-router.put("/:id/edit", productosControllers.update);
+router.put("/:id/", productosControllers.update);
+
+/* ---- APLICAR DELETE ONE PRODUCT ---- */
+ router.delete("/delete/:id", productosControllers.destroy);
+
 
 module.exports = router;
