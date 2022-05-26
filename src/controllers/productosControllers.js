@@ -8,10 +8,10 @@ const products= JSON.parse(productsJson)
 const controller = {
     carrito:  (req, res) =>{res.render(path.join(__dirname,"../views/products/carritoCompra"), console.log(category))},
     /*Detalle anterior*/
-    detalle: (req, res) =>{
-        const productos = products.find(element => element.id == req.params.id);
-        res.render(path.join(__dirname,"../views/products/productDetail"),{productos:productos})
-    },
+    //detalle: (req, res) =>{
+    //    const productos = products.find(element => element.id == req.params.id);
+    //    res.render(path.join(__dirname,"../views/products/productDetail"),{productos:productos})
+    //},
     /*Nuevo detalle by Cris(a eliminar despues)*/
     detalle: (req, res) =>{
         const productos = products.find(element => element.id == req.params.id);
@@ -37,7 +37,7 @@ const controller = {
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
         res.redirect('/');
     },
-    products: (req, res) =>{res.render(path.join(__dirname,"../views/products/BRUNO"),/*{products:products}*/)
+    products: (req, res) =>{res.render(path.join(__dirname,"../views/products/products"),{products:products})
     },
 
     update: (req, res) => {
@@ -56,13 +56,12 @@ const controller = {
         }
         let editProducts = products.map(product => { 
             if (product.id == productToEdit.id) {
-                return product = {...productToEdit}
+                product = productToEdit
             }
             return product;
         })
         fs.writeFileSync(productsFilePath, JSON.stringify(editProducts, null, " "));
         res.redirect("/");
-
     },
     
     edit: (req, res) =>{
@@ -70,5 +69,6 @@ const controller = {
         let productToEdit = products.find(product => product.id == id)
         res.render(path.join(__dirname,"../views/products/form-edit-product"),{productToEdit})
     },
+
 }
 module.exports = controller; 
