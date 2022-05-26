@@ -11,11 +11,11 @@ app.listen(3081, () =>{console.log("arriba que la musica no pare")});
 /*-------MIDDLEWARES-------*/
 app.use(express.static(path.join (__dirname, '/public')));
 /*-------REQUIRE DE RUTAS-------*/
-const productsRouter = require("./src/routes/productosRuta")
-const mainRoutes = require("./src/routes/main")
+const productsRouter = require("./src/routes/productosRuta");
+const mainRoutes = require("./src/routes/main");
 /*-------RUTAS-------*/
-app.use("/", mainRoutes)
-app.use("/", productsRouter)
+app.use("/", mainRoutes);
+app.use("/", productsRouter);
 
 /*-----PROCESAR INFORMACION-----*/
 app.use(express.urlencoded({ extended: false }));

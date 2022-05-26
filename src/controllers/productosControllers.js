@@ -7,10 +7,16 @@ const products= JSON.parse(productsJson)
 
 const controller = {
     carrito:  (req, res) =>{res.render(path.join(__dirname,"../views/products/carritoCompra"), console.log(category))},
-    /*detalle: (req, res) =>{
+    /*Detalle anterior*/
+    detalle: (req, res) =>{
         const productos = products.find(element => element.id == req.params.id);
         res.render(path.join(__dirname,"../views/products/productDetail"),{productos:productos})
-    },*/
+    },
+    /*Nuevo detalle by Cris(a eliminar despues)*/
+    detalle: (req, res) =>{
+        const productos = products.find(element => element.id == req.params.id);
+        res.render(path.join(__dirname,"../views/products/BRUNO"),{productos:productos})
+    },
     crear: (req, res) =>{res.render(path.join(__dirname,"../views/products/creacionProducto"))
     },
     crearProducto: (req, res)=>{
