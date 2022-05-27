@@ -2,11 +2,31 @@
 <html lang="en">
     <%- include("../partials/head") %>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/carrito.css">
 </head>
 <body>
     <%- include("../partials/header") %>
-    
-    <main class="ficha">
+    <section>
+        <% for(let i=0; i < products.length; i++) { %>
+        <article class="contenedor-padre1">
+            <img src="images/<%=products[i].imagen%>" alt="" class= "imagen1">
+            <div class="detallePC">
+                <div id=modificacion>
+                <a href="/<%=products[i].id%>"><h3><%=products[i].nombre%></h3></a>
+                </div >
+                   <div id="flex">
+                        <div id="cantsub">
+                                <p class="cajita">$<%=products[i].precio%></p>
+                                <!--<button class="eliminarPe" id="eliminado" type="submit"> -<i class="fa-solid fa-cart-shopping"></i></button>-->
+                        </div>
+                    </div>
+                </div>
+            
+        </article>
+        <% } %>
+    </section>    
+  
+    <!---<main class="ficha">
         <% for(let i=0; i < products.length; i++) { %>
         <div id="bruno">
     <div class="imagenes"><img src="images/<%=products[i].imagen%>" alt=""></div>
@@ -16,36 +36,12 @@
         <p class="descripcion"><%=products[i].descripcion%></p>
         <p class="precio-anterior">$<%=products[i].precio%></p>
         <p class="precio-nuevo">Oferta $<%= products[i].precio - (products[i].precio * (products[i].descuento /100))%></p>
-        <div class="cantidad">
-            <div class="simbolos"><span>-</span></div>
-        <input class="cuadro-cantidad" type="text">
-        <div class="simbolos"><span>+</span></div>
-    </div>
-    <div>
-        <button class="agregar" type="submit">Agregar</button>
-    </div>
-    <div class="icono-ficha">
-    <div class="botones-ficha">
-        <img src="images/icono-sucursal.png" alt="">
-        <div>
-            <h3>RETIRO GRATIS</h3>
-            <p>en sucursal</p>
-        </div>
-    </div>
-    <div class="botones-ficha">
-        <img style="width: 100%;" src="images/WP-peque.png" alt="">
-        <div class="guasap-ficha">
-            <h3>2235049312</h3>
-            <p>Consultanos</p>
-        </div>
-    </div>
-    </div>
     </div>
 </div>
 <% } %>
 </main>
 
-<!--FOOTER PARTIAL-->
+FOOTER PARTIAL-->
 <%- include ("../partials/footer") %>
 
 <div class="guasap"><a href="https://api.whatsapp.com/send/?phone=%2B5492235049312&text&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a></div>

@@ -638,6 +638,7 @@ section .wrapper article div .div1 {
     .cantidad{
         display: flex;
         gap: 7px;
+        justify-content: space-evenly
     }
     .agregar{
         width: 40%;
@@ -650,6 +651,7 @@ section .wrapper article div .div1 {
         font-weight: bold;
         border-radius: 7px;
         border: solid 1px #3f51b5;
+        justify-content: space-evenly
     }
 }
 

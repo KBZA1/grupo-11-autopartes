@@ -10,7 +10,7 @@ const controller = {
   
     detalle: (req, res) =>{
         const productos = products.find(element => element.id == req.params.id);
-        res.render(path.join(__dirname,"../views/products/BRUNO"),{productos:productos})
+        res.render(path.join(__dirname,"../views/products/productDetail"),{productos:productos})
     },
     crear: (req, res) =>{res.render(path.join(__dirname,"../views/products/creacionProducto"))
     },
