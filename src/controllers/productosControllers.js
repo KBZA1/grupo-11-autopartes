@@ -57,6 +57,11 @@ const controller = {
         fs.writeFileSync(productsFilePath, JSON.stringify(editProducts, null, " "));
         res.redirect("/");
     },
+    edit: (req, res) =>{
+        let id = req.params.id
+        let productToEdit = products.find(product => product.id == id)
+        res.render(path.join(__dirname,"../views/products/form-edit-product"),{productToEdit})
+    },
     destroy: (req, res) => {
         let id = req.params.id;
         let finalProducts = products.filter (product => product.id != id);
