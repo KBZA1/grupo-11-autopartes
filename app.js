@@ -13,9 +13,7 @@ app.use(express.static(path.join (__dirname, '/public')));
 /*-------REQUIRE DE RUTAS-------*/
 const productsRouter = require("./src/routes/productosRuta");
 const mainRoutes = require("./src/routes/main");
-/*-------RUTAS-------*/
-app.use("/", mainRoutes);
-app.use("/", productsRouter);
+
 
 /*-----PROCESAR INFORMACION-----*/
 app.use(express.urlencoded({ extended: false }));
@@ -24,5 +22,10 @@ app.use(methodOverride("_method"));
 //app.use((req, res, next) =>{
 //res.status(404).render("not-found") crear archivo de vista con el html para mostrar con pagina de error
 //})
+
+/*-------RUTAS-------*/
+app.use("/", mainRoutes);
+app.use("/", productsRouter);
+
 
 

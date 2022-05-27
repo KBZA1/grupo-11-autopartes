@@ -60,15 +60,7 @@
   "stock": 10
  },
  {
-  "id": 6,
-  "nombre": "Osman",
-  "categoria": "Bomba de aceite",
-  "descripcion": "sadfsdafsadfsa",
-  "marca": "afsd",
-  "precio": "10000",
-  "descuento": "sadf",
-  "codigo": "52421",
-  "stock": "10",
+  "id": "6",
   "imagen": "image-default.jpg"
  },
  {
@@ -93,6 +85,18 @@
   "descuento": "5",
   "codigo": "52421",
   "stock": "10",
+  "imagen": "image-default.jpg"
+ },
+ {
+  "id": 9,
+  "nombre": "asdasdfasf",
+  "categoria": "Arbol de Leva",
+  "descripcion": "",
+  "marca": "",
+  "precio": "",
+  "descuento": "",
+  "codigo": "",
+  "stock": "",
   "imagen": "image-default.jpg"
  }
 ]

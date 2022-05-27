@@ -29,12 +29,11 @@
             
             <button type="submit">Editar datos de Producto</button>
             <button type="reset">Eliminar Campos</button>
-            <form action="/delete/<%=productToEdit.id%>?_method=DELETE" method="POST">
-                <button type="submit">ELIMINAR</button>
-            </form>
         </form>
         
-
+        <form action="/delete/<%=productToEdit.id%>?_method=DELETE" method="POST">
+            <button type="submit">ELIMINAR</button>
+        </form>
 
 </main>
 </body>

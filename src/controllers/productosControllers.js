@@ -36,25 +36,32 @@ const controller = {
     },
     update: (req, res) => {
         let id = req.params.id;
-        let productToEdit = products.find(product => product.id === id)
+        let productToEdit = products.find(product => product.id == id)
+        console.log(productToEdit);
         let image;
         if (req.file != undefined ){
             image = req.file.filename
         } else {
             image = productToEdit.imagen
         }
-        productToEdit = {
+        /*productToEdit = {
             id: productToEdit.id,
             ...req.body,
             imagen : image,
+        }*/
+        for (let i = 0; i < products.length; i ++) {
+            if (id == products[i].id) {
+             products[i] = {id:id, ...req.body, imagen: image}
+            }
         }
-        let editProducts = products.map(product => { 
+
+        /*et editProducts = products.map(product => { 
             if (product.id == productToEdit.id) {
                 product = productToEdit
             }
             return product;
-        })
-        fs.writeFileSync(productsFilePath, JSON.stringify(editProducts, null, " "));
+        })*/
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
         res.redirect("/");
     },
     edit: (req, res) =>{
@@ -65,7 +72,7 @@ const controller = {
     destroy: (req, res) => {
         let id = req.params.id;
         let finalProducts = products.filter (product => product.id != id);
-        fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ""));
+        fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, "\n"));
         res.redirect ("/");
     },
 }
