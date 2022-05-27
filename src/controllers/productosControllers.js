@@ -7,12 +7,7 @@ const products= JSON.parse(productsJson)
 
 const controller = {
     carrito:  (req, res) =>{res.render(path.join(__dirname,"../views/products/carritoCompra"), console.log(category))},
-    /*Detalle anterior*/
-    //detalle: (req, res) =>{
-    //    const productos = products.find(element => element.id == req.params.id);
-    //    res.render(path.join(__dirname,"../views/products/productDetail"),{productos:productos})
-    //},
-    /*Nuevo detalle by Cris(a eliminar despues)*/
+  
     detalle: (req, res) =>{
         const productos = products.find(element => element.id == req.params.id);
         res.render(path.join(__dirname,"../views/products/BRUNO"),{productos:productos})
@@ -39,7 +34,6 @@ const controller = {
     },
     products: (req, res) =>{res.render(path.join(__dirname,"../views/products/products"),{products:products})
     },
-
     update: (req, res) => {
         let id = req.params.id;
         let productToEdit = products.find(product => product.id === id)
@@ -68,6 +62,11 @@ const controller = {
         let productToEdit = products.find(product => product.id == id)
         res.render(path.join(__dirname,"../views/products/form-edit-product"),{productToEdit})
     },
-
+    destroy: (req, res) => {
+        let id = req.params.id;
+        let finalProducts = products.filter (product => product.id != id);
+        fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ""));
+        res.redirect ("/");
+    },
 }
 module.exports = controller; 

@@ -9,13 +9,18 @@
     <main class="ficha">
         <p class="miga">ACA VA EL BREADCRUM</p>
         
+<<<<<<< HEAD
+    <div class="imagenes"><img src="images/" alt=""></div>
+    <div class="imagenes"><img src="images/<%=products.imagen%>" alt=""></div>
+=======
     <div class="imagenes"><img src="images/<%=productos.imagen%>" alt=""></div>
+>>>>>>> a858a009e090d26bd0da61d09a5226478cdb0940
     <div class="contenido">
-        <p class="titulo"><%=productos.nombre%></p>
-        <P class="codigo"><%=productos.codigo%></P>
-        <p class="descripcion"><%=productos.descripcion%></p>
-        <p class="precio-anterior">$<%=productos.precio%></p>
-        <p class="precio-nuevo">Oferta $<%= productos.precio - (productos.precio * (productos.descuento /100))%></p>
+        <p class="titulo"><%=products.nombre%></p>
+        <P class="codigo"><%=products.codigo%></P>
+        <p class="descripcion"><%=products.descripcion%></p>
+        <p class="precio-anterior">$<%=products.precio%></p>
+        <p class="precio-nuevo">Oferta $<%= products.precio - (products.precio * (products.descuento /100))%></p>
         <div class="cantidad">
             <div class="simbolos"><span>-</span></div>
         <input class="cuadro-cantidad" type="text">
