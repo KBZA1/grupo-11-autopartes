@@ -28,9 +28,13 @@ router.get("/products", productosControllers.products);
 router.get("/:id", productosControllers.detalle);  // No se puede poner '/productos/:id'porque no toma los CSS con estilos.
 
 /*-----PRODUCT DETAILS------*/
-//router.get("/:id", productosControllers.detalle);
+router.get("/:id", productosControllers.detalle);
 /*-----APLICAR EDIT ONE PRODUCT------*/
 router.get("/:id/edit", productosControllers.edit);
 router.put("/:id/edit", productosControllers.update);
+
+/* ---- APLICAR DELETE ONE PRODUCT ---- */
+ router.delete("/delete/:id", productosControllers.destroy);
+
 
 module.exports = router;

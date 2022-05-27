@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include("../partials/head") %>
-    <link rel="stylesheet" href="css/abm.css">
+    <link rel="stylesheet" type="text/css" href="../css/abm.css">
 </head>
 <body id="clase">
 <main >    
-        <h1>Administrador de Productos</h1>
+        <h1>Edición de Productos</h1>
         <form action="/<%=productToEdit.id%>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
           
             <input id="forma" type="text" placeholder="<%= productToEdit.nombre %>" name="nombre">
@@ -19,7 +19,7 @@
                 <option value="Tapa de cilindro">Tapa de cilindro</option>
             </select>
             <textarea id="forma" name="descripcion" rows="10" cols="50"> <%= productToEdit.descripcion %></textarea>
-            <div><p>Añada imagen del producto: </p></div>
+            <div><p>Edite imagen del producto: </p></div>
             <input id="forma" type="file" placeholder="Imagen" name="imagen" >
             <input id="forma" type="text" placeholder="<%= productToEdit.marca %>" name="marca">
             <input id="forma" type="text" placeholder="<%= productToEdit.precio %>" name="precio">
@@ -27,8 +27,11 @@
             <input id="forma" type="text" placeholder="<%= productToEdit.codigo %>" name="codigo">
             <input id="forma" type="text" placeholder="<%= productToEdit.stock %>" name="stock">
             
-            <button type="submit">Guardar datos de Producto</button>
+            <button type="submit">Editar datos de Producto</button>
             <button type="reset">Eliminar Campos</button>
+        </form>
+        <form action="/delete/<%=productToEdit.id%>?_method=DELETE" method="POST">
+            <button type="submit">ELIMINAR</button>
         </form>
 
 

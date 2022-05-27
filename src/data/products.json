@@ -58,5 +58,41 @@
   "descuento": 15,
   "codigo": 5,
   "stock": 10
+ },
+ {
+  "id": 6,
+  "nombre": "Osman",
+  "categoria": "Bomba de aceite",
+  "descripcion": "sadfsdafsadfsa",
+  "marca": "afsd",
+  "precio": "10000",
+  "descuento": "sadf",
+  "codigo": "52421",
+  "stock": "10",
+  "imagen": "image-default.jpg"
+ },
+ {
+  "id": 7,
+  "nombre": "Osman",
+  "categoria": "Arbol de Leva",
+  "descripcion": "asdfsad",
+  "marca": "corvent",
+  "precio": "10000",
+  "descuento": "afsd",
+  "codigo": "52421",
+  "stock": "asfd",
+  "imagen": "image-default.jpg"
+ },
+ {
+  "id": 8,
+  "nombre": "Osman",
+  "categoria": "Arbol de Leva",
+  "descripcion": "asdfdsaf",
+  "marca": "corvent",
+  "precio": "10000",
+  "descuento": "5",
+  "codigo": "52421",
+  "stock": "10",
+  "imagen": "image-default.jpg"
  }
 ]

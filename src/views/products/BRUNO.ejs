@@ -7,14 +7,32 @@
 <body>
     <%- include("../partials/header") %>
     <main class="ficha">
+<<<<<<< HEAD
                 
+=======
+        <p class="miga">ACA VA EL BREADCRUM</p>
+        
+<<<<<<< HEAD
+    <div class="imagenes"><img src="images/" alt=""></div>
+    <div class="imagenes"><img src="images/<%=products.imagen%>" alt=""></div>
+=======
+>>>>>>> 81e0ae99cbda730bb795fbaa6a37ad6e12e4a1f1
     <div class="imagenes"><img src="images/<%=productos.imagen%>" alt=""></div>
+>>>>>>> a858a009e090d26bd0da61d09a5226478cdb0940
     <div class="contenido">
+<<<<<<< HEAD
         <p class="titulo"><%=producto.nombre%></p>
         <P class="codigo"><%=producto.codigo%></P>
         <p class="descripcion"><%=producto.descripcion%></p>
         <p class="precio-anterior">$<%=producto.precio%></p>
         <p class="precio-nuevo">Oferta $<%= producto.precio - (producto.precio * (producto.descuento /100))%></p>
+=======
+        <p class="titulo"><%=products.nombre%></p>
+        <P class="codigo"><%=products.codigo%></P>
+        <p class="descripcion"><%=products.descripcion%></p>
+        <p class="precio-anterior">$<%=products.precio%></p>
+        <p class="precio-nuevo">Oferta $<%= products.precio - (products.precio * (products.descuento /100))%></p>
+>>>>>>> 81e0ae99cbda730bb795fbaa6a37ad6e12e4a1f1
         <div class="cantidad">
             <div class="simbolos"><span>-</span></div>
         <input class="cuadro-cantidad" type="text">
