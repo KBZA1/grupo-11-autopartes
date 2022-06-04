@@ -23,7 +23,7 @@ main form {
     flex-direction: column;
     align-items: center;
     background-color: white;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 10px 50px;
     border: 2px black solid;
 }
@@ -94,4 +94,13 @@ form button {
   form button:hover::after {
     transition: all 0.3s ease-out;
     transform: scale(1, 1) rotate(0deg);
+  }
+  /*.hola{display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    flex-wrap: wrap;
+    padding: 10px 50px;
+    border: 2px black solid;
+    font-size: ;
   }

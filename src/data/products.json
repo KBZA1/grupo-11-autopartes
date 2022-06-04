@@ -37,14 +37,13 @@
  },
  {
   "id": 4,
-  "nombre": "Tapa de Cilindro",
-  "descripcion": "xxxxxxx",
+  "nombre": "Tapa Cilindro",
   "imagen": "tapa-cilindro.webp",
-  "categoria": "Tapa de cilindro",
+  "categoria": "Enfriador de aceite",
   "marca": "Ford",
-  "precio": 15999,
-  "descuento": 10,
-  "codigo": 4,
+  "precio": 10999,
+  "descuento": 15,
+  "codigo": 5,
   "stock": 10
  },
  {
@@ -58,45 +57,5 @@
   "descuento": 15,
   "codigo": 5,
   "stock": 10
- },
- {
-  "id": "6",
-  "imagen": "image-default.jpg"
- },
- {
-  "id": 7,
-  "nombre": "Osman",
-  "categoria": "Arbol de Leva",
-  "descripcion": "asdfsad",
-  "marca": "corvent",
-  "precio": "10000",
-  "descuento": "afsd",
-  "codigo": "52421",
-  "stock": "asfd",
-  "imagen": "image-default.jpg"
- },
- {
-  "id": 8,
-  "nombre": "Osman",
-  "categoria": "Arbol de Leva",
-  "descripcion": "asdfdsaf",
-  "marca": "corvent",
-  "precio": "10000",
-  "descuento": "5",
-  "codigo": "52421",
-  "stock": "10",
-  "imagen": "image-default.jpg"
- },
- {
-  "id": 9,
-  "nombre": "asdasdfasf",
-  "categoria": "Arbol de Leva",
-  "descripcion": "",
-  "marca": "",
-  "precio": "",
-  "descuento": "",
-  "codigo": "",
-  "stock": "",
-  "imagen": "image-default.jpg"
  }
 ]
