@@ -2,6 +2,7 @@
 const express = require("express");
 const path = require ("path");
 const methodOverride = require("method-override");
+const session = require ("express-session");
 /*-------EXPRESS-------*/
 const app = express();
 /*-------TEMPLATE-------*/
@@ -10,6 +11,8 @@ app.set("views");
 app.listen(3081, () =>{console.log("arriba que la musica no pare")});
 /*-------MIDDLEWARES-------*/
 app.use(express.static(path.join (__dirname, '/public')));
+
+app.use(session({secret: "Aca esta tu session bb"}));
 /*-------REQUIRE DE RUTAS-------*/
 const productsRouter = require("./src/routes/productosRuta");
 const mainRoutes = require("./src/routes/main");
