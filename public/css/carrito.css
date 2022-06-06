@@ -2,26 +2,27 @@
     box-sizing: border-box;
     box-sizing: content-box;
 }
+#cupon{
+    margin-top: 5px;
+}
 main #textoh3{
     background-color: white;
     font-size: 2.5em;
     font-weight: bold;
     text-align: left;
-    margin: 1% 0% 0% 0%;
     padding: 1% 0% 1% 10%;
     color: black;
-    -webkit-text-stroke: 1.2px white;
+    /*-webkit-text-stroke: 1.2px white;*/
     border-top: black solid 1px;
     border-bottom: black solid 1px;    
 }
 .contenedor-padre1 {
     background-color: white;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px #000;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
 }
 .imagen1 {
     opacity: 88%;
@@ -59,13 +60,9 @@ main #textoh3{
 #espacio{
     color: black;
     background-color: white;
-    width: 40%;
     font-size: 120%;
-    margin-bottom: 50%;
-    
 }
 .cajita{
-    box-shadow: 1.5px 1.5px 1.5px 1px black;;
     font-weight: bold;
     width: 80%;
     font-size: 20px;
@@ -82,7 +79,7 @@ main #textoh3{
     color: black;
     font-weight: bold;
     padding-top: 7px;
-    border-bottom: #3321c5 1px solid;
+    border-bottom: black 1px solid;
     padding-top: 1.5%;
 }
 .totales h4  {
@@ -139,6 +136,8 @@ main #textoh3{
 article .form1 form {
     display: flex;
     flex-direction: row;
+    gap: 5px;
+    padding: 10px;
 }
 article .form1 form input {
     width: 50%;
@@ -148,18 +147,19 @@ article .form1 form input {
     border-radius: 6px;
     outline: none;
     margin-bottom: 2%;
-    height: 8%;
+    height: 20px;
 }
 form#botones {
     width: 100%;
 }
 form #aplicar{
-    width: 30%;
+    width: 100px;
     height: 32px;
     background-color: #3321c5;
     color: white;
     background-color: rgb(26, 103, 219);
     transition: 550ms all;
+    border-radius: 5px;
 }
 form #aplicar:hover{
     font-size: 16px;
@@ -175,10 +175,11 @@ main{
     flex-direction: row;
     margin-right: 12%;
     margin-left: 12%;
+    gap: 20px;
 }
 
 .eliminarPe{
-    width: 148%;
+    width: 100%;
     height: min-content;
     padding: revert;
     background-color: red;
@@ -194,12 +195,12 @@ main{
 }
 
 .eliminarP {
-    width: 50%;
+    width: 100px;
     height: min-content;
     padding: 5px 6px 5px 5px;
     background-color: red;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     border-radius: 7px;
     box-shadow: 1px 1px 1px 0 black;
@@ -243,9 +244,7 @@ main{
         width: 100%;
     } 
     .eliminarPe{
-        width: 65%;
         height: min-content;
-        padding: revert;
         background-color: red;
         color: white;
         font-size: 12px;
@@ -254,7 +253,7 @@ main{
         box-shadow: 1px 1px 1px 0 black;
         transition: all 550ms;
         opacity: 80%;
-        margin-top: 19%;
+        margin: 10px auto;
         display: block;
     }
     .totales h4 {
@@ -263,5 +262,8 @@ main{
         font-size: 16px;
         border: none;
         width: 100%;
+    }
+    .contenedor-padre1 {
+        flex-direction: column;
     }
 }

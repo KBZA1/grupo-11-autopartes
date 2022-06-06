@@ -6,7 +6,7 @@ const productsJson = fs.readFileSync(productsFilePath, "utf-8")
 const products= JSON.parse(productsJson)
 
 const controller = {
-    carrito:  (req, res) =>{res.render(path.join(__dirname,"../views/products/carritoCompra"), console.log(category))},
+    carrito:  (req, res) =>{res.render(path.join(__dirname,"../views/products/carritoCompra"), )},
   
     detalle: (req, res) =>{
         const productos = products.find(element => element.id == req.params.id);

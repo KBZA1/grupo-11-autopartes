@@ -44,11 +44,6 @@ margin-bottom: 50px;
 .guasap-ficha{
     margin-top: 20px;
 }
-.icono-ficha{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
 .precio-anterior{
     font-size: 20px;
     text-decoration: line-through;

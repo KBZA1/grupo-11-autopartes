@@ -8,11 +8,11 @@ const app = express();
 /*-------TEMPLATE-------*/
 app.set('view engine', 'ejs');
 app.set("views");
-app.listen(3081, () =>{console.log("arriba que la musica no pare")});
+app.listen(5001, () =>{console.log("arriba que la musica no pare")});
 /*-------MIDDLEWARES-------*/
 app.use(express.static(path.join (__dirname, '/public')));
 
-app.use(session({secret: "Aca esta tu session bb"}));
+/*app.use(session({secret: "Aca esta tu session bb"}));*/
 /*-------REQUIRE DE RUTAS-------*/
 const productsRouter = require("./src/routes/productosRuta");
 const mainRoutes = require("./src/routes/main");
