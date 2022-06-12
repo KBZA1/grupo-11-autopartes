@@ -42,8 +42,9 @@ const controller = {
 
     update: (req,res)=> { 
         let id = req.params.id;
-        let  userEdit= user.find(product => product.id == id)
+        let  userEdit = user.find(element => element.id == id)
         let image;
+        console.log(req.body);
         if (req.file != undefined ){
             image = req.file.filename
         } else {
@@ -51,7 +52,7 @@ const controller = {
         }
         for (let i = 0; i < user.length; i ++) {
             if (id == user[i].id) {
-             user[i] = {id:id, ...userEdit, imagen: image}
+             user[i] = {id:id, ...req.body, imagen: image}
             }
         }
         fs.writeFileSync(usersPath, JSON.stringify(user, null, " "));

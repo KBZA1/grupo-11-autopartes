@@ -1,23 +1,23 @@
 [
  {
-  "id": 1,
-  "nombre": "nombre",
-  "email": "email",
-  "imagen": "image-default-user.png",
-  "contraseña": "contraseña"
+  "id": "1",
+  "nombre": "bruno",
+  "email": "osmango9697@gmail.com",
+  "contraseña": "144785",
+  "imagen": "image-1655069248640"
  },
  {
-  "id": 2,
-  "nombre": "Osman",
-  "email": "osmango96@hotmail.com",
-  "constraseña": "12345678",
-  "imagen": "image-1655047785553"
+  "id": "2",
+  "nombre": "bruno",
+  "email": "osmango9697@gmail.com",
+  "contraseña": "1478",
+  "imagen": "image-1655070102568"
  },
  {
   "id": 3,
   "nombre": "bruno",
   "email": "osmango96@hotmail.com",
-  "constraseña": "123457",
+  "contraseña": "123457",
   "imagen": "image-default-user.png"
  }
 ]

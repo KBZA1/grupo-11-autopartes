@@ -15,7 +15,7 @@ const storage =multer.diskStorage({
     destination:(req,file,cb)=>{
         cb (null, path.join(__dirname,"../../public/images/user" ))},
     filename: (req,file,cb)=>{
-        cb (null,"image-" + Date.now() + path.extname("image"))},
+        cb (null, "image-" + Date.now() + path.extname("imagen"))},
 });
 
 /*------APLICAR--------*/
@@ -36,6 +36,6 @@ router.get("/users", userControllers.users);
 router.get("/user/:id", userControllers.sesion);
 
 router.get("/user/edit/:id", userControllers.edit);
-//router.put("/user/:id/edit", upload.single("imagen"), userControllers.update);
+router.put("/user/edit/:id", upload.single("imagen"), userControllers.update);
 
 module.exports = router;
