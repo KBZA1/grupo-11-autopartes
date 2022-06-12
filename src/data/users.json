@@ -1,11 +1,23 @@
 [
  {
-  "identificador": "id",
+  "id": 1,
   "nombre": "nombre",
-  "apellido": "apellido",
   "email": "email",
-  "fecha de nacimiento": "fecha de nacimiento",
-  "imagen": "imagen",
+  "imagen": "image-default-user.png",
   "contraseña": "contraseña"
+ },
+ {
+  "id": 2,
+  "nombre": "Osman",
+  "email": "osmango96@hotmail.com",
+  "constraseña": "12345678",
+  "imagen": "image-1655047785553"
+ },
+ {
+  "id": 3,
+  "nombre": "bruno",
+  "email": "osmango96@hotmail.com",
+  "constraseña": "123457",
+  "imagen": "image-default-user.png"
  }
 ]

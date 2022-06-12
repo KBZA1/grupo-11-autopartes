@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include("../partials/head") %>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <%- include("../partials/header") %>
+   <main>
+       <h2>Hola <%=userId.nombre%></h2>
+       
+       <section class="form-reg">
+           <h4>Edite los siguientes datos: </h4>
+           <form action="/userId/edit/<%=userId.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <div class="registro">
+                    <input class="campos" type="text" name="nombre" id="nombre-apellido" placeholder="<%=userId.nombre%>">
+                    <input class="campos" type="email" name="email" id="mail-r" placeholder="userId.email">
+                    <input class="campos" type="password" name="constraseña" id="contra" placeholder="<%=userId.contraseña%>">
+                    <!--<input class="campos" type="password" name="conf-contra" id="conf-contra" placeholder="Confirme su contraseña"> -->
+                    <div><p>Añada imagen de usuario: </p></div>
+                    <input class= "campos" id="forma" type="file" placeholder="Imagen" name="<%=userId.imagen%>">
+                    </div>
+                    <button class="crear-cuenta" type="submit">CREAR CUENTA</button>
+           </form>
+        </section>
+   </main> 
+   <!--FOOTER PARTIAL-->
+   <%- include ("../partials/footer") %>
+   
+   <div class="guasap"><a href="https://api.whatsapp.com/send/?phone=%2B5492235049312&text&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a></div>
+</body>
+</html>

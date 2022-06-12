@@ -11,21 +11,18 @@
        
        <section class="form-reg">
            <h4>Ingrese los siguientes datos: </h4>
-           <form action="/register" method="post">
+           <form action="/" method="POST" enctype="multipart/form-data">
                 <div class="registro">
-                    <input class="campos" type="text" name="nombre-apellido" id="nombre-apellido" placeholder="Nombre y Apellido">
+                    <input class="campos" type="text" name="nombre" id="nombre-apellido" placeholder="Nombre y Apellido">
                     <input class="campos" type="email" name="email" id="mail-r" placeholder="E-mail">
-                    <input class="campos" type="password" name="contra" id="contra" placeholder="Ingrese Constraseña">
-                    <input class="campos" type="password" name="conf-contra" id="conf-contra" placeholder="Confirme su contraseña">
+                    <input class="campos" type="password" name="constraseña" id="contra" placeholder="Ingrese Constraseña">
+                    <!--<input class="campos" type="password" name="conf-contra" id="conf-contra" placeholder="Confirme su contraseña"> -->
+                    <div><p>Añada imagen de usuario: </p></div>
+                    <input class= "campos" id="forma" type="file" placeholder="Imagen" name="imagen">
                     </div>
                     <button class="crear-cuenta" type="submit">CREAR CUENTA</button>
-                   
-                    </div>
-                </div>
            </form>
         </section>
-        
-       </div>
    </main> 
    <!--FOOTER PARTIAL-->
    <%- include ("../partials/footer") %>

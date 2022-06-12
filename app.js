@@ -16,6 +16,7 @@ app.use(express.static(path.join (__dirname, '/public')));
 /*-------REQUIRE DE RUTAS-------*/
 const productsRouter = require("./src/routes/productosRuta");
 const mainRoutes = require("./src/routes/main");
+const userRoutes = require("./src/routes/users");
 
 
 /*-----PROCESAR INFORMACION-----*/
@@ -28,6 +29,7 @@ app.use(methodOverride("_method"));
 
 /*-------RUTAS-------*/
 app.use("/", mainRoutes);
+app.use("/", userRoutes);
 app.use("/", productsRouter);
 
 

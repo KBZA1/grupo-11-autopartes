@@ -37,7 +37,6 @@ const controller = {
     update: (req, res) => {
         let id = req.params.id;
         let productToEdit = products.find(product => product.id == id)
-        console.log(productToEdit);
         let image;
         if (req.file != undefined ){
             image = req.file.filename
