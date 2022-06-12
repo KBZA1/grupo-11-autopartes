@@ -52,7 +52,7 @@ const controller = {
         }
         for (let i = 0; i < user.length; i ++) {
             if (id == user[i].id) {
-             user[i] = {id:id, ...req.body, imagen: image}
+            user[i] = {id:id,  ...req.body , imagen: image}
             }
         }
         fs.writeFileSync(usersPath, JSON.stringify(user, null, " "));

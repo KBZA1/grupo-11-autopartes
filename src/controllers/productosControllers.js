@@ -38,28 +38,17 @@ const controller = {
         let id = req.params.id;
         let productToEdit = products.find(product => product.id == id)
         let image;
+        console.log(req.body)
         if (req.file != undefined ){
             image = req.file.filename
         } else {
             image = productToEdit.imagen
         }
-        /*productToEdit = {
-            id: productToEdit.id,
-            ...req.body,
-            imagen : image,
-        }*/
         for (let i = 0; i < products.length; i ++) {
             if (id == products[i].id) {
              products[i] = {id:id, ...req.body, imagen: image}
             }
         }
-
-        /*et editProducts = products.map(product => { 
-            if (product.id == productToEdit.id) {
-                product = productToEdit
-            }
-            return product;
-        })*/
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
         res.redirect("/");
     },

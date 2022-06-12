@@ -13,7 +13,7 @@ const storage =multer.diskStorage({
     destination:(req,file,cb)=>{
         cb (null, path.join(__dirname,"../../public/images" ))},
     filename: (req,file,cb)=>{
-        cb (null, file.fieldname + "-" + Date.now() + path.extname("image"/*provisorio*/))},
+        cb (null, file.fieldname + "-" + Date.now() + path.extname("imagen"/*provisorio*/))},
 });
 /*-----APLICAR MULTER------*/
 const upload = multer({storage});
@@ -28,7 +28,7 @@ router.get("/products", productosControllers.products);
 router.get("/:id", productosControllers.detalle);
 /*-----APLICAR EDIT ONE PRODUCT------*/
 router.get("/:id/edit", productosControllers.edit);
-router.put("/:id/edit", productosControllers.update);
+router.put("/:id/edit",  upload.single("imagen"), productosControllers.update);
 
 /* ---- APLICAR DELETE ONE PRODUCT ---- */
  router.delete("/delete/:id", productosControllers.destroy);
