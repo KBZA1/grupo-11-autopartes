@@ -1,9 +1,12 @@
+const { Console } = require("console");
 const res = require("express/lib/response");
 const fs = require ("fs");
 const path = require ("path");
-const productsFilePath =  path.join(__dirname, "../data/products.json")
+const productsFilePath = path.join(__dirname, "../data/products.json")
 const productsJson = fs.readFileSync(productsFilePath, "utf-8")
 const products= JSON.parse(productsJson)
+
+
 
 const controller = {
     carrito:  (req, res) =>{res.render(path.join(__dirname,"../views/products/carritoCompra"), )},
@@ -29,13 +32,13 @@ const controller = {
             imagen: image
         };
         products.push(newProduct)
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "))
         res.redirect('/');
     },
     products: (req, res) =>{res.render(path.join(__dirname,"../views/products/products"),{products:products})
     },
     update: (req, res) => {
-        let id = req.params.id;
+        let id = Number(req.params.id);
         let productToEdit = products.find(product => product.id == id)
         let image;
         console.log(req.body)
@@ -60,7 +63,7 @@ const controller = {
     destroy: (req, res) => {
         let id = req.params.id;
         let finalProducts = products.filter (product => product.id != id);
-        fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, "\n"));
+        fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
         res.redirect ("/");
     },
 }

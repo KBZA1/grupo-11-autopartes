@@ -6,12 +6,7 @@
 <body id="clase">
 <main >    
         <h1>Administrador de Productos</h1>
-        <form action="/" method="POST" enctype="multipart/form-data">
-            <!-- Los espacios te mataran y el signo de exclamacion tambien -->
-            <!-- <label for="Agregar/Modificar">
-                <input id="forma" type="radio" name="Agregar/Modificar" value="Agregar" checked="">Agregar
-                <input id="forma" type="radio" name="Agregar/Modificar" value="Modificar">Modificar
-            </label> -->
+        <form action="/products" method="POST" enctype="multipart/form-data">
             <h2>Seleccione:</h2>
             <div id="caca">
                 <input type="radio" id="contactChoice1" name="producto" value="Agregar Producto"><label for="contactChoice1">Agregar Producto</label>
@@ -31,10 +26,10 @@
             <div><p>Añada imagen del producto: </p></div>
             <input id="forma" type="file" placeholder="Imagen" name="imagen" >
             <input id="forma" type="text" placeholder="Marca" name="marca">
-            <input id="forma" type="text" placeholder="Precio" name="precio">
-            <input id="forma" type="text" placeholder="Descuento" name="descuento">
-            <input id="forma" type="text" placeholder="Codigo de Producto" name="codigo">
-            <input id="forma" type="text" placeholder="Stock" name="stock">
+            <input id="forma" type="number" placeholder="Precio" name="precio">
+            <input id="forma" type="number" placeholder="Descuento" name="descuento">
+            <input id="forma" type="number" placeholder="Codigo de Producto" name="codigo">
+            <input id="forma" type="number" placeholder="Stock" name="stock">
             
             <button type="submit">Guardar datos de Producto</button>
             <button type="reset">Eliminar Campos</button>
