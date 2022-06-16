@@ -1,13 +1,12 @@
 const res = require("express/lib/response");
 const fs = require ("fs");
 const path = require ("path");
+const usersPath = path.join(__dirname, "../data/users.json");
+const usersR = fs.readFileSync(usersPath, "utf-8");
+const user = JSON.parse(usersR);
 
-     const usersPath = path.join(__dirname, "../data/users.json");
-     const usersR = fs.readFileSync(usersPath, "utf-8");
-     const user = JSON.parse(usersR);
 
-
-const controller = {
+module.exports = {
     login: (req,res)=> { res.render(path.join(__dirname,"../views/users/login"))},
     register: (req,res)=> { res.render(path.join(__dirname,"../views/users/register"))},
     create: (req,res)=> { 
@@ -18,7 +17,7 @@ const controller = {
             image = 'image-default-user.png'
         }
         let newUser = {
-            id: user[user.length - 1].id + 1,
+            id: Number(user[user.length - 1].id + 1),
             
                 ...req.body
             ,
@@ -41,7 +40,7 @@ const controller = {
     },
 
     update: (req,res)=> { 
-        let id = req.params.id;
+        let id = Number(req.params.id);
         let  userEdit = user.find(element => element.id == id)
         let image;
         console.log(req.body);
@@ -58,5 +57,11 @@ const controller = {
         fs.writeFileSync(usersPath, JSON.stringify(user, null, " "));
         res.redirect("/");
     },
+    delete: (req, res) => {
+        let id = req.params.id;
+        let userD = user.filter (element => element.id != id);
+        fs.writeFileSync(usersPath, JSON.stringify(userD, null, " "));
+        res.redirect ("/");
+    },
 }
-module.exports = controller; 
+

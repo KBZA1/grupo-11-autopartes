@@ -47,14 +47,49 @@
   "stock": 10
  },
  {
-  "id": "5",
+  "id": 5,
   "nombre": "Enfriador de Aceite125",
-  "descripcion": " xxxxxxx",
+  "descripcion": "  xxxxxxx",
   "marca": "Ford",
-  "precio": "10999",
+  "precio": "asdf",
   "descuento": "15",
   "codigo": "5",
   "stock": "10",
   "imagen": "enfriador-aceite.webp"
+ },
+ {
+  "id": 6,
+  "nombre": "cristian",
+  "categoria": "Arbol de Leva",
+  "descripcion": "el mejor",
+  "marca": "corvent",
+  "precio": "10000",
+  "descuento": "5",
+  "codigo": "52421",
+  "stock": "10",
+  "imagen": "image-default.jpg"
+ },
+ {
+  "id": 7,
+  "nombre": "OSMAN-ESTOY DE OFERTA",
+  "descripcion": " El mas peor",
+  "marca": "corvent",
+  "precio": "10000",
+  "descuento": "5",
+  "codigo": "52421",
+  "stock": "10",
+  "imagen": "imagen-1655078592832"
+ },
+ {
+  "id": 8,
+  "nombre": "prueba ",
+  "categoria": "Arbol de Leva",
+  "descripcion": "prueba sin async",
+  "marca": "corvent",
+  "precio": "10000",
+  "descuento": "5",
+  "codigo": "52421",
+  "stock": "10",
+  "imagen": "image-default.jpg"
  }
 ]

@@ -7,8 +7,8 @@
   "imagen": "image-1655069248640"
  },
  {
-  "id": "2",
-  "nombre": "Osman12",
+  "id": 2,
+  "nombre": "Osman1234",
   "email": "osmango9682@hotmail.com",
   "contraseña": "1478",
   "imagen": "image-1655072189534"
@@ -16,8 +16,15 @@
  {
   "id": 3,
   "nombre": "bruno",
-  "email": "osmango96@hotmail.com",
-  "contraseña": "123457",
+  "email": "osmango9697@gmail.com",
+  "contraseña": "123456",
   "imagen": "image-default-user.png"
+ },
+ {
+  "id": 5,
+  "nombre": "OSMAN-ESTOY DE OFERTA",
+  "email": "osmango96@hotmail.com",
+  "contraseña": "sdfsadf",
+  "imagen": "image-1655078825288"
  }
 ]
