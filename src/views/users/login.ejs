@@ -8,9 +8,14 @@
     <%- include("../partials/header") %>
     <div class="login-box">
         <h1>Ingresá</h1>
-        <form>
-            <input class="campos" type="email" placeholder="Email">
-            <input class="campos" type="password" placeholder="Contraseña">
+        <form action="/acceso" method="POST" enctype="multipart/form-data">
+            <input class="campos" type="email" name="email" placeholder="Email">
+            <% if(locals.errors && errors.email) { %>
+                <div>
+                    <%= errors.email.msg %>
+                </div>
+            <% } %>
+            <input class="campos" type="password" name="contraseña" placeholder="Contraseña">
             <input class="ingresar" type="button" value="Ingresar">
         </form>
     </div>

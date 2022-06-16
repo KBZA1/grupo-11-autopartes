@@ -9,6 +9,26 @@ const path = require ("path");
 
 const controller = {
     login: (req,res)=> { res.render(path.join(__dirname,"../views/users/login"))},
+    
+    loginProcess: (req, res) =>{
+        let userMail = user.find(element => element.email == req.params.email);
+        if (userMail){
+        // let passwordBycr = bcryptjs.compareSync (req.body.password, userMail.password);
+        if(userMail.contraseña != undefined){// cambiar if(userMail...) por if =(passwordBycr)
+            delete userMail.contraseña; //borrar info de password.
+            req.session.userLogged = userMail
+            return res.redirect(path.join(__dirname,"../views/users/index"))
+        }
+            return res.render(path.join(__dirname,"../views/users/login"),{
+            //validator
+            errors: {
+                email :{
+                    msg: "No existe un usuario con ese email"
+                }
+            }
+        })
+    }},
+
     register: (req,res)=> { res.render(path.join(__dirname,"../views/users/register"))},
     create: (req,res)=> { 
         let image;
@@ -58,5 +78,9 @@ const controller = {
         fs.writeFileSync(usersPath, JSON.stringify(user, null, " "));
         res.redirect("/");
     },
+    //logout: (req, res) => {
+    //    req.session.destroy();
+    //    return res.redirect("/")
+    //}
 }
 module.exports = controller; 

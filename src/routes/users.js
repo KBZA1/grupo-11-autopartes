@@ -26,7 +26,9 @@ const upload = multer({storage});
 /*----- ROUTES------*/;
 
 router.get("/acceso", userControllers.login)
+router.post("/acceso", userControllers.loginProcess)
 
+//router.get("/logout/", userControllers.logout) Agregar cuando agreguemos al header el usuario.
 
 router.get("/registro", userControllers.register);
 router.post("/", upload.single("imagen"), userControllers.create);

@@ -10,6 +10,11 @@ app.set('view engine', 'ejs');
 app.set("views");
 app.listen(5001, () =>{console.log("arriba que la musica no pare")});
 /*-------MIDDLEWARES-------*/
+app.use(session({
+    secret: "Esto es un secreto (?)",
+    resave: false,
+    saveUninitialized: false,
+}));
 app.use(express.static(path.join (__dirname, '/public')));
 
 /*app.use(session({secret: "Aca esta tu session bb"}));*/
