@@ -9,24 +9,55 @@ const {errors} = require ("express-validator");
 module.exports = {
     login: (req,res)=> { res.render(path.join(__dirname,"../views/users/login"))},
     
-    loginProcess: (req, res) =>{
-        let userMail = user.find(element => element.email == req.params.email);
-        if (userMail){
+    loginProcess: (req, res) => {
+		//let userToLogin = User.findByField('email', req.body.email); No tengo esta funcion declarada.
+        let userToLogin = user.find(element => element.email == req.body.email);
+        console.log(userToLogin)
+        console.log(user)
+        console.log(req.body.email)
+		if(userToLogin) {
+			//let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password); No tengo aplicado el hash en el register.
+			if (req.body.password = userToLogin.password) {
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin;
+				//if(req.body.remember_user) {
+				//	res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				//}
+				return res.redirect('/');
+			} 
+			return res.render(path.join(__dirname,"../views/users/login"), {
+				errors: {
+					email: {
+						msg: 'Las credenciales son inválidas'
+					}
+				}
+			});
+		}
+		return res.render(path.join(__dirname,"../views/users/login"), {
+			errors: {
+				email: {
+					msg: 'No se encuentra este email en nuestra base de datos'
+				}
+			}
+		});
+	},
+    //loginProcess: (req, res) =>{
+        //let userMail = user.find(element => element.email == req.params.email);
+        //if (userMail){
         // let passwordBycr = bcryptjs.compareSync (req.body.password, userMail.password);
-        if(userMail.contraseña != undefined){// cambiar if(userMail...) por if =(passwordBycr)
-            delete userMail.contraseña; //borrar info de password.
-            req.session.userLogged = userMail
-            return res.redirect("/")
-        }
-            return res.render("/acceso",{
+        //if(userMail.contraseña != undefined){// cambiar if(userMail...) por if =(passwordBycr)
+           // delete userMail.contraseña; //borrar info de password.
+           // req.session.userLogged = userMail
+           // return res.redirect("/")
+       //}
+           // return res.render("/acceso",{
             //validator
-            errors: {
-                email :{
-                    msg: "No existe un usuario con ese email"
-                }
-            }
-        })
-    }},
+           // errors: {
+           //     email :{
+                    //msg: "No existe un usuario con ese email"
+                //}
+            //}
+       // })
 
     register: (req,res)=> { res.render(path.join(__dirname,"../views/users/register"))},
     create: (req,res)=> { 
