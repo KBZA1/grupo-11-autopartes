@@ -10,14 +10,10 @@ module.exports = {
     login: (req,res)=> { res.render(path.join(__dirname,"../views/users/login"))},
     
     loginProcess: (req, res) => {
-		//let userToLogin = User.findByField('email', req.body.email); No tengo esta funcion declarada.
-        let userToLogin = user.find(element => element.email == req.body.email);
-        console.log(userToLogin)
-        console.log(user)
-        console.log(req.body.email)
+		let userToLogin = user.find(element => element.email == req.body.email);
 		if(userToLogin) {
 			//let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password); No tengo aplicado el hash en el register.
-			if (req.body.password = userToLogin.password) {
+			if (req.body.password == userToLogin.password) {
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
 				//if(req.body.remember_user) {
@@ -41,24 +37,6 @@ module.exports = {
 			}
 		});
 	},
-    //loginProcess: (req, res) =>{
-        //let userMail = user.find(element => element.email == req.params.email);
-        //if (userMail){
-        // let passwordBycr = bcryptjs.compareSync (req.body.password, userMail.password);
-        //if(userMail.contraseña != undefined){// cambiar if(userMail...) por if =(passwordBycr)
-           // delete userMail.contraseña; //borrar info de password.
-           // req.session.userLogged = userMail
-           // return res.redirect("/")
-       //}
-           // return res.render("/acceso",{
-            //validator
-           // errors: {
-           //     email :{
-                    //msg: "No existe un usuario con ese email"
-                //}
-            //}
-       // })
-
     register: (req,res)=> { res.render(path.join(__dirname,"../views/users/register"))},
     create: (req,res)=> { 
         let image;
@@ -80,9 +58,9 @@ module.exports = {
     },
     users: (req,res)=> { res.render(path.join(__dirname,"../views/users/users"), { user : user})},
 
-    sesion: (req,res)=> {
-     const userId = user.find(element => element.id == req.params.id);
-     res.render(path.join(__dirname,"../views/users/user"), { userId : userId })
+    profile: (req,res)=> {
+    //req.session.usserLoged= 
+    res.render(path.join(__dirname,"../views/users/profile"), { userId : req.session.userLogged })
     },
 
     edit: (req,res)=> { 
@@ -108,10 +86,10 @@ module.exports = {
         fs.writeFileSync(usersPath, JSON.stringify(user, null, " "));
         res.redirect("/");
     },
-    //logout: (req, res) => {
-    //    req.session.destroy();
-    //    return res.redirect("/")
-    //}
+    logout: (req, res) => {
+    req.session.destroy();
+    return res.redirect("/")
+    },
     
     delete: (req, res) => {
         let id = req.params.id;

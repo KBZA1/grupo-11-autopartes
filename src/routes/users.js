@@ -9,6 +9,10 @@ const path = require ("path");
 
 const userControllers = require("../controllers/userControllers");
 
+/*-----CONFIGURACION MIDDLEWARE------*/
+const guestMiddleware = require ("../middleware/guestMiddleware");
+const authMiddleware = require("../middleware/authMiddleware");
+
 /*-----CONFIGURACION MULTER------*/
 
 const storage =multer.diskStorage({
@@ -25,17 +29,17 @@ const upload = multer({storage});
 
 /*----- ROUTES------*/;
 
-router.get("/acceso", userControllers.login)
+router.get("/acceso",guestMiddleware, userControllers.login)
 router.post("/acceso", userControllers.loginProcess)
 
-//router.get("/logout/", userControllers.logout) Agregar cuando agreguemos al header el usuario.
+router.get("/user/profile", authMiddleware, userControllers.profile);
 
-router.get("/registro", userControllers.register);
+router.get("/logout/", userControllers.logout)
+
+router.get("/registro", guestMiddleware, userControllers.register);
 router.post("/", upload.single("imagen"), userControllers.create);
 
 router.get("/users", userControllers.users);
-
-router.get("/user/:id", userControllers.sesion);
 
 router.get("/user/edit/:id", userControllers.edit);
 router.put("/user/edit/:id", upload.single("imagen"), userControllers.update);

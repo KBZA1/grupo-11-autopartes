@@ -7,15 +7,15 @@
 <body>
     <%- include("../partials/header") %>
     <div class="login-box">
+        <% if(locals.errors && errors.email) { %>
+            <div>
+                <%= errors.email.msg %>
+            </div>
+        <% } %>
         <h1>Ingresá</h1>
-        <form action="/acceso" method="POST" enctype="multipart/form-data">
+        <form method="POST" action="/acceso">
             <input class="campos" type="email" name="email" placeholder="Email">
-            <% if(locals.errors && errors.email) { %>
-                <div>
-                    <%= errors.email.msg %>
-                </div>
-            <% } %>
-            <input class="campos" type="password" name="contraseña" placeholder="Contraseña">
+            <input class="campos" type="password" name="password" placeholder="Contraseña">
             <button class="ingresar" type="submit">Ingresar</button>
         </form>
     </div>
