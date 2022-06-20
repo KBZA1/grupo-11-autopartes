@@ -4,7 +4,7 @@ const path = require ("path");
 const usersPath = path.join(__dirname, "../data/users.json");
 const usersR = fs.readFileSync(usersPath, "utf-8");
 const user = JSON.parse(usersR);
-
+const {errors} = require ("express-validator");
 
 module.exports = {
     login: (req,res)=> { res.render(path.join(__dirname,"../views/users/login"))},
@@ -16,9 +16,9 @@ module.exports = {
         if(userMail.contraseña != undefined){// cambiar if(userMail...) por if =(passwordBycr)
             delete userMail.contraseña; //borrar info de password.
             req.session.userLogged = userMail
-            return res.redirect(path.join(__dirname,"../views/users/index"))
+            return res.redirect("/")
         }
-            return res.render(path.join(__dirname,"../views/users/login"),{
+            return res.render("/acceso",{
             //validator
             errors: {
                 email :{

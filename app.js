@@ -13,11 +13,10 @@ app.listen(5001, () =>{console.log("arriba que la musica no pare")});
 app.use(session({
     secret: "Esto es un secreto (?)",
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: false
 }));
 app.use(express.static(path.join (__dirname, '/public')));
 
-/*app.use(session({secret: "Aca esta tu session bb"}));*/
 /*-------REQUIRE DE RUTAS-------*/
 const productsRouter = require("./src/routes/productosRuta");
 const mainRoutes = require("./src/routes/main");
