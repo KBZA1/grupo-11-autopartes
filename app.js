@@ -3,7 +3,7 @@ const express = require("express");
 const path = require ("path");
 const methodOverride = require("method-override");
 const session = require ("express-session");
-//const sessionMiddleware = require (path.join(__dirname, "/src/middleware/sessionMiddleware.js"))
+const sessionMiddleware = require (path.join(__dirname, "/src/middleware/sessionMiddleware.js"))
 /*-------EXPRESS-------*/
 const app = express();
 /*-------TEMPLATE-------*/
@@ -17,12 +17,12 @@ app.use(session({
     saveUninitialized: false
 }));
 app.use(express.static(path.join (__dirname, '/public')));
+app.use(sessionMiddleware);
 
 /*-------REQUIRE DE RUTAS-------*/
 const productsRouter = require("./src/routes/productosRuta");
 const mainRoutes = require("./src/routes/main");
 const userRoutes = require("./src/routes/users");
-
 
 /*-----PROCESAR INFORMACION-----*/
 app.use(express.urlencoded({ extended: false }));
@@ -33,9 +33,6 @@ app.use(methodOverride("_method"));
 //})
 
 /*-------RUTAS-------*/
-app.use("/"/*,sessionMiddleware*/, mainRoutes);
-app.use("/"/*,sessionMiddleware*/, userRoutes);
-app.use("/"/*,sessionMiddleware*/, productsRouter);
-
-
-
+app.use("/", mainRoutes);
+app.use("/", userRoutes);
+app.use("/", productsRouter);

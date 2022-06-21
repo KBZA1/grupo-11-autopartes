@@ -13,7 +13,7 @@ module.exports = {
     loginProcess: (req, res) => {
 		let userToLogin = user.find(element => element.email == req.body.email);
 		if(userToLogin) {
-			let isOkThePassword = bcryptjs.compareSync( userToLogin.password, req.body.password); 
+			let isOkThePassword = bcryptjs.compareSync(  req.body.password, userToLogin.password); 
 			if (isOkThePassword) {
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;

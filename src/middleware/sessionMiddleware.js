@@ -1,7 +1,10 @@
-module.exports = (req,res,next) =>{
+
+function sessionMiddleware (req,res,next) {
+    res.locals.userLogin = false;
     if(req.session.userLogged){
-        const locals = req.session.userLogged
-        res.render({locals : locals})
+    res.locals.userLogin = true;     
+    res.locals.userLogged = req.session.userLogged ;          
     }
     next()
 }
+module.exports = sessionMiddleware;
