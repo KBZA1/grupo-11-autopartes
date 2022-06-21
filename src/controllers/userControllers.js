@@ -5,6 +5,7 @@ const usersPath = path.join(__dirname, "../data/users.json");
 const usersR = fs.readFileSync(usersPath, "utf-8");
 const user = JSON.parse(usersR);
 const {errors} = require ("express-validator");
+const bcryptjs = require('bcryptjs');
 
 module.exports = {
     login: (req,res)=> { res.render(path.join(__dirname,"../views/users/login"))},
@@ -12,8 +13,8 @@ module.exports = {
     loginProcess: (req, res) => {
 		let userToLogin = user.find(element => element.email == req.body.email);
 		if(userToLogin) {
-			//let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password); No tengo aplicado el hash en el register.
-			if (req.body.password == userToLogin.password) {
+			let isOkThePassword = bcryptjs.compareSync( userToLogin.password, req.body.password); 
+			if (isOkThePassword) {
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
 				//if(req.body.remember_user) {
@@ -48,7 +49,8 @@ module.exports = {
         let newUser = {
             id: Number(user[user.length - 1].id + 1),
             
-                ...req.body
+                ...req.body,
+                password : bcryptjs.hashSync(req.body.password, 10)
             ,
             imagen: image
         };
@@ -58,14 +60,18 @@ module.exports = {
     },
     users: (req,res)=> { res.render(path.join(__dirname,"../views/users/users"), { user : user})},
 
+    //sesion: (req,res)=> {
+    //    const userId = user.find(element => element.id == req.params.id);
+    //    res.render(path.join(__dirname,"../views/users/user"), { userId : userId })
+    //   },
+
     profile: (req,res)=> {
-    //req.session.usserLoged= 
     res.render(path.join(__dirname,"../views/users/profile"), { userId : req.session.userLogged })
     },
 
     edit: (req,res)=> { 
-        const userf = user.find(element => element.id == req.params.id);
-        res.render(path.join(__dirname,"../views/users/edit"), {userId : userf})
+        //const userf = user.find(element => element.id == req.params.id);
+        res.render(path.join(__dirname,"../views/users/edit"), {userId : req.session.userLogged })
     },
 
     update: (req,res)=> { 

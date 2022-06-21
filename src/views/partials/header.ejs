@@ -6,7 +6,14 @@
             <div class="input" ><i class="fa fa-search"></i> ¿Que repuesto estas buscando? </div>
         </div>
         <div class="user-cart">
-        <a href="/acceso"><i class="fa-solid fa-user"></i></a>
+        
+        <% if(locals){ %>
+            <a href="/acceso" ><img style="border-radius: 100%" src="\images\user\<%=locals.imagen%>" >Imagen</img></a>
+            <a style= "font-size : 12px" href="/user/profile" role="button">Perfil</a>
+            <a style= "font-size : 12px" href="/logout" role= "button">LogOut</a>
+            <%}else{ %>
+            <a href="/acceso" ><i class="fa-solid fa-user"></i></a>
+            <%}%>
         <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>         
     </div>

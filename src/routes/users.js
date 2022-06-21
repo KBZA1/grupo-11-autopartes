@@ -41,6 +41,7 @@ router.post("/", upload.single("imagen"), userControllers.create);
 
 router.get("/users", userControllers.users);
 
+//router.get("/user/:id", userControllers.sesion);
 router.get("/user/edit/:id", userControllers.edit);
 router.put("/user/edit/:id", upload.single("imagen"), userControllers.update);
 router.delete("/user/delete/:id", userControllers.delete);

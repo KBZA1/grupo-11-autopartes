@@ -3,28 +3,14 @@
   "id": "1",
   "nombre": "bruno",
   "email": "osmango9697@gmail.com",
-  "password": "144785",
+  "password": "$2a$10$XMQabUjhwVafJz0eRbBV/ONCOH/qgqA.UyFolZ0tp1A9BxFYdsPcW",
   "imagen": "image-1655069248640"
  },
  {
-  "id": 2,
-  "nombre": "Osman1234",
-  "email": "osmango9682@hotmail.com",
-  "password": "1478",
-  "imagen": "image-1655072189534"
- },
- {
-  "id": 3,
-  "nombre": "bruno",
-  "email": "osmango9697@gmail.com",
-  "password": "123456",
+  "id": 11,
+  "nombre": "Osman",
+  "email": "osmango96@gmail.com",
+  "password": "$2a$10$kf83RZJOm8Oyx1uDEAQu/.VSP/OH7/5RKvLvBuu0uKN4s.BR0L/Gu",
   "imagen": "image-default-user.png"
- },
- {
-  "id": 5,
-  "nombre": "OSMAN-ESTOY DE OFERTA",
-  "email": "osmango96@hotmail.com",
-  "password": "sdfsadf",
-  "imagen": "image-1655078825288"
  }
 ]
