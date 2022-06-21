@@ -8,7 +8,7 @@
         <div class="user-cart">
         
         <% if(locals.userLogin){ %>
-            <img src="\images\user\<%=locals.userLogged.imagen%>" width="40"; style="border-radius: 100%;"></img>
+            <img src="\images\user\<%=locals.userLogged.imagen%>" style="border-radius: 100% ; width: 40px"></img>
             <a style= "font-size : 12px" href="/user/profile" role="button">Perfil</a>
             <a style= "font-size : 12px" href="/logout" role= "button">LogOut</a>
             <%}else{ %>
