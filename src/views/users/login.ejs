@@ -9,7 +9,7 @@
     <div class="login-box">
         <% if(locals.errors && errors.email) { %>
             <div>
-                <%= errors.email.msg %>
+                <p style="color: red"><%= errors.email.msg %></p>
             </div>
         <% } %>
         <h1>Ingresá</h1>

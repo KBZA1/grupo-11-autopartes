@@ -8,9 +8,12 @@
         <div class="user-cart">
         
         <% if(locals.userLogin){ %>
-            <img src="\images\user\<%=locals.userLogged.imagen%>" style="border-radius: 100% ; width: 40px"></img>
-            <a style= "font-size : 12px" href="/user/profile" role="button">Perfil</a>
-            <a style= "font-size : 12px" href="/logout" role= "button">LogOut</a>
+            <a href="#" style= "font-size : 12px">
+                <img src="\images\user\<%=locals.userLogged.imagen%>" style="border-radius: 100% ; width: 40px"></img>
+                Hola, <%=locals.userLogged.nombre%>!
+            </a>
+            <a style= "font-size : 12px" href="/user/profile">Perfil</a>
+            <a style= "font-size : 12px" href="/logout">Cerrar sesión</a>
             <%}else{ %>
             <a href="/acceso" ><i class="fa-solid fa-user"></i></a>
             <%}%>
