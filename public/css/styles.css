@@ -493,6 +493,10 @@ section .wrapper article .row .label-antes{
     display: flex;
     margin-right: 15px;
 }
+.bottom{
+    position: absolute;
+    bottom: 0;
+}
 section .wrapper article .row .label-ahora{
     color: black;
     font-size: 22px;
