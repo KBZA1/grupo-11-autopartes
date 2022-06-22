@@ -11,10 +11,10 @@ module.exports = {
     login: (req,res)=> { res.render(path.join(__dirname,"../views/users/login"))},
     
     loginProcess: (req, res) => {
-		 let userToLogin = ()=>{ user.find(element => element.email == req.body.email)};
+		 let userToLogin =  user.find(element => element.email == req.body.email);
 
 		if(userToLogin) {
-			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password); 
+			let isOkThePassword = () => {bcryptjs.compareSync(req.body.password, userToLogin.password)}; 
 			if (isOkThePassword) {
 				delete userToLogin.password;// ME BORRA EL PASS PARA VOLVERME A LOGEAR.
 				req.session.userLogged = userToLogin;
