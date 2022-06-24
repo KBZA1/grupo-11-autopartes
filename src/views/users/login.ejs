@@ -7,11 +7,16 @@
 <body>
     <%- include("../partials/header") %>
     <div class="login-box">
+        <% if(locals.errors && errors.email) { %>
+            <div>
+                <p style="color: red"><%= errors.email.msg %></p>
+            </div>
+        <% } %>
         <h1>Ingresá</h1>
-        <form>
-            <input class="campos" type="email" placeholder="Email">
-            <input class="campos" type="password" placeholder="Contraseña">
-            <input class="ingresar" type="button" value="Ingresar">
+        <form method="POST" action="/acceso">
+            <input class="campos" type="email" name="email" placeholder="Email">
+            <input class="campos" type="password" name="password" placeholder="Contraseña">
+            <button class="ingresar" type="submit">Ingresar</button>
         </form>
     </div>
     <p class="para-registrarse">No tenes cuenta?<a href="/registro"> Registrate aqui </a> </p>

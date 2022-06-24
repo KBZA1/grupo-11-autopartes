@@ -48,14 +48,13 @@
  },
  {
   "id": 5,
-  "nombre": "Enfriador de Aceite",
-  "descripcion": "xxxxxxx",
-  "imagen": "enfriador-aceite.webp",
-  "categoria": "Enfriador de aceite",
+  "nombre": "Enfriador de Aceite125",
+  "descripcion": "  xxxxxxx",
   "marca": "Ford",
-  "precio": 10999,
-  "descuento": 15,
-  "codigo": 5,
-  "stock": 10
+  "precio": "asdf",
+  "descuento": "15",
+  "codigo": "5",
+  "stock": "10",
+  "imagen": "enfriador-aceite.webp"
  }
 ]

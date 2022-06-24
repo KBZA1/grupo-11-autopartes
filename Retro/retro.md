@@ -22,3 +22,12 @@ Retrospectiva Sprint 3
 En este sprint estuvimos un poco mas perdidos en cuanto a lo visto para implementar en el proyecto, la parte de controllers y rutas nos mareo bastante pero pudimos sacarlo adelante, nos faltan reforzar conceptos y seguir practicando. Como grupo estamos mas afianzados, tratando de dividir las tareas de una mejor manera y encarando, como seria nuestra politica, el tema mas dificil entre todos. A nivel proyecto nos faltan varias cosas porque vamos tocando y cambiando a medida que vamos avanzando y que podemos dedicarle mas tiempo.
 Ya para este punto del proyecto notamos que cada uno se va haciendo fuerte en lo que mas le gusta o el tema que mas entiende, lo cual es beneficioso para otro integrante que no haya entendido y nos lo puede hacer entender desde otro punto de vista.
 Como punto de mejora tendriamos que terminar de definir algunas cuestiones de que cosa queremos agregar y sacar de nuestro proyecto, tambien en mantener nuestro tablero de trabajo mas organizado.
+
+Retrospectiva Sprint 4
+
+Para el principio de este Sprint priorizamos modificar los estilos de nuestra web ya que teniamos varias cosas para mejorar en ese sentido. El CRUD nos llevó un buen tiempo pero lo pudimos sacar adelante. Una dificultad que tuvimos es que a medida que agregabamos funciones algo se nos rompia por otro lado, por lo cual era hacer y revisar lo anterior para dejar todo funcionando OK. Tomamos una medida un poco mas grupal para avanzar sobre las cosas mas complicadas, y lo mas simple se dividia. Como buen punto para mejorar seria ya reveer que partes vamos a querer modificar teniendo en cuenta que estamos llegando al fianl del curso y queremos hacer una buena presentacion acorde a nuestros criterios y tiempos. 
+
+Retrospectiva Sprint 5
+
+En este Sprint nos dividimos un poco mas las tareas que anteriormente, imponiendo plazos estimados. Se pudo llegar con exito al final, con algunas complicaciones para reunirnos. Hubo problemas con los estilos para cuando se crea una pagina nueva, pero se pudo resolver. 
+Punto para mejorar en estos ultimos pasos que quedan es afianzar las reuniones para llegar al final de esto bien completo el proyecto para cumplir con los objetivos grupales. Mas alla de las complicaciones para las reuniones, creemos que trabajamos de buena manera como grupo y una buena comunicacion entre todos los integrantes.
