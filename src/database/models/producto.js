@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) =>{
-    let alias = "Producto";
+    let alias = "producto";
     let cols ={
         id:{
             type: dataTypes.INTEGER.UNSIGNED,
@@ -32,16 +32,16 @@ module.exports = (sequelize, dataTypes) =>{
         }
         }
         let config = {
-            tableName: "Producto",
+            tableName: "producto",
             timestamps: false
         }
         const producto = sequelize.define(alias, cols, config)
 
         producto.associate = function (models){
-            producto.belongsTo(models.marca,{ //Usuario seria el valor a usar de alias en ese archivo
+            producto.belongsTo(models.marca,{ 
              foreingKey: marca_id 
             })
-            producto.belongsTo(models.categoria,{ //Usuario seria el valor a usar de alias en ese archivo
+            producto.belongsTo(models.categoria,{ 
                 foreingKey: categoria_id 
                })
             producto.belongsToMany(models.imagen,{

@@ -17,7 +17,7 @@ module.exports = (sequelize, dataTypes) =>{
         const usuario_categoria = sequelize.define(alias, cols, config)
 
         usuario_categoria.associate = function (models){
-            usuario_categoria.hasMany(models.Usuario,{ //Usuario seria el valor a usar de alias en ese archivo
+            usuario_categoria.hasMany(models.usuario,{ 
              as: "usuario",
              foreingKey: categoria_id 
             })

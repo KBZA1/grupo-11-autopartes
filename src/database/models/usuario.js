@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) =>{
-    let alias = "Usuario";
+    let alias = "usuario";
     let cols ={
         id:{
             type: dataTypes.INTEGER.UNSIGNED,
@@ -28,13 +28,13 @@ module.exports = (sequelize, dataTypes) =>{
         }
         }
         let config = {
-            tableName: "Usuario",
+            tableName: "usuario",
             timestamps: false
         }
         const usuario = sequelize.define(alias, cols, config)
 
         usuario.associate = function (models){
-            usuario.belongsTo(models.usuario_categoria,{ //Usuario seria el valor a usar de alias en ese archivo
+            usuario.belongsTo(models.usuario_categoria,{ 
              foreingKey: categoria_id 
             })
 

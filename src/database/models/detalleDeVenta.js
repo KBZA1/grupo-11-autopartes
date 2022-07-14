@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) =>{
-    let alias = "Detalle de venta";
+    let alias = "detalleDeVenta";
     let cols ={
         id:{
             type: dataTypes.INTEGER.UNSIGNED,
@@ -24,18 +24,18 @@ module.exports = (sequelize, dataTypes) =>{
         }
         }
         let config = {
-            tableName: "Detalle de venta",
+            tableName: "detalledeventa",
             timestamps: false
         }
         const detalleDeVenta = sequelize.define(alias, cols, config)
 
         detalleDeVenta.associate = function (models){
-            detalleDeVenta.hasMany(models.producto,{ //Usuario seria el valor a usar de alias en ese archivo
+            detalleDeVenta.hasMany(models.producto,{ 
              foreingKey: producto_id 
             })
 
-
-               // REVISAR ESTAS RELACIONES DIA JUEVEEEEEEEEEEEEEEEEEEEES
+                // Falta relaciones con detalleDeVenta en producto.js y compra.js
+                // REVISAR ESTAS RELACIONES DIA JUEVEEEEEEEEEEEEEEEEEEEES
 
 
         detalleDeVenta.belongsTo(models.compra,{

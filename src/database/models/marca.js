@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) =>{
-    let alias = "Marca";
+    let alias = "marca";
     let cols ={
         id:{
             type: dataTypes.INTEGER,
@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) =>{
         const marca = sequelize.define(alias, cols, config)
 
         marca.associate = function (models){
-            marca.hasMany(models.Producto,{ //Producto seria el valor a usar de alias en ese archivo
+            marca.hasMany(models.producto,{ 
              as: "Producto",
              foreingKey: marca_id 
             })
