@@ -1,8 +1,9 @@
-module.exports = {
+module.exports=
+ {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "database_development",
+    "password": "",
+    "database": "distripart",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -19,5 +20,5 @@ module.exports = {
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
-  }
+  },
 }
