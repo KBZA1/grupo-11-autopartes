@@ -7,6 +7,7 @@ const path = require ("path");
 //const products= JSON.parse(productsJson)
 const db = require("../database/models");
 const producto = require("../database/models/producto");
+//crear const marca ?
 
 
 const controller = {
@@ -50,7 +51,7 @@ const controller = {
         });
         res.redirect('/');
     },
-    products: (req, res) => {res.render(path.join(__dirname,"../views/products/products"),{productos:productos})
+    products: (req, res) => {res.render(path.join(__dirname,"../views/products/products"),{products:productos}) 
     //(req, res) =>{res.render(path.join(__dirname,"../views/products/products"),{products:products})
     
     },
@@ -86,8 +87,8 @@ const controller = {
     //    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
         res.redirect("/");
     },
-    edit: (req, res) => { //VER FORMULARIO DE EDICION.
-    let productosEdit = db.productos.findByPk(req.params.id);
+    edit: (req, res) => { //VER FORMULARIO DE EDICION. 
+        let productosEdit = db.productos.findByPk(req.params.id);
         let productoCategoria = db.categoria.findAll();
         Promise.all([productoEdit, ProductoCategoria])
         .then(function([producto, categoria]){

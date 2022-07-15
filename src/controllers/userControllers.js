@@ -6,13 +6,15 @@ const usersR = fs.readFileSync(usersPath, "utf-8");
 const user = JSON.parse(usersR);
 const {errors} = require ("express-validator");
 const bcryptjs = require('bcryptjs');
+const db = require("../database/models");
+const usuario = require("../database/models/usuario");
 
 module.exports = {
     login: (req,res)=> { res.render(path.join(__dirname,"../views/users/login"))},
     
     loginProcess: (req, res) => {
-		 let userToLogin =  user.find(element => element.email == req.body.email);
-
+		//let userToLogin =  user.find(element => element.email == req.body.email);
+        //
 		if(userToLogin) {
 			let isOkThePassword = () => {bcryptjs.compareSync(req.body.password, userToLogin.password)}; 
 			if (isOkThePassword) {
