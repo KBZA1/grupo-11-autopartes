@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) =>{
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        precio:{
+        precio:{  //PREGUNTAR A NATALIA.
             type: dataTypes.DECIMAL(5,2),
             allowNull: false
         }
@@ -33,11 +33,6 @@ module.exports = (sequelize, dataTypes) =>{
             detalleDeVenta.hasMany(models.producto,{ 
              foreingKey: producto_id 
             })
-
-                // Falta relaciones con detalleDeVenta en producto.js y compra.js
-                // REVISAR ESTAS RELACIONES DIA JUEVEEEEEEEEEEEEEEEEEEEES
-
-
         detalleDeVenta.belongsTo(models.compra,{
              foreingKey: compra_id
             })

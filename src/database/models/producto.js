@@ -24,8 +24,8 @@ module.exports = (sequelize, dataTypes) =>{
         descuento:{
             type: dataTypes.INTEGER,
         },
-        marca_id:{
-            type: dataTypes.INTEGER.UNSIGNED,
+        marca:{
+            type: dataTypes.VARCHAR(15),
         },
         categoria_id:{
             type: dataTypes.INTEGER.UNSIGNED
@@ -38,15 +38,15 @@ module.exports = (sequelize, dataTypes) =>{
         const producto = sequelize.define(alias, cols, config)
 
         producto.associate = function (models){
-            producto.belongsTo(models.marca,{ 
-             foreingKey: marca_id 
-            })
             producto.belongsTo(models.categoria,{ 
                 foreingKey: categoria_id 
                })
-            producto.belongsToMany(models.imagen,{
+            producto.hasMany(models.imagen,{
                 foreingKey: producto_id
-            })   
+            }) 
+            producto.belongsTo(models.detalleDeVenta,{
+                foreingKey: producto_id
+            })
         }
 
         return producto;

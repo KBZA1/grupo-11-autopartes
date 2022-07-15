@@ -21,7 +21,7 @@ module.exports = (sequelize, dataTypes) =>{
         const imagen = sequelize.define(alias, cols, config)
 
         imagen.associate = function (models){
-            imagen.hasMany(models.producto,{ //Usuario seria el valor a usar de alias en ese archivo
+            imagen.hasMany(models.producto,{ 
              as: "producto",
              foreingKey: producto_id 
             })

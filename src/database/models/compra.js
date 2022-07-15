@@ -25,10 +25,14 @@ module.exports = (sequelize, dataTypes) =>{
         const compra = sequelize.define(alias, cols, config)
 
         compra.associate = function (models){
-           compra.belongsTo(models.usuario,{ 
+            compra.belongsTo(models.usuario,{ 
              foreingKey: usuario_id 
             })
+            compra.hasMany(models.detalleDeVenta,{
+                foreingKey: compra_id
+            })
         }
+        
 
-        return usuario;
+        return compra;
     };

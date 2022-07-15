@@ -6,8 +6,8 @@ const path = require ("path");
 //const productsJson = fs.readFileSync(productsFilePath, "utf-8")
 //const products= JSON.parse(productsJson)
 const db = require("../database/models");
-const producto = require("../database/models/producto");
-//crear const marca ?
+//const producto = require("../database/models/producto");
+//crear const categoria ?
 
 
 const controller = {
@@ -16,9 +16,9 @@ const controller = {
     detalle: (req, res) =>{
         //const productos = products.find(element => element.id == req.params.id);
         //res.render(path.join(__dirname,"../views/products/productDetail"),{productos:productos})
-        db.productos.findByPk(req.params.id)
+        db.producto.findByPk(req.params.id)
             .then(function(productos){
-                include:[{association: "marca"}, {association:"categoria"}, {association:"imagen"}]
+                include:[{association:"categoria"}, {association:"imagen"}]
                 return res.render("productDetail", {productos:productos})
             })
     },
@@ -40,35 +40,44 @@ const controller = {
         //};
         //products.push(newProduct)
         //fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "))
-        db.productos.create({
+        db.producto.create({
             nombre: req.body.nombre,
             precio: req.body.precio,
             stock: req.body.stock,
             descripcion: req.body.descripcion,
             descuento: req.body.descuento,
-            marca_id: req.body.marca,  // duda crear un nuevo db.marca.create para la marca?
-            categoria_id: req.body.categoria  // duda crear un nuevo db.categoria.create para la categoria?
-        });
-        res.redirect('/');
+            marca: req.body.marca,
+            categoria_id: req.body.categoria  
+        })
+        .then(()=> {
+            return res.redirect('/')})            
+        .catch(error => res.send(error));
     },
-    products: (req, res) => {res.render(path.join(__dirname,"../views/products/products"),{products:productos}) 
+    products: (req, res) => {
+        db.producto.findAll()
+        .then(function(producto){
+            res.render(path.join(__dirname,"../views/products/products"),{products:producto})
+        })
     //(req, res) =>{res.render(path.join(__dirname,"../views/products/products"),{products:products})
     
     },
     update: (req, res) => {
-        db.productos.update({
+        db.producto.update({
             nombre: req.body.nombre,
             precio: req.body.precio,
             stock: req.body.stock,
             descripcion: req.body.descripcion,
             descuento: req.body.descuento,
-            marca_id: req.body.marca,  // duda crear un nuevo db.marca.create para la marca?
-            categoria_id: req.body.categoria  // duda crear un nuevo db.categoria.create para la categoria?
+            marca: req.body.marca, 
+            categoria_id: req.body.categoria  
         },{
             where: {
                 id: req.params.id
             }
-        });        
+        })
+        .then(()=> {
+            return res.redirect('/')})            
+        .catch(error => res.send(error));;        
     //(req, res) => {
     //    let id = Number(req.params.id);
     //    let productToEdit = products.find(product => product.id == id)
@@ -85,12 +94,11 @@ const controller = {
     //        }
     //    }
     //    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-        res.redirect("/");
     },
     edit: (req, res) => { //VER FORMULARIO DE EDICION. 
-        let productosEdit = db.productos.findByPk(req.params.id);
+        let productosEdit = db.producto.findByPk(req.params.id);
         let productoCategoria = db.categoria.findAll();
-        Promise.all([productoEdit, ProductoCategoria])
+        Promise.all([productoEdit, productoCategoria])
         .then(function([producto, categoria]){
                 res.render(path.join(__dirname,"../views/products/form-edit-product"),{producto:producto, categoria:categoria})})
         //(req, res) =>{
@@ -102,9 +110,13 @@ const controller = {
     destroy: (req, res) => { //BORRAR ASOCIACIONES PRIMERO?
         db.producto.destroy({
             where:{
-                id:req.params.id
+                id:req.params.id,
+                force: true
             }
         })
+        .then(()=> {
+            return res.redirect('/')})            
+        .catch(error => res.send(error));
         //let id = req.params.id;
         //let finalProducts = products.filter (product => product.id != id);
         //fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
