@@ -2,33 +2,33 @@ module.exports = (sequelize, dataTypes) =>{
     let alias = "producto";
     let cols ={
         id:{
-            type: dataTypes.INTEGER.UNSIGNED,
+            type: dataTypes.TINYINT(15).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
         nombre:{
-            type: dataTypes.VARCHAR(500),
+            type: dataTypes.STRING(500),
             allowNull: false
         },
         precio:{
-            type: dataTypes.FLOAT,
+            type: dataTypes.TINYINT(15),
             allowNull: false
         },
         stock:{
-            type: dataTypes.INTEGER,
+            type: dataTypes.TINYINT(15),
             allowNull: false
         },
         descripcion:{
-            type: dataTypes.LONGTEXT,
+            type: dataTypes.STRING(500),
         },
         descuento:{
-            type: dataTypes.INTEGER,
+            type: dataTypes.TINYINT(15),
         },
         marca:{
-            type: dataTypes.VARCHAR(15),
+            type: dataTypes.STRING(15),
         },
         categoria_id:{
-            type: dataTypes.INTEGER.UNSIGNED
+            type: dataTypes.TINYINT(15).UNSIGNED
         }
         }
         let config = {
@@ -39,13 +39,16 @@ module.exports = (sequelize, dataTypes) =>{
 
         producto.associate = function (models){
             producto.belongsTo(models.categoria,{ 
-                foreingKey: categoria_id 
+                as: "categoria",
+                foreignKey: "categoria_id"
                })
             producto.hasMany(models.imagen,{
-                foreingKey: producto_id
+                as: "imagen",
+                foreignKey: "producto_id"
             }) 
             producto.belongsTo(models.detalleDeVenta,{
-                foreingKey: producto_id
+                as: "detalleDeVenta",
+                foreignKey: "detalleDeVenta_id"
             })
         }
 

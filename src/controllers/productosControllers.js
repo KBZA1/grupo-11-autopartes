@@ -16,9 +16,10 @@ const controller = {
     detalle: (req, res) =>{
         //const productos = products.find(element => element.id == req.params.id);
         //res.render(path.join(__dirname,"../views/products/productDetail"),{productos:productos})
-        db.producto.findByPk(req.params.id)
+        db.producto.findByPk(req.params.id, {
+            include:[{association:"categoria"}, {association:"imagen"}]
+        })
             .then(function(productos){
-                include:[{association:"categoria"}, {association:"imagen"}]
                 return res.render("productDetail", {productos:productos})
             })
     },

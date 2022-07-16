@@ -2,16 +2,16 @@ module.exports = (sequelize, dataTypes) =>{
     let alias = "imagen";
     let cols ={
         id:{
-            type: dataTypes.INTEGER.UNSIGNED,
+            type: dataTypes.TINYINT(15).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
         nombreImagen:{
-            type: dataTypes.VARCHAR(10000),
+            type: dataTypes.STRING(10000),
             allownull: false
         },
         producto_id:{
-            type: dataTypes.INTEGER.UNSIGNED,
+            type: dataTypes.TINYINT(15).UNSIGNED,
         }
         }
         let config = {
@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) =>{
         imagen.associate = function (models){
             imagen.hasMany(models.producto,{ 
              as: "producto",
-             foreingKey: producto_id 
+             foreignKey: "imagen_id" 
             })
         }
 
