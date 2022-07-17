@@ -28,7 +28,7 @@ module.exports = (sequelize, dataTypes) =>{
             type: dataTypes.STRING(15),
         },
         categoria_id:{
-            type: dataTypes.TINYINT(15).UNSIGNED,
+            type: dataTypes.TINYINT(15),
         },
         imagen: {
             type: dataTypes.STRING(100),
@@ -43,15 +43,15 @@ module.exports = (sequelize, dataTypes) =>{
         producto.associate = function (models){
             producto.belongsTo(models.categoria,{ 
                 as: "categoria",
-                foreingKey: "categoria_id"
+                foreignKey: "categoria_id"
                })
             /*producto.hasMany(models.imagen,{
                 as: "imagen",
                 foreingKey: "producto_id"
             }) */
-            producto.belongsTo(models.detalleDeVenta,{
+            /*producto.belongsTo(models.detalleDeVenta,{
                 foreingKey: "producto_id"
-            })
+            })*/
         }
 
         return producto;

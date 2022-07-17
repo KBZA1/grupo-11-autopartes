@@ -17,10 +17,10 @@ const controller = {
         //const productos = products.find(element => element.id == req.params.id);
         //res.render(path.join(__dirname,"../views/products/productDetail"),{productos:productos})
         db.producto.findByPk(req.params.id, {
-            include:[{association:"categoria"}, {association:"imagen"}]
+            include:[{association:"categoria"} /*{association:"imagen"}*/]
         })
             .then(function(productos){
-                return res.render("productDetail", {productos:productos})
+                return res.render(path.join(__dirname,"../views/products/productDetail"), {productos:productos})
             })
     },
     /*crear: (req, res) =>{res.render(path.join(__dirname,"../views/products/creacionProducto"))
