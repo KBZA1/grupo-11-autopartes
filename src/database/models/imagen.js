@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) =>{
             autoIncrement: true
         },
         nombreImagen:{
-            type: dataTypes.VARCHAR(10000),
+            type: dataTypes.STRING(10000),
             allownull: false
         },
         producto_id:{
@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) =>{
         imagen.associate = function (models){
             imagen.hasMany(models.producto,{ 
              as: "producto",
-             foreingKey: producto_id 
+             foreingKey: "producto_id"
             })
         }
 

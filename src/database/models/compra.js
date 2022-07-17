@@ -26,10 +26,10 @@ module.exports = (sequelize, dataTypes) =>{
 
         compra.associate = function (models){
             compra.belongsTo(models.usuario,{ 
-             foreingKey: usuario_id 
+             foreingKey: "usuario_id"
             })
             compra.hasMany(models.detalleDeVenta,{
-                foreingKey: compra_id
+                foreingKey: "compra_id"
             })
         }
         

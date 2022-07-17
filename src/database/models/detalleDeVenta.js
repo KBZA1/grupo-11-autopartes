@@ -31,10 +31,10 @@ module.exports = (sequelize, dataTypes) =>{
 
         detalleDeVenta.associate = function (models){
             detalleDeVenta.hasMany(models.producto,{ 
-             foreingKey: producto_id 
+             foreingKey: "producto_id"
             })
         detalleDeVenta.belongsTo(models.compra,{
-             foreingKey: compra_id
+             foreingKey: "compra_id"
             })
         }
 

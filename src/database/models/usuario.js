@@ -7,19 +7,19 @@ module.exports = (sequelize, dataTypes) =>{
             autoIncrement: true
         },
         nombre:{
-            type: dataTypes.VARCHAR(50).NOTNULL,
+            type: dataTypes.STRING(50),
             allowNull: false
         },
         email:{
-            type: dataTypes.VARCHAR(200),
+            type: dataTypes.STRING(200),
             allowNull: false
         },
         pass:{
-            type: dataTypes.VARCHAR(15),
+            type: dataTypes.STRING(15),
             allowNull: false
         },
         imagen:{
-            type: dataTypes.VARCHAR(10000),
+            type: dataTypes.STRING(10000),
             allowNull: false
         },
         categoria_id:{
@@ -35,13 +35,13 @@ module.exports = (sequelize, dataTypes) =>{
 
         usuario.associate = function (models){
             usuario.belongsTo(models.usuario_categoria,{ 
-             foreingKey: categoria_id 
+             foreingKey: "categoria_id"
             })
 
             usuario.hasMany(models.compra,{
-             foreingKey: usuario_id
+             foreingKey: "usuario_id"
             })
         }
 
-        return usuario;
+    return usuario;
     };

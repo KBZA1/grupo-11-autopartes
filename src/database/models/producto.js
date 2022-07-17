@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) =>{
             autoIncrement: true
         },
         nombre:{
-            type: dataTypes.VARCHAR(500),
+            type: dataTypes.STRING(500),
             allowNull: false
         },
         precio:{
@@ -19,13 +19,13 @@ module.exports = (sequelize, dataTypes) =>{
             allowNull: false
         },
         descripcion:{
-            type: dataTypes.LONGTEXT,
+            type: dataTypes.STRING(150000),
         },
         descuento:{
             type: dataTypes.INTEGER,
         },
         marca:{
-            type: dataTypes.VARCHAR(15),
+            type: dataTypes.STRING(15),
         },
         categoria_id:{
             type: dataTypes.INTEGER.UNSIGNED
@@ -39,13 +39,13 @@ module.exports = (sequelize, dataTypes) =>{
 
         producto.associate = function (models){
             producto.belongsTo(models.categoria,{ 
-                foreingKey: categoria_id 
+                foreingKey: "categoria_id"
                })
             producto.hasMany(models.imagen,{
-                foreingKey: producto_id
+                foreingKey: "producto_id"
             }) 
             producto.belongsTo(models.detalleDeVenta,{
-                foreingKey: producto_id
+                foreingKey: "producto_id"
             })
         }
 
