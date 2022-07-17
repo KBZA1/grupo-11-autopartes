@@ -34,12 +34,14 @@ module.exports = (sequelize, dataTypes) =>{
         const usuario = sequelize.define(alias, cols, config)
 
         usuario.associate = function (models){
-            usuario.belongsTo(models.usuario_categoria,{ 
-             foreingKey: "categoria_id"
+            usuario.belongsTo(models.usuario_categoria,{
+                as: "categoria", 
+                foreignKey: "categoria_id"
             })
 
             usuario.hasMany(models.compra,{
-             foreingKey: "usuario_id"
+                as: "compra",
+                foreignKey: "usuario_id"
             })
         }
 

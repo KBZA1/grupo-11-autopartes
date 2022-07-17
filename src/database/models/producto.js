@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) =>{
     let alias = "producto";
     let cols ={
         id:{
-            type: dataTypes.INTEGER.UNSIGNED,
+            type: dataTypes.TINYINT(15).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
@@ -11,24 +11,28 @@ module.exports = (sequelize, dataTypes) =>{
             allowNull: false
         },
         precio:{
-            type: dataTypes.FLOAT,
+            type: dataTypes.TINYINT(15),
             allowNull: false
         },
         stock:{
-            type: dataTypes.INTEGER,
+            type: dataTypes.TINYINT(15),
             allowNull: false
         },
         descripcion:{
+<<<<<<< HEAD
             type: dataTypes.STRING(150000),
+=======
+            type: dataTypes.STRING(500),
+>>>>>>> f07868c9a2c2ba933876b4c3d40fb444be9c56c5
         },
         descuento:{
-            type: dataTypes.INTEGER,
+            type: dataTypes.TINYINT(15),
         },
         marca:{
             type: dataTypes.STRING(15),
         },
         categoria_id:{
-            type: dataTypes.INTEGER.UNSIGNED
+            type: dataTypes.TINYINT(15).UNSIGNED
         }
         }
         let config = {

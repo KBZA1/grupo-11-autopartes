@@ -2,20 +2,20 @@ module.exports = (sequelize, dataTypes) =>{
     let alias = "detalleDeVenta";
     let cols ={
         id:{
-            type: dataTypes.INTEGER.UNSIGNED,
+            type: dataTypes.TINYINT(15).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
         cantidad:{
-            type: dataTypes.INTEGER,
+            type: dataTypes.TINYINT(15),
             allowNull: false
         },
         compra_id:{
-            type: dataTypes.INTEGER,
+            type: dataTypes.TINYINT(15),
             allowNull: false
         },
         producto_id:{
-            type: dataTypes.INTEGER,
+            type: dataTypes.TINYINT(15),
             allowNull: false
         },
         precio:{  //PREGUNTAR A NATALIA.
@@ -31,10 +31,12 @@ module.exports = (sequelize, dataTypes) =>{
 
         detalleDeVenta.associate = function (models){
             detalleDeVenta.hasMany(models.producto,{ 
-             foreingKey: "producto_id"
+                as: "productoDetalleVenta",
+                foreignKey: "producto_id"
             })
         detalleDeVenta.belongsTo(models.compra,{
-             foreingKey: "compra_id"
+            as: "compra",
+            foreignKey: "compra_id"
             })
         }
 

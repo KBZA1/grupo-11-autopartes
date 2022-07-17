@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) =>{
     let alias = "imagen";
     let cols ={
         id:{
-            type: dataTypes.INTEGER.UNSIGNED,
+            type: dataTypes.TINYINT(15).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) =>{
             allownull: false
         },
         producto_id:{
-            type: dataTypes.INTEGER.UNSIGNED,
+            type: dataTypes.TINYINT(15).UNSIGNED,
         }
         }
         let config = {
