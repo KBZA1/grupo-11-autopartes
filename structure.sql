@@ -32,7 +32,7 @@ precio float NOT NULL,
 stock INT NOT NULL,
 descripcion varchar(500),
 descuento INT,
-marca INT,
+marca VARCHAR(100),
 categoria_id INT UNSIGNED,
 FOREIGN KEY (categoria_id) REFERENCES categoria(id)
 );

@@ -19,11 +19,7 @@ module.exports = (sequelize, dataTypes) =>{
             allowNull: false
         },
         descripcion:{
-<<<<<<< HEAD
             type: dataTypes.STRING(150000),
-=======
-            type: dataTypes.STRING(500),
->>>>>>> f07868c9a2c2ba933876b4c3d40fb444be9c56c5
         },
         descuento:{
             type: dataTypes.TINYINT(15),
@@ -32,7 +28,10 @@ module.exports = (sequelize, dataTypes) =>{
             type: dataTypes.STRING(15),
         },
         categoria_id:{
-            type: dataTypes.TINYINT(15).UNSIGNED
+            type: dataTypes.TINYINT(15).UNSIGNED,
+        },
+        imagen: {
+            type: dataTypes.STRING(100),
         }
         }
         let config = {
@@ -43,11 +42,13 @@ module.exports = (sequelize, dataTypes) =>{
 
         producto.associate = function (models){
             producto.belongsTo(models.categoria,{ 
+                as: "categoria",
                 foreingKey: "categoria_id"
                })
-            producto.hasMany(models.imagen,{
+            /*producto.hasMany(models.imagen,{
+                as: "imagen",
                 foreingKey: "producto_id"
-            }) 
+            }) */
             producto.belongsTo(models.detalleDeVenta,{
                 foreingKey: "producto_id"
             })

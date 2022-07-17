@@ -23,7 +23,7 @@ const controller = {
                 return res.render("productDetail", {productos:productos})
             })
     },
-    crear: (req, res) =>{res.render(path.join(__dirname,"../views/products/creacionProducto"))
+    /*crear: (req, res) =>{res.render(path.join(__dirname,"../views/products/creacionProducto"))
     },
     crearProducto: (req, res)=>{
         let image;
@@ -122,6 +122,6 @@ const controller = {
         //let finalProducts = products.filter (product => product.id != id);
         //fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
         res.redirect ("/");
-    },
+    },*/
 }
 module.exports = controller; 
