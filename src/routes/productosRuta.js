@@ -20,18 +20,18 @@ const upload = multer({storage});
 /*-----APLICAR CARRITO------*/
 router.get("/carrito", productosControllers.carrito); 
 /*-----APLICAR CREATE------*/   
-/*router.get("/create", productosControllers.crear);
+router.get("/create", productosControllers.crear);
 router.post("/products", upload.single("imagen"),productosControllers.crearProducto);      
 /*-----PRODUCT------*/
-/*router.get("/products", productosControllers.products);
+router.get("/products", productosControllers.products);
 /*-----PRODUCT DETAILS------*/
 router.get("/:id", productosControllers.detalle);
 /*-----APLICAR EDIT ONE PRODUCT------*/
-/*router.get("/:id/edit", productosControllers.edit);
+router.get("/:id/edit", productosControllers.edit);
 router.put("/:id/edit",  upload.single("imagen"), productosControllers.update);
 
 /* ---- APLICAR DELETE ONE PRODUCT ---- */
- /*router.delete("/delete/:id", productosControllers.destroy);*/
+ router.delete("/delete/:id", productosControllers.destroy);
 
 
 module.exports = router;

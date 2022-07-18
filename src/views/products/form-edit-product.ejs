@@ -7,31 +7,31 @@
 <main >    
         <h1>Edición de Productos</h1>
         <div>
-        <form action="/<%=productToEdit.id%>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/<%=producto.id%>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
           
-            <input id="forma" type="text" value="<%= productToEdit.nombre %>" name="nombre">
+            <input id="forma" type="text" value="<%= producto.nombre %>" name="nombre">
             
             <select id="forma" name="categoria">
-                <option disabled selected><%=productToEdit.categoria%></option>
-                <option value="Arbol de Leva">Arbol de Leva</option>
-                <option value="Bomba de aceite">Bomba de aceite</option>
-                <option value="Biela">Biela</option>
-                <option value="Enfriador de aceite">Enfriador de aceite</option>
-                <option value="Tapa de cilindro">Tapa de cilindro</option>
+                <option disabled selected><%=categoria.nombreCategoria%></option>
+                <option value="1">Arbol de Leva</option>
+                <option value="2">Bomba de aceite</option>
+                <option value="3">Biela</option>
+                <option value="4">Enfriador de aceite</option>
+                <option value="5">Tapa de cilindro</option>
             </select>
-            <textarea id="forma" name="descripcion" rows="10" cols="50"> <%= productToEdit.descripcion %></textarea>
+            <textarea id="forma" name="descripcion" rows="10" cols="50"> <%= producto.descripcion %></textarea>
             <div><p>Edite imagen del producto: </p></div>
-            <input id="forma" type="file" value="productToEdit.imagen" name="imagen" >
-            <input id="forma" type="text" value="<%= productToEdit.marca %>" name="marca">
-            <input id="forma" type="text" value="<%= productToEdit.precio %>" name="precio">
-            <input id="forma" type="text" value="<%= productToEdit.descuento %>" name="descuento">
-            <input id="forma" type="text" value="<%= productToEdit.codigo %>" name="codigo">
-            <input id="forma" type="text" value="<%= productToEdit.stock %>" name="stock">
+            <input id="forma" type="file" value="producto.imagen" name="imagen" >
+            <input id="forma" type="text" value="<%= producto.marca %>" name="marca">
+            <input id="forma" type="text" value="<%= producto.precio %>" name="precio">
+            <input id="forma" type="text" value="<%= producto.descuento %>" name="descuento">
+        <!-- <input id="forma" type="text" value="<%= producto.codigo %>" name="codigo"> -->
+            <input id="forma" type="text" value="<%= producto.stock %>" name="stock">
             
             <button type="submit">Editar datos de Producto</button>
             <button type="reset">Eliminar Campos</button>
         </form>
-        <form action="/delete/<%=productToEdit.id%>?_method=DELETE" method="POST">
+        <form action="/delete/<%=producto.id%>?_method=DELETE" method="POST">
             <button type="submit">Eliminar</button>
         
         </form>

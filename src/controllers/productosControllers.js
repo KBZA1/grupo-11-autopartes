@@ -23,7 +23,7 @@ const controller = {
                 return res.render(path.join(__dirname,"../views/products/productDetail"), {productos:productos})
             })
     },
-    /*crear: (req, res) =>{res.render(path.join(__dirname,"../views/products/creacionProducto"))
+    crear: (req, res) =>{res.render(path.join(__dirname,"../views/products/creacionProducto"))
     },
     crearProducto: (req, res)=>{
         let image;
@@ -48,7 +48,8 @@ const controller = {
             descripcion: req.body.descripcion,
             descuento: req.body.descuento,
             marca: req.body.marca,
-            categoria_id: req.body.categoria  
+            categoria_id: req.body.categoria,
+            imagen: image
         })
         .then(()=> {
             return res.redirect('/')})            
@@ -63,6 +64,13 @@ const controller = {
     
     },
     update: (req, res) => {
+        let image;
+        if(req.file != undefined){
+            image = req.file.filename
+        } else {
+            image = 'image-default.jpg'
+        }
+
         db.producto.update({
             nombre: req.body.nombre,
             precio: req.body.precio,
@@ -70,7 +78,8 @@ const controller = {
             descripcion: req.body.descripcion,
             descuento: req.body.descuento,
             marca: req.body.marca, 
-            categoria_id: req.body.categoria  
+            categoria_id: req.body.categoria,  
+            imagen: image
         },{
             where: {
                 id: req.params.id
@@ -97,9 +106,9 @@ const controller = {
     //    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
     },
     edit: (req, res) => { //VER FORMULARIO DE EDICION. 
-        let productosEdit = db.producto.findByPk(req.params.id);
+        let productToEdit = db.producto.findByPk(req.params.id);
         let productoCategoria = db.categoria.findAll();
-        Promise.all([productoEdit, productoCategoria])
+        Promise.all([productToEdit, productoCategoria])
         .then(function([producto, categoria]){
                 res.render(path.join(__dirname,"../views/products/form-edit-product"),{producto:producto, categoria:categoria})})
         //(req, res) =>{
@@ -109,19 +118,20 @@ const controller = {
         //}
     },
     destroy: (req, res) => { //BORRAR ASOCIACIONES PRIMERO?
+        
         db.producto.destroy({
             where:{
                 id:req.params.id,
-                force: true
+                //force: true
             }
         })
         .then(()=> {
-            return res.redirect('/')})            
-        .catch(error => res.send(error));
+            return res.redirect('../')})            
+        //.catch(error => res.send(error));
         //let id = req.params.id;
         //let finalProducts = products.filter (product => product.id != id);
         //fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
-        res.redirect ("/");
-    },*/
+       // res.redirect ("/");
+    },
 }
 module.exports = controller; 
