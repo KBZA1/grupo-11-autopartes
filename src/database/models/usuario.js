@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) =>{
             allowNull: false
         },
         pass:{
-            type: dataTypes.STRING(15),
+            type: dataTypes.STRING(1500),
             allowNull: false
         },
         imagen:{

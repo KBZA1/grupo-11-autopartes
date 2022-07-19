@@ -14,14 +14,16 @@ module.exports = {
     
     loginProcess: async (req, res) => {   //PROBLEMAS CON EL BCRYPTJS CON AWAIT(SIEMPRE FALSE) Y SIN AWAIT(SIEMPRE TRUE)
         let userToLogin = await db.usuario.findOne({
-              where: {email: req.body.email} 
-        })
+              where: {email: req.body.email},
+        });
 		//let userToLogin =  user.find(element => element.email == req.body.email); 
         if(userToLogin) {
-		let isOkThePassword = await bcryptjs.compare(req.body.password, userToLogin.pass); 
+		let isOkThePassword = bcryptjs.compareSync(req.body.password,userToLogin.pass); 
         console.log(userToLogin.pass)
         console.log(req.body.password)
         console.log(isOkThePassword)
+        console.log(bcryptjs.hashSync("hola123", 10))
+        console.log(bcryptjs.compareSync("hola123","$2a$10$bGS28UbvD.3gU4fl6cIYSeG0xqDEJ/LjC2dmzbEz2vDnyT1Hfxwym"))
 		if (isOkThePassword) {
 				delete userToLogin.pass;
 				req.session.userLogged = userToLogin;
