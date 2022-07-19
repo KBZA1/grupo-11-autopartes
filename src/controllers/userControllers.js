@@ -83,11 +83,11 @@ module.exports = {
     //sesion: (req,res)=> {
     //    const userId = user.find(element => element.id == req.params.id);
     //    res.render(path.join(__dirname,"../views/users/user"), { userId : userId })
-    //   },
+    //   },*/
 
     profile: (req,res)=> {
     res.render(path.join(__dirname,"../views/users/profile"), { userId : req.session.userLogged })
-    },*/
+    },
 
     edit: (req,res)=> { 
         //const userf = user.find(element => element.id == req.params.id);
@@ -136,13 +136,21 @@ module.exports = {
     logout: (req, res) => {
     req.session.destroy();
     return res.redirect("/")
-    },/*
+    },
     
-    delete: (req, res) => {
-        let id = req.params.id;
+    delete: (req, res) => {           
+        db.usuario.destroy({
+            where:{
+                id:req.params.id,
+                    //force: true
+            }
+            })
+        .then(()=> {
+            return res.redirect('/')})    
+        /*let id = req.params.id;
         let userD = user.filter (element => element.id != id);
         fs.writeFileSync(usersPath, JSON.stringify(userD, null, " "));
-        res.redirect ("/");
-    },*/
+        res.redirect ("/");*/
+    },
 }
 

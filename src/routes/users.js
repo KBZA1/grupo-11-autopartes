@@ -54,7 +54,7 @@ const upload = multer({storage});
 router.get("/acceso",guestMiddleware, userControllers.login)
 router.post("/acceso", validationLogin , userControllers.loginProcess)
 
-//router.get("/user/profile", authMiddleware, userControllers.profile);
+router.get("/user/profile", authMiddleware, userControllers.profile);
 
 router.get("/logout/", userControllers.logout)
 
@@ -66,6 +66,6 @@ router.post("/", upload.single("imagen"), userControllers.create);
 //router.get("/user/:id", userControllers.sesion);
 router.get("/user/edit/:id", sessionMiddleware, userControllers.edit);
 router.put("/user/edit/:id", upload.single("imagen"), userControllers.update);
-//router.delete("/user/delete/:id", userControllers.delete);
+router.delete("/user/delete/:id", userControllers.delete);
 
 module.exports = router;
