@@ -13,7 +13,7 @@ const userControllers = require("../controllers/userControllers");
 /*-----CONFIGURACION MIDDLEWARE------*/
 const guestMiddleware = require ("../middleware/guestMiddleware");
 const authMiddleware = require("../middleware/authMiddleware");
-
+const sessionMiddleware = require("../middleware/sessionMiddleware");
 /*-----VALIDACION------*/
 const validationLogin = [
     check("password").notEmpty().withMessage("El campo de contraseña no puede estar vacio"),
@@ -54,18 +54,18 @@ const upload = multer({storage});
 router.get("/acceso",guestMiddleware, userControllers.login)
 router.post("/acceso", validationLogin , userControllers.loginProcess)
 
-router.get("/user/profile", authMiddleware, userControllers.profile);
+//router.get("/user/profile", authMiddleware, userControllers.profile);
 
 router.get("/logout/", userControllers.logout)
 
 router.get("/registro", guestMiddleware, userControllers.register);
 router.post("/", upload.single("imagen"), userControllers.create);
 
-router.get("/users", userControllers.users);
+//router.get("/users", userControllers.users);
 
 //router.get("/user/:id", userControllers.sesion);
-router.get("/user/edit/:id", userControllers.edit);
+router.get("/user/edit/:id", sessionMiddleware, userControllers.edit);
 router.put("/user/edit/:id", upload.single("imagen"), userControllers.update);
-router.delete("/user/delete/:id", userControllers.delete);
+//router.delete("/user/delete/:id", userControllers.delete);
 
 module.exports = router;

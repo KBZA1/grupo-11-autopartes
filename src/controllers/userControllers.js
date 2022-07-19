@@ -1,9 +1,9 @@
 const res = require("express/lib/response");
 const fs = require ("fs");
 const path = require ("path");
-const usersPath = path.join(__dirname, "../data/users.json");
-const usersR = fs.readFileSync(usersPath, "utf-8");
-const user = JSON.parse(usersR);
+//const usersPath = path.join(__dirname, "../data/users.json");
+//const usersR = fs.readFileSync(usersPath, "utf-8");
+//const user = JSON.parse(usersR);
 const {errors} = require ("express-validator");
 const bcryptjs = require('bcryptjs');
 const db = require("../database/models");
@@ -13,12 +13,15 @@ module.exports = {
     login: (req,res)=> { res.render(path.join(__dirname,"../views/users/login"))},
     
     loginProcess: (req, res) => {
-		//let userToLogin =  user.find(element => element.email == req.body.email);
-        //
-		if(userToLogin) {
-			let isOkThePassword = () => {bcryptjs.compareSync(req.body.password, userToLogin.password)}; 
-			if (isOkThePassword) {
-				delete userToLogin.password;// ME BORRA EL PASS PARA VOLVERME A LOGEAR.
+        let userToLogin = db.usuario.findOne({
+              where: {email: req.body.email} 
+        })
+		//let userToLogin =  user.find(element => element.email == req.body.email); 
+        if(userToLogin) {
+		let isOkThePassword = () => {bcryptjs.compareSync(req.body.password, userToLogin.pass)}; 
+        console.log(userToLogin.pass)
+		if (isOkThePassword) {
+				delete userToLogin.pass;
 				req.session.userLogged = userToLogin;
 				//if(req.body.remember_user) {
 				//	res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
@@ -49,18 +52,28 @@ module.exports = {
         } else {
             image = 'image-default-user.png'
         }
-        let newUser = {
-            id: Number(user[user.length - 1].id + 1),
-            
-                ...req.body,
-                password : bcryptjs.hashSync(req.body.password, 10)
-            ,
-            imagen: image
-        };
-        user.push(newUser)
-        fs.writeFileSync(usersPath, JSON.stringify(user, null, ' '))
-        res.redirect('/');
-    },
+        db.usuario.create({
+            nombre: req.body.nombre,
+            email: req.body.email,
+            pass: bcryptjs.hashSync(req.body.password, 10),
+            imagen: image,
+            categoria_id: 2
+        })
+        .then(()=> {
+            return res.redirect('/')})            
+        .catch(error => res.send(error));
+        //let newUser = {
+        //    id: Number(user[user.length - 1].id + 1),
+        //    
+        //       ...req.body,
+        //        password : bcryptjs.hashSync(req.body.password, 10)
+        //    ,
+        //    imagen: image
+        //};
+        //user.push(newUser)
+        //fs.writeFileSync(usersPath, JSON.stringify(user, null, ' '))
+        //res.redirect('/');
+    },/*
     users: (req,res)=> { res.render(path.join(__dirname,"../views/users/users"), { user : user})},
 
     //sesion: (req,res)=> {
@@ -70,16 +83,15 @@ module.exports = {
 
     profile: (req,res)=> {
     res.render(path.join(__dirname,"../views/users/profile"), { userId : req.session.userLogged })
-    },
+    },*/
 
     edit: (req,res)=> { 
         //const userf = user.find(element => element.id == req.params.id);
-        res.render(path.join(__dirname,"../views/users/edit"), {userId : req.session.userLogged })
-    },
+        let pedidoUsuario = db.Usuarios.findByPk(req.params.id)
+        .then(()=>{res.render(path.join(__dirname,"../views/users/edit"), {userId : pedidoUsuario })
+    })},
 
     update: (req,res)=> { 
-        let id = Number(req.params.id);
-        let  userEdit = user.find(element => element.id == id)
         let image;
         console.log(req.body);
         if (req.file != undefined ){
@@ -87,24 +99,46 @@ module.exports = {
         } else {
             image = userEdit.imagen
         }
-        for (let i = 0; i < user.length; i ++) {
-            if (id == user[i].id) {
-            user[i] = {id:id,  ...req.body, password : bcryptjs.hashSync(req.body.password, 10) , imagen: image}
+        db.producto.update({
+            nombre: req.body.nombre,
+            email: req.body.email,
+            pass: bcryptjs.hashSync(req.body.password, 10),
+            imagen: image,
+        },{
+            where: {
+                id: req.params.id
             }
-        }
-        fs.writeFileSync(usersPath, JSON.stringify(user, null, " "));
-        res.redirect("/");
+        })
+        .then(()=> {
+            return res.redirect('/')})            
+        .catch(error => res.send(error));;
+        //let id = Number(req.params.id);
+        //let  userEdit = user.find(element => element.id == id)
+        //let image;
+        //console.log(req.body);
+        //if (req.file != undefined ){
+        //    image = req.file.filename
+        //} else {
+        //    image = userEdit.imagen
+        //}
+        //for (let i = 0; i < user.length; i ++) {
+        //    if (id == user[i].id) {
+        //    user[i] = {id:id,  ...req.body, password : bcryptjs.hashSync(req.body.password, 10) , imagen: image}
+        //   }
+        //}
+        //fs.writeFileSync(usersPath, JSON.stringify(user, null, " "));
+        //res.redirect("/");
     },
     logout: (req, res) => {
     req.session.destroy();
     return res.redirect("/")
-    },
+    },/*
     
     delete: (req, res) => {
         let id = req.params.id;
         let userD = user.filter (element => element.id != id);
         fs.writeFileSync(usersPath, JSON.stringify(userD, null, " "));
         res.redirect ("/");
-    },
+    },*/
 }
 
