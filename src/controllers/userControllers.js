@@ -146,6 +146,7 @@ module.exports = {
             }
             })
         .then(()=> {
+            req.session.destroy();
             return res.redirect('/')})    
         /*let id = req.params.id;
         let userD = user.filter (element => element.id != id);
