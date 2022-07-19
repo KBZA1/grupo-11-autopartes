@@ -12,14 +12,16 @@ const usuario = require("../database/models/usuario");
 module.exports = {
     login: (req,res)=> { res.render(path.join(__dirname,"../views/users/login"))},
     
-    loginProcess: (req, res) => {
-        let userToLogin = db.usuario.findOne({
+    loginProcess: async (req, res) => {   //PROBLEMAS CON EL BCRYPTJS CON AWAIT(SIEMPRE FALSE) Y SIN AWAIT(SIEMPRE TRUE)
+        let userToLogin = await db.usuario.findOne({
               where: {email: req.body.email} 
         })
 		//let userToLogin =  user.find(element => element.email == req.body.email); 
         if(userToLogin) {
-		let isOkThePassword = () => {bcryptjs.compareSync(req.body.password, userToLogin.pass)}; 
+		let isOkThePassword = await bcryptjs.compare(req.body.password, userToLogin.pass); 
         console.log(userToLogin.pass)
+        console.log(req.body.password)
+        console.log(isOkThePassword)
 		if (isOkThePassword) {
 				delete userToLogin.pass;
 				req.session.userLogged = userToLogin;
@@ -87,9 +89,9 @@ module.exports = {
 
     edit: (req,res)=> { 
         //const userf = user.find(element => element.id == req.params.id);
-        let pedidoUsuario = db.Usuarios.findByPk(req.params.id)
-        .then(()=>{res.render(path.join(__dirname,"../views/users/edit"), {userId : pedidoUsuario })
-    })},
+        //let pedidoUsuario = db.Usuarios.findByPk(req.params.id)
+       res.render(path.join(__dirname,"../views/users/edit"), {userId : req.session.userLogged })
+    },
 
     update: (req,res)=> { 
         let image;
@@ -97,9 +99,9 @@ module.exports = {
         if (req.file != undefined ){
             image = req.file.filename
         } else {
-            image = userEdit.imagen
+            image = req.session.userLogged.imagen
         }
-        db.producto.update({
+        db.usuario.update({
             nombre: req.body.nombre,
             email: req.body.email,
             pass: bcryptjs.hashSync(req.body.password, 10),
