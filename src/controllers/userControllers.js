@@ -77,13 +77,16 @@ module.exports = {
         //user.push(newUser)
         //fs.writeFileSync(usersPath, JSON.stringify(user, null, ' '))
         //res.redirect('/');
-    },/*
-    users: (req,res)=> { res.render(path.join(__dirname,"../views/users/users"), { user : user})},
+    },
+    users: (req,res)=> db.usuario.findAll({
+        include: [{ association: "categoria" }],
+    })
+    .then((usuario)=>{ res.render(path.join(__dirname,"../views/users/user"), { userId : usuario})}),
 
     //sesion: (req,res)=> {
     //    const userId = user.find(element => element.id == req.params.id);
     //    res.render(path.join(__dirname,"../views/users/user"), { userId : userId })
-    //   },*/
+    //   },
 
     profile: (req,res)=> {
     res.render(path.join(__dirname,"../views/users/profile"), { userId : req.session.userLogged })

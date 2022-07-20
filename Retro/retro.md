@@ -31,3 +31,11 @@ Retrospectiva Sprint 5
 
 En este Sprint nos dividimos un poco mas las tareas que anteriormente, imponiendo plazos estimados. Se pudo llegar con exito al final, con algunas complicaciones para reunirnos. Hubo problemas con los estilos para cuando se crea una pagina nueva, pero se pudo resolver. 
 Punto para mejorar en estos ultimos pasos que quedan es afianzar las reuniones para llegar al final de esto bien completo el proyecto para cumplir con los objetivos grupales. Mas alla de las complicaciones para las reuniones, creemos que trabajamos de buena manera como grupo y una buena comunicacion entre todos los integrantes.
+
+Retrospectiva Sprint 6 
+
+Este Sprint fue una constante lucha superadora de obstaculos. Base de datos, el gran desafio fue plantear el diagrama, con todas las relaciones para luego volcar eso en codigos Y QUE FUNCIONARA SIN DESTRUIR TODO!!!!!!!
+Despues de mucho esfuerzo, lo logramos! No esta al 100% como quisieramos pero mas adelante con mas tiempo lograremos agregar relaciones sin perjudicar el funcionamiento.
+En este Sprint la comunicacion fue clave. Tuvimos mas reuniones que en los anteriores Sprints, ya que era mucha las dudas que teniamos. Despues de mucho investigar y consultar logramos hacer andar el CRUD.
+Nuestra fortaleza es definitivamente el trabajo en grupo, nada hubiera podido ser sin el aporte de cada uno de los integrantes.
+

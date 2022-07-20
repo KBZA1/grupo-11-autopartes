@@ -98,6 +98,9 @@ h4{
     padding-top: 10px;
     border-top: solid 3px black;
     }
+.errors{
+    color: #a02822;
+}    
 
 .campos{
     width: 80%;

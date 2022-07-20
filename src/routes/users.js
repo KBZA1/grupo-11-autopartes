@@ -61,7 +61,7 @@ router.get("/logout/", userControllers.logout)
 router.get("/registro", guestMiddleware, userControllers.register);
 router.post("/", upload.single("imagen"), userControllers.create);
 
-//router.get("/users", userControllers.users);
+router.get("/users", userControllers.users);
 
 //router.get("/user/:id", userControllers.sesion);
 router.get("/user/edit/:id", sessionMiddleware, userControllers.edit);
