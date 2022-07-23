@@ -9,11 +9,11 @@ window.addEventListener("load", function(){
         let errors = [];
         if (password.value == ""){
             //password.innerText = "Por favor, introduzca su contraseña"
-            errors.push("El campo de contraseña no puede estar vacio")
+            errors.push("El campo de contraseña no puede estar vacio");
         }
         if (email.value == ""){
             //password.innerText = "Por favor, introduzca su contraseña"
-            errors.push("El campo de email no puede estar vacio")
+            errors.push("El campo de email no puede estar vacio");
         }
         if(errors.length > 0){ 
             event.preventDefault()
