@@ -2,6 +2,7 @@
 <html lang="es">
     <%- include("../partials/head") %>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/validacionesRegister.js"></script>
 </head>
 <body>
     <%- include("../partials/header") %>
@@ -11,6 +12,8 @@
        
        <section class="form-reg">
            <h4>Ingrese los siguientes datos: </h4>
+           <ul class="errores">
+        </ul>
            <form action="/" method="POST" enctype="multipart/form-data">
                 <div class="registro">
                     <input class="campos" type="text" name="nombre" id="nombre-apellido" placeholder="Nombre y Apellido">
@@ -18,7 +21,7 @@
                     <input class="campos" type="password" name="password" id="contra" placeholder="Ingrese Contraseña">
                     <!--<input class="campos" type="password" name="conf-contra" id="conf-contra" placeholder="Confirme su contraseña"> -->
                     <div><p>Añada imagen de usuario: </p></div>
-                    <input class= "campos" id="forma" type="file" placeholder="Imagen" name="imagen">
+                    <input class= "campos" id="fotito" name="imagen" type="file" placeholder="Imagen" >
                     </div>
                     <button class="crear-cuenta" type="submit">CREAR CUENTA</button>
            </form>

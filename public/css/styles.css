@@ -168,6 +168,9 @@ h4{
     justify-content: center;
     align-items: center
 }
+.errores{
+    color: red;
+}
 .ingresar{
     width: 60%;
     margin-top: 8px;
