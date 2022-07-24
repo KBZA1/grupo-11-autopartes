@@ -3,7 +3,7 @@ window.addEventListener("load", function(){
     const email = document.getElementById('email')
     const password = document.getElementById('password')
     const emailIsValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    
+
     window.addEventListener("submit", (event)=>{
         let errors = [];
         if (email.value == ""){
@@ -32,10 +32,4 @@ window.addEventListener("load", function(){
             }
         }
     })
-})
-
-
-
-
-
-   
+})   
