@@ -35,6 +35,73 @@ form #forma {
     margin-bottom: 2%;
 
 }
+form #nombrecito {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+form #descripcioncita {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+form #categoria {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+form #marca {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+form #precio {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+form #descuento {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+form #codigo{
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+form #stock {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+.avisos{
+  color: red;
+}
 #caca{
     display: flex;
     flex-direction: row;

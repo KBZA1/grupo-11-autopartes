@@ -6,8 +6,6 @@ const path = require ("path");
 //const productsJson = fs.readFileSync(productsFilePath, "utf-8")
 //const products= JSON.parse(productsJson)
 const db = require("../database/models");
-//const producto = require("../database/models/producto");
-//crear const categoria ?
 
 
 const controller = {

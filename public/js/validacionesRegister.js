@@ -5,7 +5,7 @@ window.onload = function(){
     const pass = document.getElementById("contra")
     const imagen = document.getElementById("fotito")
 
-
+    
     const emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const passValidation = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     const imageExtension = [".jpg", ".jpeg", ".png", ".gif"];
@@ -22,7 +22,7 @@ window.addEventListener("submit", function (event){
     }
 
     //VALIDACION: EMAIL
-    if (email.value = ""){
+    if (email.value == ""){
             errores.push("El campo email es obligatorio");
         } else if (!emailValidation.test(email.value)){
         //errores.pop();
@@ -38,7 +38,7 @@ window.addEventListener("submit", function (event){
     }
 
     //VALIDACION: IMAGEN.
-    if (imagen.value != "") {
+    if (imagen.value !== "") {
         const extension = imagen.value
           .substring(imagen.value.lastIndexOf("."))
           .toLowerCase();
@@ -53,7 +53,7 @@ window.addEventListener("submit", function (event){
          errores1.innerHTML =""
     
     for (let index = 0; index < errores.length; index++) {
-       errores1.innerHTML += "<li>" + errores1[index] + "</li>"  
+       errores1.innerHTML += "<li>" + errores[index] + "</li>"  
        console.log(errores)
     }
 }
