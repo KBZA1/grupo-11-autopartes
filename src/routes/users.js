@@ -19,13 +19,13 @@ const validationLogin = [
     check("password").notEmpty().withMessage("El campo de contraseña no puede estar vacio"),
     check("email").notEmpty().withMessage("El campo de Nombre y Apellido no puede estar vacio").bail()
          .isEmail().withMessage("Tiene que tener un email valido"),];
-const validationRegister = [
-    check("nombre").notEmpty().withMessage("El campo de Nombre y Apellido no puede estar vacio").bail()
-         .isLength({min: 3, }).withMessage("El campo tienen que tener al menos 3 caracteres"),
-    check("email").notEmpty().withMessage("El campo de Nombre y Apellido no puede estar vacio").bail()
-         .isEmail().withMessage("Tiene que tener un email valido"),
-    check("password").isLength({min : 5, max: 12 }).withMessage("El campo de contraseña tiene que tener 5 a 12 caracteres").bail()
-        .notEmpty().withMessage("El campo de contraseña no puede estar vacio"),
+//const validationRegister = [
+  //  check("nombre").notEmpty().withMessage("El campo de Nombre y Apellido no puede estar vacio").bail()
+    //     .isLength({min: 3, }).withMessage("El campo tienen que tener al menos 3 caracteres"),
+   // check("email").notEmpty().withMessage("El campo de Nombre y Apellido no puede estar vacio").bail()
+     //    .isEmail().withMessage("Tiene que tener un email valido"),
+    //check("password").isLength({min : 5, max: 12 }).withMessage("El campo de contraseña tiene que tener 5 a 12 caracteres").bail()
+      //  .notEmpty().withMessage("El campo de contraseña no puede estar vacio"),
     /*check("imagen").custom((value, {req}){
          file = req.file;
          if (!file){
@@ -33,7 +33,7 @@ const validationRegister = [
          }
          return true
     })
-*/];  
+];  */
          
 
 /*-----CONFIGURACION MULTER------*/

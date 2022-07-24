@@ -23,9 +23,11 @@ window.addEventListener("load", function(){
         
         if(errors.length > 0){ 
             event.preventDefault()
+            const errores = document.querySelector('.errors')
+            errores.innerHTML = ""
             
             for (let index = 0; index < errors.length; index++) {
-                const errores = document.querySelector('.errors')
+                
                 errores.innerHTML += "<li>" + errors[index] + "</li>"  
             }
         }
