@@ -7,8 +7,8 @@ CREATE TABLE usuario(
 id INT UNSIGNED AUTO_INCREMENT,
 nombre VARCHAR(50) NOT NULL,
 email VARCHAR(200) NOT NULL,
-pass VARCHAR(15000) NOT NULL,
-imagen varchar(10000) NOT NULL,
+pass VARCHAR(1500) NOT NULL,
+imagen varchar(250) NOT NULL,
 categoria_id INT UNSIGNED,
 PRIMARY KEY(id),
 FOREIGN KEY (categoria_id) REFERENCES usuario_categoria(id)

@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) =>{
             allowNull: false
         },
         imagen:{
-            type: dataTypes.STRING(10000),
+            type: dataTypes.STRING(250),
             allowNull: false
         },
         categoria_id:{
