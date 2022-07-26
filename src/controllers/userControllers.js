@@ -15,7 +15,7 @@ module.exports = {
     
     loginProcess: async (req, res) => {   
         const resultValidation = validationResult(req);
-        if (resultValidation.length == 0){
+        if (resultValidation.errors.length == 0){
         let userToLogin = await db.usuario.findOne({
               where: {email: req.body.email},
         });

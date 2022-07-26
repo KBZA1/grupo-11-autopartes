@@ -35,6 +35,12 @@
                         </div>
                     <% } %>
                     <input class="campos" type="password" name="password" id="contra" placeholder="Ingrese Contraseña">
+                    <% if (locals.errors && errors.passwordConfirmation) { %>
+                        <div style="color: red">
+                            <%= errors.passwordConfirmation.msg %> 
+                        </div>
+                    <% } %>
+                    <input class="campos" type="password" name="passwordConfirmation" id="contra" placeholder="Confirme Contraseña">
                     <!--<input class="campos" type="password" name="conf-contra" id="conf-contra" placeholder="Confirme su contraseña"> -->
                     <% if (locals.errors && errors.imagen) { %>
                         <div style="color: red">

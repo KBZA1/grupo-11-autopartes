@@ -2,7 +2,7 @@
 <html lang="en">
     <%- include("../partials/head") %>
     <link rel="stylesheet" href="css/abm.css">
-    <script src="js/validacionesCreacionProducto.js"></script>/
+    <!--<script src="js/validacionesCreacionProducto.js"></script>/-->
 </head>
 <body id="clase">
 <main >    
@@ -19,6 +19,11 @@
                     
                 </ul>
             </div>
+            <% if (locals.errors && errors.nombre) { %>
+                <div style="color: red">
+                    <%= errors.nombre.msg %> 
+                </div>
+            <% } %>
             <input id="nombrecito" type="text" placeholder="Nombre de Producto" name="nombre">
             <select id="categoria" name="categoria">
                 <option value=1>Arbol de Leva</option>
@@ -27,13 +32,43 @@
                 <option value=4>Enfriador de aceite</option>
                 <option value=5>Tapa de cilindro</option>
             </select>
+            <% if (locals.errors && errors.descripcion) { %>
+                <div style="color: red">
+                    <%= errors.descripcion.msg %> 
+                </div>
+            <% } %>
             <textarea id="descripcioncita" name="descripcion" rows="10" cols="50" placeholder="Añada aqui la descripcion del Producto"></textarea>
             <div><p>Añada imagen del producto: </p></div>
+            <% if (locals.errors && errors.imagen) { %>
+                <div style="color: red">
+                    <%= errors.imagen.msg %> 
+                </div>
+            <% } %>
             <input id="forma" type="file" placeholder="Imagen" name="imagen" >
+            <% if (locals.errors && errors.marca) { %>
+                <div style="color: red">
+                    <%= errors.marca.msg %> 
+                </div>
+            <% } %>
             <input id="marca" type="text" placeholder="Marca" name="marca">
+            <% if (locals.errors && errors.precio) { %>
+                <div style="color: red">
+                    <%= errors.precio.msg %> 
+                </div>
+            <% } %>
             <input id="precio" type="number" placeholder="Precio" name="precio">
+            <% if (locals.errors && errors.descuento) { %>
+                <div style="color: red">
+                    <%= errors.descuento.msg %> 
+                </div>
+            <% } %>
             <input id="descuento" type="number" placeholder="Descuento" name="descuento">
             <input id="codigo" type="number" placeholder="Codigo de Producto" name="codigo">
+            <% if (locals.errors && errors.descuento) { %>
+                <div style="color: red">
+                    <%= errors.descuento.msg %> 
+                </div>
+            <% } %>
             <input id="stock" type="number" placeholder="Stock" name="stock">
             
             <button type="submit">Guardar datos de Producto</button>
