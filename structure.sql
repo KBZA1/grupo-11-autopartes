@@ -34,6 +34,7 @@ descripcion varchar(500),
 descuento INT,
 marca VARCHAR(100),
 categoria_id INT UNSIGNED,
+imagen VARCHAR(150),
 FOREIGN KEY (categoria_id) REFERENCES categoria(id)
 );
 CREATE TABLE detalleDeVenta(
