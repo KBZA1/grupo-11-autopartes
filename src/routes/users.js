@@ -15,25 +15,8 @@ const guestMiddleware = require ("../middleware/guestMiddleware");
 const authMiddleware = require("../middleware/authMiddleware");
 const sessionMiddleware = require("../middleware/sessionMiddleware");
 /*-----VALIDACION------*/
-const validationLogin = [
-    check("password").notEmpty().withMessage("El campo de contraseña no puede estar vacio"),
-    check("email").notEmpty().withMessage("El campo de Nombre y Apellido no puede estar vacio").bail()
-         .isEmail().withMessage("Tiene que tener un email valido"),];
-//const validationRegister = [
-  //  check("nombre").notEmpty().withMessage("El campo de Nombre y Apellido no puede estar vacio").bail()
-    //     .isLength({min: 3, }).withMessage("El campo tienen que tener al menos 3 caracteres"),
-   // check("email").notEmpty().withMessage("El campo de Nombre y Apellido no puede estar vacio").bail()
-     //    .isEmail().withMessage("Tiene que tener un email valido"),
-    //check("password").isLength({min : 5, max: 12 }).withMessage("El campo de contraseña tiene que tener 5 a 12 caracteres").bail()
-      //  .notEmpty().withMessage("El campo de contraseña no puede estar vacio"),
-    /*check("imagen").custom((value, {req}){
-         file = req.file;
-         if (!file){
-            throw new Error("Tienes que ingresar una Imagen")
-         }
-         return true
-    })
-];  */
+const validationLogin = require ("../middleware/validationLogin");
+const validationRegister = require ("../middleware/validationRegister");
          
 
 /*-----CONFIGURACION MULTER------*/
@@ -59,7 +42,7 @@ router.get("/user/profile", authMiddleware, userControllers.profile);
 router.get("/logout/", userControllers.logout)
 
 router.get("/registro", guestMiddleware, userControllers.register);
-router.post("/", upload.single("imagen"), userControllers.create);
+router.post("/", upload.single("imagen"),validationRegister, userControllers.create);
 
 router.get("/users", userControllers.users);
 

@@ -2,7 +2,7 @@
 <html lang="es">
     <%- include("../partials/head") %>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/validacionesRegister.js"></script>
+    <!--<script src="js/validacionesRegister.js"></script> -->
 </head>
 <body>
     <%- include("../partials/header") %>
@@ -16,10 +16,31 @@
         </ul>
            <form action="/" method="POST" enctype="multipart/form-data">
                 <div class="registro">
-                    <input class="campos" type="text" name="nombre" id="nombre-apellido" placeholder="Nombre y Apellido">
+                    <% if (locals.errors && errors.nombre) { %>
+                        <div style="color: red">
+                            <%= errors.nombre.msg %> 
+                        </div>
+                    <% } %>
+                    <input class="campos <%= locals.errors && errors.name ? 'validacionRegister' : null %>"
+                    type="text" name="nombre" id="nombre-apellido" placeholder="Nombre y Apellido">
+                    <% if (locals.errors && errors.email) { %>
+                        <div style="color: red">
+                            <%= errors.email.msg %> 
+                        </div>
+                    <% } %>
                     <input class="campos" type="text" name="email" id="mail-r" placeholder="E-mail">
+                    <% if (locals.errors && errors.password) { %>
+                        <div style="color: red">
+                            <%= errors.password.msg %> 
+                        </div>
+                    <% } %>
                     <input class="campos" type="password" name="password" id="contra" placeholder="Ingrese Contraseña">
                     <!--<input class="campos" type="password" name="conf-contra" id="conf-contra" placeholder="Confirme su contraseña"> -->
+                    <% if (locals.errors && errors.imagen) { %>
+                        <div style="color: red">
+                            <%= errors.imagen.msg %> 
+                        </div>
+                    <% } %>
                     <div><p>Añada imagen de usuario: </p></div>
                     <input class= "campos" id="fotito" name="imagen" type="file" placeholder="Imagen" >
                     </div>
