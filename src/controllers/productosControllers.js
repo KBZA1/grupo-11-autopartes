@@ -1,5 +1,6 @@
 const { Console } = require("console");
 const res = require("express/lib/response");
+const {validationResult} = require ("express-validator");
 const fs = require ("fs");
 const path = require ("path");
 //const productsFilePath = path.join(__dirname, "../data/products.json")
@@ -24,7 +25,9 @@ const controller = {
     crear: (req, res) =>{res.render(path.join(__dirname,"../views/products/creacionProducto"))
     },
     crearProducto: (req, res)=>{
-        let image;
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length == 0) {
+            let image;
         if(req.file != undefined){
             image = req.file.filename
         } else {
@@ -52,6 +55,12 @@ const controller = {
         .then(()=> {
             return res.redirect('/')})            
         .catch(error => res.send(error));
+    }   else { 
+            return res.render((path.join(__dirname,"../views/products/creacionProducto")), {
+				errors: resultValidation.mapped()
+				//oldData: req.body
+			})
+        }
     },
     products: (req, res) => {
         db.producto.findAll()
@@ -62,6 +71,8 @@ const controller = {
     
     },
     update: (req, res) => {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length == 0) {
         let image;
         if(req.file != undefined){
             image = req.file.filename
@@ -85,7 +96,20 @@ const controller = {
         })
         .then(()=> {
             return res.redirect('/')})            
-        .catch(error => res.send(error));;        
+        .catch(error => res.send(error));
+        }else{
+        let productToEdit = db.producto.findByPk(req.params.id);
+        let productoCategoria = db.categoria.findAll();
+        Promise.all([productToEdit, productoCategoria])
+        .then(function([producto, categoria]){
+                res.render(path.join(__dirname,"../views/products/form-edit-product"),
+                {
+                    producto:producto, 
+                    categoria:categoria,
+                    errors: resultValidation.mapped()
+                }
+                )})
+        }     
     //(req, res) => {
     //    let id = Number(req.params.id);
     //    let productToEdit = products.find(product => product.id == id)
@@ -103,7 +127,8 @@ const controller = {
     //    }
     //    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
     },
-    edit: (req, res) => { //VER FORMULARIO DE EDICION. 
+    edit: (req, res) => { //VER FORMULARIO DE EDICION.
+        
         let productToEdit = db.producto.findByPk(req.params.id);
         let productoCategoria = db.categoria.findAll();
         Promise.all([productToEdit, productoCategoria])

@@ -14,11 +14,12 @@ const userControllers = require("../controllers/userControllers");
 const guestMiddleware = require ("../middleware/guestMiddleware");
 const authMiddleware = require("../middleware/authMiddleware");
 const sessionMiddleware = require("../middleware/sessionMiddleware");
+//const multerMiddleware = require("../middleware/multerMiddleware");  <---------------
 /*-----VALIDACION------*/
 const validationLogin = require ("../middleware/validationLogin");
 const validationRegister = require ("../middleware/validationRegister");
          
-
+//PREGUNTAR A NATALIA QUE HAY QUE LLEVARSE DEL MULTER PARA REQUERIRLO COMO ARCHIVO <--------------
 /*-----CONFIGURACION MULTER------*/
 const storage =multer.diskStorage({
     destination:(req,file,cb)=>{
