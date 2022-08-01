@@ -23,6 +23,9 @@ app.use(sessionMiddleware);
 const productsRouter = require("./src/routes/productosRuta");
 const mainRoutes = require("./src/routes/main");
 const userRoutes = require("./src/routes/users");
+/*------ REQUIRE DE RUTAS por API ------*/
+const apiUsersRouter = require("./src/routes/api/apiUsersRoutes");
+const apiProductsRouter = require("./src/routes/api/apiProductsRoutes");
 
 /*-----PROCESAR INFORMACION-----*/
 app.use(express.urlencoded({ extended: false }));
@@ -36,3 +39,7 @@ app.use(methodOverride("_method"));
 app.use("/", mainRoutes);
 app.use("/", userRoutes);
 app.use("/", productsRouter);
+
+/*---- Rutas API -----*/
+app.use("/api/users", apiUsersRouter);
+app.use("/api/products", apiProductsRouter);
