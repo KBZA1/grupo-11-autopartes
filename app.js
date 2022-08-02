@@ -27,6 +27,7 @@ const userRoutes = require("./src/routes/users");
 const apiUsersRouter = require("./src/routes/api/apiUsersRoutes");
 const apiProductsRouter = require("./src/routes/api/apiProductsRoutes");
 
+
 /*-----PROCESAR INFORMACION-----*/
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
