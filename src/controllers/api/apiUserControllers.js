@@ -1,5 +1,5 @@
 const path = require ("path");
-const db = require("../database/models");
+const db = require("../../database/models");
 const usuario = db.Usuario
 const Op = db.Sequelize.Op;
 const bcrypt = require("bcryptjs");
@@ -27,7 +27,7 @@ module.exports = {
             order: [["id", "ASC"]],
           });
           users.forEach((user) => {
-            return (user.dataValues.detail = `http://localhost:3001/api/users/${user.id}`);
+            return (user.dataValues.detail = `http://localhost:5001/api/users/${user.id}`);
           });
           const totalPages = Math.ceil(users.length / limit);
           
@@ -38,11 +38,11 @@ module.exports = {
               currentPage: page,
               next:
                 page < totalPages && page > 0
-                  ? `http://localhost:3001/api/users/?page=${page + 1}`
+                  ? `http://localhost:5001/api/users/?page=${page + 1}`
                   : undefined,
               previous:
                 page > 1 && page <= totalPages
-                  ? `http://localhost:3001/api/users/?page=${page - 1}`
+                  ? `http://localhost:5001/api/users/?page=${page - 1}`
                   : undefined,
             },
             users: paginatedUsers,
@@ -250,3 +250,5 @@ const apiUsersController = {
 };
 */
 module.exports = apiUsersController;
+/*};*/
+

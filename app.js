@@ -24,7 +24,7 @@ const productsRouter = require("./src/routes/productosRuta");
 const mainRoutes = require("./src/routes/main");
 const userRoutes = require("./src/routes/users");
 /*------ REQUIRE DE RUTAS por API ------*/
-const apiUsersRouter = require("./src/routes/api/apiUsersRoutes");
+const apiUsersRouter = require("./src/routes/api/apiUserRoutes");
 const apiProductsRouter = require("./src/routes/api/apiProductsRoutes");
 
 

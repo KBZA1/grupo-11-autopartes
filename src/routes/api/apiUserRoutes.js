@@ -4,24 +4,15 @@ const express = require("express");
 
 /*-------CONTROLLERS-------*/
 
-const apiUserControllers = require("../controllers/api/apiUserControllers");
+const apiUserControllers = require("../../controllers/api/apiUserControllers");
 
 /*------APLICAR--------*/
 const router = express.Router();
 
 /*----- ROUTES------*/;
 
-router.get("/users",apiUserControllers.login)
+router.get("/",apiUserControllers.list)
+router.get("/:id", apiUserControllers.detail);
 
-router.post("/acceso", userControllers.loginProcess)
-
-router.get("/user/profile", userControllers.profile);
-
-router.get("/logout/", userControllers.logout)
-
-router.get("/registro", userControllers.register);
-router.post("/", userControllers.create);
-
-router.get("/users", userControllers.users);
 
 module.exports = router;
