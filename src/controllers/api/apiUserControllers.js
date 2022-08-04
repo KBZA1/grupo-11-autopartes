@@ -27,10 +27,10 @@ module.exports = {
           const paginatedUsers = await db.usuario.findAll({
             limit: limit,
             offset: (page - 1) * limit,
-            attributes: ["id", "nombre", "email" ],
+            attributes: ["id", "nombre", "email"],
             order: [["id", "ASC"]],
           });
-          users.forEach((user) => {
+          paginatedUsers.forEach((user) => {
             return (user.dataValues.detail = `http://localhost:5001/api/users/${user.id}`)
           });
           const totalPages = Math.ceil(users.length / limit);
