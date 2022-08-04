@@ -3,10 +3,10 @@ const path = require ("path")
 /*------APLICAR ROUTER--------*/
 const router = express.Router();
 /*-------CONTROLLERS-------*/
-const productosControllers = require("../controllers/api/apiProductsControllers");
+const apiProductsControllers = require("../../controllers/api/apiProductsControllers");
 
-router.get("/",productosControllers)
-router.get("/:id",productosControllers)
+router.get("/", apiProductsControllers.list)
+//router.get("/:id",apiProductosControllers)
 
 
 
