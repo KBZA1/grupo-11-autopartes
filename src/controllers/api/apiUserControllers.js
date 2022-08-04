@@ -1,6 +1,6 @@
 const path = require ("path");
 const db = require("../../database/models");
-const usuario = db.Usuario
+//const Usuario = db.Usuario
 const Op = db.Sequelize.Op;
 const bcrypt = require("bcryptjs");
 
@@ -9,25 +9,29 @@ module.exports = {
         try {
           // USERS PAGINATION
           const pageAsNumber = parseInt(req.query.page);
-          const limit = 5;
+          const limit = 15;
           //    localhost:/api/user/?page=1
           // definimos la paginación
           let page = 1;
           if (!Number.isNaN(pageAsNumber) && pageAsNumber > 1) {
             page = pageAsNumber;
           }
-          const users = await usuario.findAll({
+          const users = await db.usuario.findAll({
             attributes: ["id", "nombre", "email"],
             order: [["id", "ASC"]],
           });
-          const paginatedUsers = await usuario.findAll({
+          
+          //console.log(users);
+          
+          
+          const paginatedUsers = await db.usuario.findAll({
             limit: limit,
             offset: (page - 1) * limit,
-            attributes: ["id", "nombre", "email"],
+            attributes: ["id", "nombre", "email" ],
             order: [["id", "ASC"]],
           });
           users.forEach((user) => {
-            return (user.dataValues.detail = `http://localhost:5001/api/users/${user.id}`);
+            return (user.dataValues.detail = `http://localhost:5001/api/users/${user.id}`)
           });
           const totalPages = Math.ceil(users.length / limit);
           
@@ -44,9 +48,10 @@ module.exports = {
                 page > 1 && page <= totalPages
                   ? `http://localhost:5001/api/users/?page=${page - 1}`
                   : undefined,
+              
             },
             users: paginatedUsers,
-          });
+          })
         } catch (e) {
             res.status(500).json({
               meta: {
@@ -249,6 +254,5 @@ const apiUsersController = {
   },
 };
 */
-module.exports = apiUsersController;
 /*};*/
 
