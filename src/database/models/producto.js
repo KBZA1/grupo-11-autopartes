@@ -44,7 +44,7 @@ module.exports = (sequelize, dataTypes) =>{
             producto.belongsTo(models.categoria,{ 
                 as: "categoria",
                 foreignKey: "categoria_id"
-               })
+            })
             /*producto.hasMany(models.imagen,{
                 as: "imagen",
                 foreingKey: "producto_id"
