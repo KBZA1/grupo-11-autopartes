@@ -6,7 +6,7 @@ const router = express.Router();
 const apiProductsControllers = require("../../controllers/api/apiProductsControllers");
 
 router.get("/", apiProductsControllers.list)
-//router.get("/:id",apiProductosControllers)
+router.get("/:id", apiProductsControllers.detail)
 
 
 

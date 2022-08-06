@@ -24,7 +24,7 @@ module.exports = {
             limit: limit,
             offset: (page - 1) * limit,
             include: [
-              { association: "categoria", attributes: ["nombreCategoria"] },
+              { association: "categoria", attributes: [["nombreCategoria"]] },
             ],
             attributes: ["id", "nombre", "descripcion"],
             order: [["id", "ASC"]],
@@ -70,9 +70,41 @@ module.exports = {
               meta: {
                 status: "error",
               },
-              error: "Producto no encontrado",
+              error: "Productos no encontrados",
             });
           }
         },  
+    detail: async (req, res) => {
+          const id = req.params.id;
+          try {
+            const product = await db.producto.findOne({
+              include: [
+                { association: "categoria", attributes: ["nombreCategoria"] },
+              ],
+              attributes: { exclude: ["categoria_id"] },
+              where: {
+                id: id,
+              },
+            });
+      
+            // sobreescribimos el valor de image en la muestra al cliente
+            product.dataValues.imagen = `/images/products/${product.imagen}`; ///raroooooo
+            // user.setDataValue("image", `/images/users/${user.image.name}`);
+      
+            // le mandamos el user con la info
+            res.status(200).json({
+              product,
+            });
+          } catch (e) {
+            res.status(500).json({
+              meta: {
+                status: "error",
+              },
+              error: "producto no correspondido",
+            });
+          }
+        },
         
-    }
+          
+      }
+  
