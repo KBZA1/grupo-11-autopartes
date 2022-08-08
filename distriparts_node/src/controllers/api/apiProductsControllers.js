@@ -24,7 +24,7 @@ module.exports = {
             limit: limit,
             offset: (page - 1) * limit,
             include: [
-              { association: "categoria", attributes: [["nombreCategoria"]] },
+              { association: "categoria", attributes: ["nombreCategoria"] },
             ],
             attributes: ["id", "nombre", "descripcion"],
             order: [["id", "ASC"]],
@@ -104,7 +104,6 @@ module.exports = {
             });
           }
         },
-        
           
       }
   
