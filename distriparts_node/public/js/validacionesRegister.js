@@ -7,7 +7,7 @@ window.onload = function(){
 
     
     const emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    const passValidation = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    /* const passValidation = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,}$/; */
     const imageExtension = [".jpg", ".jpeg", ".png", ".gif"];
 
 
@@ -30,12 +30,12 @@ window.addEventListener("submit", function (event){
     }
 
     //VALIDACION: PASSWORD
-    if (pass.value == ""){
+    /* if (pass.value == ""){
         errores.push("El campo contraseña es obligatorio")
     } else if (!passValidation.test(pass.value)){
         //errores.pop();
         errores.push("El campo contraseña debe tener al menos 8 caracteres, con una letra mayúscula, una minúscula, un número y un caracter especial")
-    }
+    } */
 
     //VALIDACION: IMAGEN.
     if (imagen.value !== "") {

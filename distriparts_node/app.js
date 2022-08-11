@@ -9,6 +9,15 @@ const app = express();
 /*-------TEMPLATE-------*/
 app.set('view engine', 'ejs');
 app.set("views");
+/**---------------------- */
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+  });
+  /*------------------------------------- */
 app.listen(5001, () =>{console.log("arriba que la musica no pare")});
 /*-------MIDDLEWARES-------*/
 app.use(session({
@@ -32,6 +41,10 @@ const apiProductsRouter = require("./src/routes/api/apiProductsRoutes");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride("_method"));
+
+
+
+
 //app.use((req, res, next) =>{
 //res.status(404).render("not-found") crear archivo de vista con el html para mostrar con pagina de error
 //})

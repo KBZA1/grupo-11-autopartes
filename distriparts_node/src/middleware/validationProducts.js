@@ -1,20 +1,20 @@
-const path = require('path');
-const { body } = require('express-validator');
+const { check } = require('express-validator');
+const path = require ('path');
 
-module.exports = [
-	body('nombre').notEmpty().withMessage('Tienes que escribir un nombre al nuevo producto'),
-	body('marca').notEmpty().withMessage('Tienes que escribir una marca al producto').bail()
+const checking = [
+	check('nombre').notEmpty().withMessage('Tienes que escribir un nombre al nuevo producto'),
+	check('marca').notEmpty().withMessage('Tienes que escribir una marca al producto').bail()
     .isLength({min: 1, }).withMessage("El campo tienen que tener al menos 2 caracteres"),
-	body('descripcion').notEmpty().withMessage('Tienes que escribir una descripcion al producto').bail()
-    .isLength({min: 15, }).withMessage("El campo tienen que tener al menos 15 caracteres"),
-    body('precio').notEmpty().withMessage('Tienes que escribir una precio').bail().isInt()
+	check('descripcion').notEmpty().withMessage('Tienes que escribir una descripcion al producto').bail()
+    .isLength({min: 20, }).withMessage("El campo tienen que tener al menos 20 caracteres"),
+    check('precio').notEmpty().withMessage('Tienes que escribir una precio').bail().isInt()
     .withMessage("Tiene que ingresar un precio valido"),
-    body('descuento').isInt()
+    check('descuento').isInt()
     .withMessage("Tiene que ingresar un descuento valido"),
-    body('codigo').notEmpty().withMessage('Tienes que escribir una codigo'), //Necesario ? por que esta el id
-    body('stock').notEmpty().withMessage('Tienes que escribir una marca').bail().isInt()
+    check('codigo').notEmpty().withMessage('Tienes que escribir una codigo'), //Necesario ? por que esta el id
+    check('stock').notEmpty().withMessage('Tienes que escribir una marca').bail().isInt()
     .withMessage("Tiene que ingresar un stock valido en numero"),
-	body('imagen').custom((value, { req }) => {
+	check('imagen').custom((value, { req }) => {
 		let file = req.file;
 		let acceptedExtensions = ['.jpg', '.png', '.gif'];
 
@@ -30,4 +30,5 @@ module.exports = [
 		return true;
 	})
 ]
+module.exports = checking
 

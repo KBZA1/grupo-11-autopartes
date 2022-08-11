@@ -49,6 +49,7 @@ module.exports = {
           
           res.status(200).json({
             meta: {
+              categoriesCount: categories.length,
               count: products.length,
               countByCategory: categoryCount, 
               totalPages,
