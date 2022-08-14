@@ -17,7 +17,7 @@ module.exports = {
           }
           const products = await db.producto.findAll({
             order: [["id", "ASC"]],
-            attributes: ["id", "nombre", "descripcion"],
+            attributes: ["id", "nombre", "descripcion","imagen"],
           })          
           
           const paginatedProducts = await db.producto.findAll({
@@ -26,11 +26,11 @@ module.exports = {
             include: [
               { association: "categoria", attributes: ["nombreCategoria"] },
             ],
-            attributes: ["id", "nombre", "descripcion"],
+            attributes: ["id", "nombre", "descripcion","imagen"],
             order: [["id", "ASC"]],
           });
           paginatedProducts.forEach((product) => {
-            return (product.dataValues.detail = `http://localhost:5001/api/products/${product.id}`)
+            return (product.dataValues.detail = `http://localhost:5001/api/products/${product.id}`,product.dataValues.imagenUrl = `http://localhost:5001/images/products/${product.imagen}`)
           });
           const totalPages = Math.ceil(products.length / limit);
 
@@ -49,6 +49,7 @@ module.exports = {
           
           res.status(200).json({
             meta: {
+              categoriesCount: categories.length,
               count: products.length,
               countByCategory: categoryCount, 
               totalPages,
@@ -88,7 +89,7 @@ module.exports = {
             });
       
             // sobreescribimos el valor de image en la muestra al cliente
-            product.dataValues.imagen = `/images/products/${product.imagen}`; ///raroooooo
+            product.dataValues.imagenUrl = `http://localhost:5001/images/products/${product.imagen}`; ///raroooooo
             // user.setDataValue("image", `/images/users/${user.image.name}`);
       
             // le mandamos el user con la info

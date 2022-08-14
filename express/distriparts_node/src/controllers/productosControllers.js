@@ -26,6 +26,7 @@ const controller = {
     },
     crearProducto: (req, res)=>{
         const resultValidation = validationResult(req);
+        console.log(resultValidation);
         if (resultValidation.errors.length == 0) {
             let image;
         if(req.file != undefined){

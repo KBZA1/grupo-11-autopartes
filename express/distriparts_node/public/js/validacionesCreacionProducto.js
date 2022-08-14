@@ -12,8 +12,8 @@ window.addEventListener("load", function(){
         // VALIDACION NOMBRE
         if (nombre.value =="") {
             avisos.push ("El campo nombre es obligatorio")
-        } else if (nombre.value.length < 5){
-            avisos.push ("El campo nombre debe tener al menos 5 caracteres")
+        } else if (nombre.value.length < 2){
+            avisos.push ("El campo nombre debe tener al menos 2 caracteres")
         }
         
         // VALIDACION DESCRIPCION
