@@ -89,7 +89,7 @@ module.exports = {
             });
       
             // sobreescribimos el valor de image en la muestra al cliente
-            product.dataValues.imagenUrl = `http://localhost:5001/images/products/${product.imagen}`; ///raroooooo
+            product.dataValues.imagenUrl = `http://localhost:5001/images/${product.imagen}`; ///raroooooo
             // user.setDataValue("image", `/images/users/${user.image.name}`);
       
             // le mandamos el user con la info
