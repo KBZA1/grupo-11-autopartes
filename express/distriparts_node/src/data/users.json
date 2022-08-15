@@ -1,0 +1,16 @@
+[
+ {
+  "id": "1",
+  "nombre": "bruno",
+  "email": "osmango9697@gmail.com",
+  "password": "$2a$10$XMQabUjhwVafJz0eRbBV/ONCOH/qgqA.UyFolZ0tp1A9BxFYdsPcW",
+  "imagen": "image-1655069248640"
+ },
+ {
+  "id": 11,
+  "nombre": "Crist",
+  "email": "cmussi@hotmail.com",
+  "password": "$2a$10$wVDSzuja.uyapjIBzf2.Redh54dt/bQb9rP67rSBhtrU1O4cmWlq6",
+  "imagen": "image-1655776824602"
+ }
+]

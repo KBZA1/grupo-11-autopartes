@@ -1,0 +1,173 @@
+ #clase{
+    background-image: url(/images/agree.jpg);
+    background-repeat:repeat;
+    background-attachment: scroll;
+}
+
+main h1 {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    text-align: center;
+}
+main {
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    flex-wrap: nowrap;
+    padding: 10px 50px;
+    border: 2px black solid;
+}
+form #forma {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    margin-bottom: 2%;
+
+}
+form #nombrecito {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+form #descripcioncita {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+form #categoria {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+form #marca {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+form #precio {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+form #descuento {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+form #codigo{
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+form #stock {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 2%;
+
+}
+.avisos{
+  color: red;
+}
+#caca{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 7px;
+}
+#caca2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 20px;
+}
+#caca input{
+    background-color: white;
+}
+form div {
+width: 100%;
+}
+form div p{
+    margin: 3px -6px;
+    color: gray;
+}
+
+form button {
+    background: #fff; /* color de fondo */
+    color: #003366; /* color de fuente */
+    border: 2px solid #003366; /* tamaño y color de borde */
+    padding: 12px 18px;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    width: 70%;
+    margin-bottom: 3px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  form button:hover {
+    color: #fff;/* color de fuente hover */
+  }
+  form button::after {
+    content: "";
+    background: #003366; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0) rotate(-180deg);
+    transition: all 0.3s ease;
+  }
+  form button:hover::after {
+    transition: all 0.3s ease-out;
+    transform: scale(1, 1) rotate(0deg);
+  }
+  /*.hola{display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    flex-wrap: wrap;
+    padding: 10px 50px;
+    border: 2px black solid;
+    font-size: ;
+  }

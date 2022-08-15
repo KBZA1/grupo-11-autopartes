@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head") %>
+    <link rel="stylesheet" href="css/carrito.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <%- include("../partials/header") %>
+    <main class="home">
+        <div class="banner-temp">
+            <div class="img-banner-oferta"><img src="/images/banner-ofertas.jpg" alt="Ofertas"></div>
+            <div class="flecha-izq"><i class="fa-solid fa-circle-arrow-left"></i></div>
+            <div class="flecha-der"><i class="fa-solid fa-circle-arrow-right"></i></div>
+            <div class="mini-circle">
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+            </div>
+        </div>
+        <div class="barra-home">
+        <div class="icono-tc">
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <p>12 CUOTAS SIN INTERES</p>
+        </div>
+        <div class="barra-envios">
+        <p>ENVIOS A TODO EL PAIS</p>
+        <div class="camion1" ><i class="fa-solid fa-truck"></i></div>
+        <div class="camion2"><i class="fa-solid fa-truck-fast"></i></div>
+        <div class="camion3"><i class="fa-solid fa-truck-fast"></i></div>
+        </div>
+        </div >
+    <section>
+        <h2>NUESTRAS OFERTAS</h2>  
+        <div class="wrapper" >  
+            <!-- <a class="logo-1" href="/"><img src="images/DistriPart movile.png" alt="DistriParts"></a> -->  
+            <% for(let i=0; i < 4; i++){%>
+            <article >
+                    <img src="\images\<%=products[i].imagen%>" alt="">
+                    <div class="relleno">NUEVAS OFERTAS</div>
+                    <div class="nombre-producto"><a href="/<%=products[i].id%>"><p ><%=products[i].nombre%></p></a></div>
+                    <div class="row"><span class="before">$<%=products[i].precio%></span></div>
+                    <div class="row"><span class="precio-ahora">$<%= products[i].precio - (products[i].precio * (products[i].descuento /100))%> <strong class="descuento" ><%=products[i].descuento%>% OFF</strong></span> </div>
+                    <span class="cuotas">12 CUOTAS SIN INTERES  <i class="fa-solid fa-credit-card"></i></span>
+                    <div id="sa"><button class="agregar-compra" type="submit">AGREGAR &nbsp;<i class="fa-solid fa-cart-shopping"></i> </button></div>
+           </article>
+           <% } %>
+        </div>
+        </section>
+           <!--<H2><a href="/products">MIRA TODOS NUESTROS PRODUCTOS</a></H2>-->  
+           <img class="banner-separador" src="/images/corven.png" alt="">
+           <section>
+            <h2>Destacados del mes</h2>  
+            <div class="wrapper" > 
+           <% for(let i=5; i < 9; i++){%>
+        
+            <article >
+                    <img src="\images\<%=products[i].imagen%>" alt="">
+                    <div class="nombre-producto"><a href="/<%=products[i].id%>"><p ><%=products[i].nombre%></p></a></div>
+                    <div class="row2"><span class="precio-ahora">$<%= products[i].precio%> </span> </div>
+                    <span class="cuotas">12 CUOTAS SIN INTERES  <i class="fa-solid fa-credit-card"></i></span>
+                    <div id="sa"><button class="agregar-compra" type="submit">AGREGAR &nbsp;<i class="fa-solid fa-cart-shopping"></i> </button></div>
+           </article>
+           <% } %>
+        </div>
+        </section>
+        
+    </main>  
+
+    <img class="banner-inferior" src="/images/banner inferior.jpg" alt="">
+    
+    <!--FOOTER PARTIAL-->
+    <%- include ("../partials/footer") %>
+
+    <div class="guasap"><a href="https://api.whatsapp.com/send/?phone=%2B5492235049312&text&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a></div>
+</body>
+</html>
