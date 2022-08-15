@@ -13,11 +13,11 @@
  },
  {
   "id": 2,
-  "nombre": "Biela",
+  "nombre": "Biela Corven",
   "descripcion": "Características: Condición del ítem : Nuevo Diámetro de la cabeza : 40 Mm Incluye cojinetes : Si Largo : 100.5 Mm Marca : W Standard Número de pieza : W73041  OEM : No  Origen : China SKU : W73041 Tipo de biela : Sólida Tipo de grantía : Garantía de fábrica",
-  "imagen": "biela.jpg",
+  "imagen": "biela-corven.webp",
   "categoria": "Biela",
-  "marca": "YAMAHA",
+  "marca": "Corven",
   "precio": 4900,
   "descuento": 20,
   "codigo": 2,
@@ -56,5 +56,52 @@
   "codigo": "5",
   "stock": "10",
   "imagen": "enfriador-aceite.webp"
- }
+ },
+ {
+    "id": 6,
+    "nombre": "Arbol de Leva Fiat",
+    "descripcion": "Origen: Nacional. Fiat Palio modelo 97 1.3",
+    "imagen": "arbol-leva2.webp",
+    "categoria": "Arbol de Leva",
+    "marca": "Fiat",
+    "precio": 8790,
+    "descuento": 15,
+    "codigo": 12563,
+    "stock": 15
+   },
+   {
+    "id": 7,
+    "nombre": "Cilindro Chevrolet",
+    "descripcion": "Tapa Válvulas Original Chevrolet Spark 1.0. Garantía de fábrica",
+    "imagen": "tapa_chevrolet.webp",
+    "categoria": "Tapa de cilindro",
+    "marca": "Chevrolet",
+    "precio": 59990,
+    "descuento": 10,
+    "codigo": 22563,
+    "stock": 100
+   },
+   {
+    "id": 8,
+    "nombre": "Biela BMW",
+    "descripcion": "Biela para BMW motor N20 standard.",
+    "imagen": "biela-bmw.webp",
+    "categoria": "Biela",
+    "marca": "Bmw",
+    "precio": 65499,
+    "descuento": 10,
+    "codigo": 3256,
+    "stock": 17
+   },
+   {
+    "id": 9,
+    "nombre": "Bomba Renault",
+    "imagen": "bomba_aceite.webp",
+    "categoria": "Bomba de Aceite",
+    "marca": "Renault",
+    "precio": 69999,
+    "descuento": 15,
+    "codigo": 5,
+    "stock": 10
+   }
 ]

@@ -128,8 +128,8 @@ form div p{
 
 form button {
     background: #fff; /* color de fondo */
-    color: #4741d7; /* color de fuente */
-    border: 2px solid #4741d7; /* tamaño y color de borde */
+    color: #003366; /* color de fuente */
+    border: 2px solid #003366; /* tamaño y color de borde */
     padding: 12px 18px;
     border-radius: 3px; /* redondear bordes */
     position: relative;
@@ -146,7 +146,7 @@ form button {
   }
   form button::after {
     content: "";
-    background: #4741d7; /* color de fondo hover */
+    background: #003366; /* color de fondo hover */
     position: absolute;
     z-index: -1;
     padding: 16px 20px;

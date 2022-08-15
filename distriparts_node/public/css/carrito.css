@@ -91,7 +91,7 @@ main #textoh3{
 }     
 #pTotal{
     font-size: 28px;
-    color: #3321c5;
+    color: #003366;
     font-weight: bold;
     box-shadow: none;
     border: none;
@@ -120,7 +120,7 @@ main #textoh3{
 }
 
 #continuarC {
-    background-color: #3321c5;
+    background-color: #003366;
     color: white;
     opacity: 95%;
     transition: all 450ms;
@@ -155,9 +155,8 @@ form#botones {
 form #aplicar{
     width: 100px;
     height: 32px;
-    background-color: #3321c5;
+    background-color: #003366;
     color: white;
-    background-color: rgb(26, 103, 219);
     transition: 550ms all;
     border-radius: 5px;
 }

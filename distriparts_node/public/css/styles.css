@@ -23,7 +23,7 @@
     justify-content: center;
     align-content: center;
     font-size: 2em;
-    background-color: #3321c5;
+    background-color: #003366;
     color: white;
     padding-bottom: 10px;
 }
@@ -63,7 +63,7 @@ form input{
 }
 body{
     color: #7b7d7d;
-    background-color: #e7e7e7;
+    background-color: #f5f5f5;
     text-align: center;
     height: 100%;
     display: flex;
@@ -122,7 +122,7 @@ h4{
     margin: 0px 20%;
 }
 .logo-rs img{
-    width: 70px;
+    width: 50px;
 }
 .seguinos{
     margin-bottom: 15px;
@@ -135,37 +135,38 @@ h4{
     margin-top: 8px;
     margin-bottom: 15px;
     padding: 15px;
-    background-color:  #3f51b5 ;
+    background-color:  #003366;
     color: white;
     font-size: 14px;
     font-weight: bold;
     border-radius: 7px;
-    border: solid 1px #3f51b5;
+    border: solid 1px #003366;
 
 }
 .crear-cuenta:hover{
-    background-color: #3321c5;
+    background-color: #003e7c;
     transition: 0.65s;
 }
 .agregar-compra{
     width: 57%;
     height: 38px;
     padding: 8px 15px;
-    background-color:  #3f51b5 ;
+    background-color:  #003366 ;
     color: white;
     font-size: 14px;
     font-weight: bold;
     border-radius: 5px;
-    border: solid 1px #3f51b5;
+    border: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 450ms;
+    cursor: pointer;
 }
 .agregar-compra:hover{
     width: 57%;
-    background-color: green;
-    border: solid 1px green;
+    background-color: #003e7c;
+    border: 0;
 }
 #sa{
     display: flex;
@@ -180,12 +181,12 @@ h4{
     margin-top: 8px;
     margin-bottom: 15px;
     padding: 15px;
-    background-color:  #3f51b5 ;
+    background-color:  #003366 ;
     color: white;
     font-size: 14px;
     font-weight: bold;
     border-radius: 7px;
-    border: solid 1px #3f51b5;
+    border: solid 1px #003366;
 }
 .para-registrarse{
     margin-bottom: 15px;
@@ -217,7 +218,7 @@ h4{
 }
 .top-header{
     display: flex;
-    background-color: #3321c5;
+    background-color: #003366;
     color: white;
     align-items: center;
     justify-content: space-between;
@@ -249,27 +250,31 @@ h4{
 .menu{
     display: none;
     flex-wrap: wrap;
-    background-color: #3321c5;
+    background-color: #003366;
     color: white;
     justify-content: center;
 }
 .menu-p{
     border: whitesmoke 1px solid;
-    background-color:  #303f9f ;
+    background-color:  #003366 ;
     padding: 10px;
     margin-bottom: 10px;
-    width: 140px;
+    /*width: 140px;*/
     margin-right: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+.menu-p:hover{
+    background-color: #003e7c;
 }
 .top-header a{
     color: white;
 }
 
 .footer-principal{
-    background-color: #3321c5;
+    background-color: #003366;
     color: white;
     justify-content: space-around;
     height: 100px;
@@ -277,9 +282,10 @@ h4{
     display: none;
 }
 footer{
-    background-color: #3321c5;
+    background-color: #003366;
     color: white;
     width: 100%;
+    padding: 20px 0;
 }
 .footer-izq{
     text-align: left;
@@ -320,14 +326,14 @@ footer{
 .barra-home{
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid #3321c5;
-    justify-content: space-between;
+    /*border: 2px solid #3321c5;*/
+    justify-content: center;
+    flex-direction: column;
     margin: 0px;
 }
 .icono-tc{
     display: flex;
     flex-wrap: wrap;
-    width: 49%;
     padding: 5px;
     justify-content: center;
 }
@@ -339,7 +345,6 @@ footer{
 .barra-envios{
     display: flex;
     flex-wrap: wrap;
-    width: 49%;
     justify-content: center;
     padding: 5px;
 
@@ -380,6 +385,16 @@ footer{
     display: none;
     position: relative;
 }
+@media (min-width: 769px) {
+    .barra-home{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .barra-envios,
+    .icono-tc{
+        width: 49%;
+    }
+}
 .img-banner-oferta{
     display: flex;
     position: relative;
@@ -390,9 +405,14 @@ footer{
 }
 .banner-inferior{
     width: 100%;
-    height: 65%;
+    /*height: 65%;*/
     margin-top: 40px;
     margin-bottom: 0px;
+}
+.banner-separador{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 .flecha-izq{
     display: flex;
@@ -439,7 +459,8 @@ section .wrapper{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 75px;
+    gap:10px;
+    /*margin-bottom: 75px;*/
 }
 article .relleno {
     background-color: green;
@@ -462,16 +483,15 @@ section .wrapper article {
     /*border:#3f51b5 solid 2px;*/
     flex-direction: column;
     flex-wrap: wrap;
-    border-radius: 3%;
+    border-radius: 8px;
     box-shadow: 0 2px 3px 0 rgb(0 0 0 / 20%);
     display: flex;
     transition: box-shadow widht height 950ms;
-    margin-bottom: 25px;
 }
 section .wrapper article:hover{
     box-shadow: 0 5px 7px 0 rgb(0 0 0 / 35%);
-    width: 285px;
-    height: 477px;
+   /* width: 285px;
+    height: 477px;*/
 }
 section .wrapper article .row {
     display: flex;
@@ -481,16 +501,24 @@ section .wrapper article .row {
     margin-top:15px;
     margin-bottom: 7px;    
 }
+section .wrapper article .row2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
 section .wrapper article .nombre-producto {
     font-size: 2em;
     display: flex;
     margin-top: 10px;
     justify-content: center;
     font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
-    background-color: #3321c5;
+    background-color: #003366;
     margin-left: 4px;
     margin-right: 5px;
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+}
+section .wrapper article .nombre-producto a {
+    text-decoration: none;
 }
 section .wrapper article .row .before{
     text-decoration: line-through;
@@ -521,12 +549,16 @@ section .wrapper article .row .precio-ahora{
     margin-top: -20px;
     gap:15px;
 }
+section .wrapper article .row2 .precio-ahora{
+    color: black;
+    font-size: 35px;
+}
 .descuento{
-    color: #3321c5;
+    color: #003366;
     font-size: 18px;
 }
 section .wrapper article .cuotas{
-    color: #3321c5;
+    color: #003366;
     font-size: 18px;
     display: flex;
     justify-content: center;
@@ -668,12 +700,12 @@ section .wrapper article div .div1 {
         margin-top: 8px;
         margin-bottom: 15px;
         padding: 15px;
-        background-color: #3f51b5;
+        background-color: #003366;
         color: white;
         font-size: 14px;
         font-weight: bold;
         border-radius: 7px;
-        border: solid 1px #3f51b5;
+        border: solid 1px #003366;
         justify-content: space-evenly
     }
 @media (min-width: 769px) {
