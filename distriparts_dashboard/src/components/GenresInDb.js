@@ -12,11 +12,11 @@ function GenresInDb() {
       let resProducts = await fetch(`http://localhost:5001/api/products/`);
       let productsSaved = await resProducts.json();
       let countByCategories = productsSaved.meta.countByCategory;
-      let categoria = []
+      let categoria = {};
       console.log(categoria);
       //console.log(categoria);
       for (const key in countByCategories) {
-        categoria.push(key+ " Cantidad: "+countByCategories[key])
+        categoria[key] = key +" Cantidad: "+ countByCategories[key] 
         };
        
         
@@ -45,27 +45,27 @@ function GenresInDb() {
             <div className="row">
               <div className="col-lg-6 mb-4">
                 <div className="card bg-dark text-white shadow">
-                {  categoryCount && <div className="card-body">   {categoryCount[0]} </div>}
+                {  categoryCount && <div className="card-body">   {categoryCount["Arbol de Leva"]} </div>}
                 </div>
               </div>
               <div className="col-lg-6 mb-4">
                 <div className="card bg-dark text-white shadow">
-                {  categoryCount && <div className="card-body">   {categoryCount[1]}</div>}
+                {  categoryCount && <div className="card-body">   {categoryCount.Biela}</div>}
                 </div>
               </div>
               <div className="col-lg-6 mb-4">
                 <div className="card bg-dark text-white shadow">
-                {  categoryCount &&<div className="card-body">   {categoryCount[2]}</div>}
+                {  categoryCount &&<div className="card-body">   {categoryCount["Tapa de cilindro"]}</div>}
                 </div>
               </div>
               <div className="col-lg-6 mb-4">
                 <div className="card bg-dark text-white shadow">
-                {  categoryCount && <div className="card-body">   {categoryCount[3]}</div>}
+                {  categoryCount && <div className="card-body">   {categoryCount["Bomba de aceite"]}</div>}
                 </div>
               </div>
               <div className="col-lg-6 mb-4">
                 <div className="card bg-dark text-white shadow">
-                {  categoryCount && <div className="card-body">   {categoryCount[4]}</div>}
+                {  categoryCount && <div className="card-body">   {categoryCount["Enfriador de aceite"]}</div>}
                 </div>
               </div>
                 </div>
