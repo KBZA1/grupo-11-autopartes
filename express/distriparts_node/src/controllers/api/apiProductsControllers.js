@@ -8,7 +8,7 @@ module.exports = {
         try {
           // PAGINACION PRODUCTO
           const pageAsNumber = parseInt(req.query.page);
-          const limit = 3;
+          const limit = 5;
           
           
           let page = 1;
