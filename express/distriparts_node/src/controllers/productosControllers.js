@@ -71,6 +71,17 @@ const controller = {
     //(req, res) =>{res.render(path.join(__dirname,"../views/products/products"),{products:products})
     
     },
+    productsByCategory: async (req, res) => {
+        await db.producto.findAll({
+            where: { categoria_id: req.params.categoria}
+    })
+        .then(function(producto){
+            res.render(path.join(__dirname,"../views/products/products"),{products:producto})
+        })
+    //(req, res) =>{res.render(path.join(__dirname,"../views/products/products"),{products:products})
+    
+    },
+    
     update: (req, res) => {
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length == 0) {
