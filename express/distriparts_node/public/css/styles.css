@@ -735,6 +735,7 @@ section .wrapper article div .div1 {
 .catalogo {
     max-width: 991px;
     margin: 2em auto;
+    min-height: 500px;
 }
 .catalogo .contenedor-padre1 {
     border: solid 1px #999;
