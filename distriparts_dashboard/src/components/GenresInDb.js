@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import CategoriesCount from "./CategoriesCount";
+
 
 function GenresInDb() {
   const [info, setInfo] = useState(null);
