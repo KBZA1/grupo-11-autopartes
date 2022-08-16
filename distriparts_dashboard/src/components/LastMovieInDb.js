@@ -8,9 +8,17 @@ function LastMovieInDb(){
         const getInfo = async () => {
           let resProduct = await fetch(`http://localhost:5001/api/products`);
           let productSaved = await resProduct.json();
-         
+          console.log(productSaved);
+          if (productSaved.meta.totalPages !== 1 ) {
+            let resProduct2 = await fetch(`http://localhost:5001/api/products/?page=${productSaved.meta.totalPages}`);
+            let productSaved2 = await resProduct2.json();
+            let lastProduct2 = productSaved2.products.slice(-1);
+            setProduct(lastProduct2);
+          }else{
           let lastProduct = productSaved.products.slice(-1);
           setProduct(lastProduct);
+        }
+          
         };
         getInfo();
       }, []);
