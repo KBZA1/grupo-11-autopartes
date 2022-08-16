@@ -5,26 +5,33 @@ import CategoriesCount from "./CategoriesCount";
 function GenresInDb() {
   const [info, setInfo] = useState(null);
   const [categoryCount, setCategories] = useState();
-  const [categories, setCategoriesName] = useState();
+  
   console.log(info);
   useEffect(() => {
     const allInfo = async () => {
       let resProducts = await fetch(`http://localhost:5001/api/products/`);
       let productsSaved = await resProducts.json();
-      let nameByCategories = Object.getOwnPropertyNames(productsSaved.meta.countByCategory);
       let countByCategories = productsSaved.meta.countByCategory;
-    
+      let categoria = []
+      console.log(categoria);
+      //console.log(categoria);
+      for (const key in countByCategories) {
+        categoria.push(key+ " Cantidad: "+countByCategories[key])
+        };
+       
+        
+      
       //setNameCategories(nameByCategories);
-      setCategories(countByCategories);
-      setCategoriesName(nameByCategories);
+      setCategories(categoria);
+      
       
     }
     allInfo();
   }, []);
   
   useEffect(()=>{
-    setInfo({categoryCount,categories});
-  }, [categoryCount,categories]);
+    setInfo({categoryCount});
+  }, [categoryCount]);
 
     return (
       <div className="col-lg-6 mb-4">
@@ -38,27 +45,27 @@ function GenresInDb() {
             <div className="row">
               <div className="col-lg-6 mb-4">
                 <div className="card bg-dark text-white shadow">
-                { categories && categoryCount && <div className="card-body"> {categories.[0]} Cantidad: {categoryCount.["Arbol de Leva"]} </div>}
+                {  categoryCount && <div className="card-body">   {categoryCount[0]} </div>}
                 </div>
               </div>
               <div className="col-lg-6 mb-4">
                 <div className="card bg-dark text-white shadow">
-                { categories && categoryCount && <div className="card-body"> {categories.[1]} Cantidad: {categoryCount.["Biela"]}</div>}
+                {  categoryCount && <div className="card-body">   {categoryCount[1]}</div>}
                 </div>
               </div>
               <div className="col-lg-6 mb-4">
                 <div className="card bg-dark text-white shadow">
-                { categories && categoryCount &&<div className="card-body"> {categories.[2]} Cantidad: {categoryCount.["Bomba de aceite"]}</div>}
+                {  categoryCount &&<div className="card-body">   {categoryCount[2]}</div>}
                 </div>
               </div>
               <div className="col-lg-6 mb-4">
                 <div className="card bg-dark text-white shadow">
-                { categories && categoryCount && <div className="card-body"> {categories.[3]} Cantidad: {categoryCount.["Enfriador de aceite"]}</div>}
+                {  categoryCount && <div className="card-body">   {categoryCount[3]}</div>}
                 </div>
               </div>
               <div className="col-lg-6 mb-4">
                 <div className="card bg-dark text-white shadow">
-                { categories && categoryCount && <div className="card-body"> {categories.[4]} Cantidad: {categoryCount.["Tapa de cilindro"]}</div>}
+                {  categoryCount && <div className="card-body">   {categoryCount[4]}</div>}
                 </div>
               </div>
                 </div>
