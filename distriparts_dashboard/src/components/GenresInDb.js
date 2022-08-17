@@ -3,22 +3,23 @@ import React, { useState, useEffect } from "react";
 
 
 function GenresInDb() {
-  const [info, setInfo] = useState(null);
+  //const [info, setInfo] = useState(null);
   const [categoryCount, setCategories] = useState();
   
-  console.log(info);
+  /* console.log(info); */
   useEffect(() => {
     const allInfo = async () => {
       let resProducts = await fetch(`http://localhost:5001/api/products/`);
       let productsSaved = await resProducts.json();
       let countByCategories = productsSaved.meta.countByCategory;
       let categoria = {};
+    
       console.log(categoria);
       //console.log(categoria);
       for (const key in countByCategories) {
         categoria[key] = key +" Cantidad: "+ countByCategories[key] 
         };
-       
+    
         
       
       //setNameCategories(nameByCategories);
@@ -29,10 +30,10 @@ function GenresInDb() {
     allInfo();
   }, []);
   
-  useEffect(()=>{
+/*   useEffect(()=>{
     setInfo({categoryCount});
   }, [categoryCount]);
-
+ */
     return (
       <div className="col-lg-6 mb-4">
         <div className="card shadow mb-4">
