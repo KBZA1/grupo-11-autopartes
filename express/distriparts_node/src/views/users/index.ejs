@@ -41,7 +41,7 @@
             <article >
                     <img src="\images\<%=products[i].imagen%>" alt="">
                     <div class="relleno">NUEVAS OFERTAS</div>
-                    <div class="nombre-producto"><a href="/<%=products[i].id%>"><p ><%=products[i].nombre%></p></a></div>
+                    <div class="nombre-producto"><a href="/<%=products[i].id%>/detail"><p ><%=products[i].nombre%></p></a></div>
                     <div class="row"><span class="before">$<%=products[i].precio%></span></div>
                     <div class="row"><span class="precio-ahora">$<%= products[i].precio - (products[i].precio * (products[i].descuento /100))%> <strong class="descuento" ><%=products[i].descuento%>% OFF</strong></span> </div>
                     <span class="cuotas">12 CUOTAS SIN INTERES  <i class="fa-solid fa-credit-card"></i></span>
@@ -59,7 +59,7 @@
         
             <article >
                     <img src="\images\<%=products[i].imagen%>" alt="">
-                    <div class="nombre-producto"><a href="/<%=products[i].id%>"><p ><%=products[i].nombre%></p></a></div>
+                    <div class="nombre-producto"><a href="/<%=products[i].id%>/detail"><p ><%=products[i].nombre%></p></a></div>
                     <div class="row2"><span class="precio-ahora">$<%= products[i].precio%> </span> </div>
                     <span class="cuotas">12 CUOTAS SIN INTERES  <i class="fa-solid fa-credit-card"></i></span>
                     <div id="sa"><button class="agregar-compra" type="submit">AGREGAR &nbsp;<i class="fa-solid fa-cart-shopping"></i> </button></div>

@@ -11,12 +11,11 @@ const checking = [
     .withMessage("Tiene que ingresar un precio valido"),
     check('descuento').isInt()
     .withMessage("Tiene que ingresar un descuento valido"),
-    check('codigo').notEmpty().withMessage('Tienes que escribir una codigo'), //Necesario ? por que esta el id
     check('stock').notEmpty().withMessage('Tienes que escribir una marca').bail().isInt()
     .withMessage("Tiene que ingresar un stock valido en numero"),
 	check('imagen').custom((value, { req }) => {
 		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif'];
+		let acceptedExtensions = ['.jpg','.jpeg' , '.png', '.gif'];
 
 		if (!file) {
 			throw new Error('Tienes que subir una imagen');

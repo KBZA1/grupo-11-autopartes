@@ -39,3 +39,11 @@ Despues de mucho esfuerzo, lo logramos! No esta al 100% como quisieramos pero ma
 En este Sprint la comunicacion fue clave. Tuvimos mas reuniones que en los anteriores Sprints, ya que era mucha las dudas que teniamos. Despues de mucho investigar y consultar logramos hacer andar el CRUD.
 Nuestra fortaleza es definitivamente el trabajo en grupo, nada hubiera podido ser sin el aporte de cada uno de los integrantes.
 
+Retrospectiva Sprint 7
+
+Este Sprint fue el que nos quedó mas comodo. Seguimos con la modalidad de trabajo grupal, es decir, siempre conectados trabajando sobre el proyecto de un compañero y haciendo las cosas entre todos. No tuvimos mayores dificultades para terminarlo y nos sentimos bastante comodos. La comunicacion siempre fluida y constante en esta ultima etapa del proyecto.
+
+Retrospectiva Sprint 8
+
+En este Sprint tuvimos varios problemas aL crear la App de React. Lo hizo un compañero y al momento de hacer un push todo se complicó. El podia ver todos los archivos que contenia la app y su contenido y con mi otro compañero no podiamos ver nada al hacer un pull. Luego vinieron otros problemas mas grandes que tardamos dias en poder resolverlo por lo cual nos atrasamos un poco en la entrega
+ no podiamos treabaabajar. El dia de ayer pudimos resolver esos errores y aavanzar con lo que nos quedaba para terminar. Sentimos que el trabajar con el tablero de React fue una buena experiencia y nos quedamos con ganas de mas, se ve como un lenguaje muy interesante. Trabajamos mucho en equipo, con muchas reuniones para terminar de modificar algunas cosas del proyecto y poder llegar a la presentacion bien armados.

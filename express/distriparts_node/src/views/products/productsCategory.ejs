@@ -6,10 +6,11 @@
 </head>
 <body>
     <%- include("../partials/header") %>
-    <section class="catalogo">
+    <section class="catalogoProductos">
+    
         <% for(let i=0; i < products.length; i++) { %>
         <article class="contenedor-padre1">
-            <img src="../images/<%=products[i].imagen%>" alt="" class= "imagen1">
+            <img src="../images/<%=products[i].imagen%>" alt="" style="width:40%;">
             <div class="detallePC">
                 <div id=modificacion>
                 <a href="/<%=products[i].id%>/detail"><h3><%=products[i].nombre%></h3></a>
@@ -24,6 +25,7 @@
             
         </article>
         <% } %>
+    
     </section>    
   
     <!---<main class="ficha">
