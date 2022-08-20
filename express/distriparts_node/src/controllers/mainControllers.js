@@ -18,6 +18,7 @@ module.exports = {
             include:["categoria"]
           })
           .then(producto=> res.render(path.join(__dirname,"../views/products/products"),{products:producto}))
+          console.log(db.producto);
     }
 }
 

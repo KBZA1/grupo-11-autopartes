@@ -732,6 +732,12 @@ section .wrapper article div .div1 {
     gap: 20px;
     margin-top: 20px;
 }
+.catalogoProductos{
+    max-width: 991px;
+    margin: 2em auto;
+    /* min-height: 500px; */
+    /*height: 100%;*/
+}
 .catalogo {
     max-width: 991px;
     margin: 2em auto;

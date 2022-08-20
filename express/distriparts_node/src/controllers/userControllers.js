@@ -11,7 +11,7 @@ const db = require("../database/models");
 const usuario = require("../database/models/usuario");
 
 module.exports = {
-    login: (req,res)=> { res.render(path.join(__dirname,"../views/users/login"))},
+    login: (req, res)=> { res.render(path.join(__dirname,"../views/users/login"))},
     
     loginProcess: async (req, res) => {   
         const resultValidation = validationResult(req);
@@ -90,9 +90,9 @@ module.exports = {
         //res.redirect('/');
     },
     users: (req,res)=> db.usuario.findAll({
-        include: [{ association: "categoria" }],
+         include: [{ association: "categoria" }], 
     })
-    .then((usuario)=>{ res.render(path.join(__dirname,"../views/users/user"), { userId : usuario})}),
+    .then((user)=>{ res.render(path.join(__dirname,"../views/users/users"), { user : user})}),
 
     //sesion: (req,res)=> {
     //    const userId = user.find(element => element.id == req.params.id);

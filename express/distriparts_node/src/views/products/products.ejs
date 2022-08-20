@@ -7,9 +7,10 @@
 <body>
     <%- include("../partials/header") %>
     <section class="catalogo">
+        <% if (products.length > 0){ %>
         <% for(let i=0; i < products.length; i++) { %>
         <article class="contenedor-padre1">
-            <img src="images/<%=products[i].imagen%>" alt="" class= "imagen1">
+            <img src="../images/<%=products[i].imagen%>" alt="" class= "imagen1">
             <div class="detallePC">
                 <div id=modificacion>
                 <a href="/<%=products[i].id%>/detail"><h3><%=products[i].nombre%></h3></a>
@@ -23,6 +24,9 @@
                 </div>
             
         </article>
+        <% } %>
+        <% }else {  %>
+            <p>NO EXISTE ESTE PRODUCTO, FAVOR DE INTENTAR BUSCAR OTRO PRODUCTO</p>
         <% } %>
     </section>    
   
