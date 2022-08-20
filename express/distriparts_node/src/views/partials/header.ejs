@@ -2,10 +2,21 @@
     <div class='top-header'>
         <a class="logo-1" href="/"><img src="/images/DistriPart movile.png" alt="DistriParts"></a>
         <a class ="logo-2" href="/"><img src="/images/logo centralizado v2.png" alt="DistriParts"></a>
-        <div class="form" action="#" method="GET">
+         <div class="form">
+                <form action="/search" method="GET">
+                   <input type="search" name="term" placeholder="¿Que repuesto estas buscando?"><i style="margin-right: 15px;" class="fa fa-search"></i>
+                </form>
+            </div>
+        <!-- <div class="form" action="/search" method="GET">
             <div class="input" ><i class="fa fa-search"></i> ¿Que repuesto estas buscando? </div>
-        </div>
+        </div> -->
         <div class="user-cart">
+            <!-- <div class="form">
+                <form action="/search" method="GET">
+                    <div class="input"><input type="search" name="term" placeholder="¿Que repuesto estas buscando?"></div>
+                    <button type="submit"><i class="fa fa-search""></i></button>
+                </form>
+            </div> -->
         
         <% if(locals.userLogin){ %>
             <a href="#" style= "font-size : 12px">

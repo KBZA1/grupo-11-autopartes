@@ -13,11 +13,11 @@ module.exports = {
     search:(req, res) => {
         const {term} = req.query;
 
-        db.Product.findAll({
+        db.producto.findAll({
             where:{nombre:{[Op.like]:'%' + term + '%'}},
-            include:["sections"]
+            include:["categoria"]
           })
-          .then(products=> res.render("./products", {products:products}))
+          .then(producto=> res.render(path.join(__dirname,"../views/products/products"),{products:producto}))
     }
 }
 

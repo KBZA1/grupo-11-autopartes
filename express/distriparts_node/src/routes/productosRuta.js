@@ -26,7 +26,7 @@ router.post("/products", upload.single("imagen"),validationProducts,productosCon
 /*-----PRODUCT------*/
 router.get("/products", productosControllers.products);
 /*-----PRODUCT DETAILS------*/
-router.get("/:id", productosControllers.detalle);
+router.get("/:id/detail", productosControllers.detalle);
 /*-----PRODUCTS BY CATEGORY------*/
 router.get("/products/:categoria", productosControllers.productsByCategory);
 /*-----APLICAR EDIT ONE PRODUCT------*/

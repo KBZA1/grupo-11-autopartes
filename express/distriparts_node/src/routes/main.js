@@ -9,7 +9,8 @@ const mainControllers = require("../controllers/mainControllers");
 
 /*-----APLICAR INDEX------*/
 router.get("/", mainControllers.index)
-
+/*-----BUSCADOR DE PRODUCTOS------*/
+router.get("/search", mainControllers.search);
 //router.get("/acceso", mainControllers.login)
 
 module.exports = router;

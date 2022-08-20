@@ -18,7 +18,7 @@ app.use(function (req, res, next) {
     next();
   });
   /*------------------------------------- */
-app.listen(5001, () =>{console.log("arriba que la musica no pare")});
+app.listen(5001, () =>{console.log("Servidor corriendo")});
 /*-------MIDDLEWARES-------*/
 app.use(session({
     secret: "Esto es un secreto (?)",
@@ -42,13 +42,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride("_method"));
 
-
-
-
-//app.use((req, res, next) =>{
-//res.status(404).render("not-found") crear archivo de vista con el html para mostrar con pagina de error
-//})
-
 /*-------RUTAS-------*/
 app.use("/", mainRoutes);
 app.use("/", userRoutes);
@@ -57,3 +50,9 @@ app.use("/", productsRouter);
 /*---- Rutas API -----*/
 app.use("/api/users", apiUsersRouter);
 app.use("/api/products", apiProductsRouter);
+
+
+/*---- 404 -Not Found -----*/
+app.use((req, res, next) =>{
+res.status(404).render(path.join(__dirname,"../distriparts_node/src/views/products/BRUNO"))
+})

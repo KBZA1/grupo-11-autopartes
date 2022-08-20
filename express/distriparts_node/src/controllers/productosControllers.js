@@ -76,7 +76,7 @@ const controller = {
             where: { categoria_id: req.params.categoria}
     })
         .then(function(producto){
-            res.render(path.join(__dirname,"../views/products/products"),{products:producto})
+            res.render(path.join(__dirname,"../views/products/productsCategory"),{products:producto})
         })
     //(req, res) =>{res.render(path.join(__dirname,"../views/products/products"),{products:products})
     
