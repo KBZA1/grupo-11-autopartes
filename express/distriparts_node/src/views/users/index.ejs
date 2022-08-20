@@ -3,6 +3,9 @@
     <%- include("../partials/head") %>
     <link rel="stylesheet" href="css/carrito.css">
     <link rel="stylesheet" href="css/styles.css">
+ <!--    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <script src="js/carrusel.js"></script> -->
 </head>
 <body>
     <%- include("../partials/header") %>
@@ -42,7 +45,7 @@
                     <div class="row"><span class="before">$<%=products[i].precio%></span></div>
                     <div class="row"><span class="precio-ahora">$<%= products[i].precio - (products[i].precio * (products[i].descuento /100))%> <strong class="descuento" ><%=products[i].descuento%>% OFF</strong></span> </div>
                     <span class="cuotas">12 CUOTAS SIN INTERES  <i class="fa-solid fa-credit-card"></i></span>
-                    <div id="sa"><button class="agregar-compra" type="submit">AGREGAR &nbsp;<i class="fa-solid fa-cart-shopping"></i> </button></div>
+                    <div id="sa"><button class="agregar-compra" type="submit">AGREGAR &nbsp;<i class="fa-solid fa-cart-shopping"></i> </button></div>  
            </article>
            <% } %>
         </div>
@@ -61,6 +64,7 @@
                     <span class="cuotas">12 CUOTAS SIN INTERES  <i class="fa-solid fa-credit-card"></i></span>
                     <div id="sa"><button class="agregar-compra" type="submit">AGREGAR &nbsp;<i class="fa-solid fa-cart-shopping"></i> </button></div>
            </article>
+
            <% } %>
         </div>
         </section>
