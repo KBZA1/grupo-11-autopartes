@@ -15,7 +15,7 @@ const checking = [
     .withMessage("Tiene que ingresar un stock valido en numero"),
 	check('imagen').custom((value, { req }) => {
 		let file = req.file;
-		let acceptedExtensions = ['.jpg','.jpeg' , '.png', '.gif'];
+		let acceptedExtensions = ['.jpg','.jpeg' , '.png', '.gif',".webp"];
 
 		if (!file) {
 			throw new Error('Tienes que subir una imagen');
