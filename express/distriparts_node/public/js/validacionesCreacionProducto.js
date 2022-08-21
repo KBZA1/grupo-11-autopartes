@@ -3,7 +3,7 @@ window.addEventListener("load", function(){
     const nombre = document.getElementById("nombrecito");
     const imagen = document.getElementById("forma"); 
     
-    const imagenExtension = [".jpg", ".jpeg", ".png", ".gif" , ".webp"];
+    const imagenExtension = [".jpg", ".jpeg", ".png", ".gif", ".webp"];
 
 
     window.addEventListener("submit", function (event){

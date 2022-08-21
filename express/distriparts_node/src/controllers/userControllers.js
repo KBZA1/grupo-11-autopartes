@@ -18,7 +18,9 @@ module.exports = {
         if (resultValidation.errors.length == 0){
         let userToLogin = await db.usuario.findOne({
               where: {email: req.body.email},
-        });
+                      
+            } );
+        
 		//let userToLogin =  user.find(element => element.email == req.body.email); 
         if(userToLogin) {
 		let isOkThePassword = bcryptjs.compareSync(req.body.password,userToLogin.pass); 
@@ -29,6 +31,7 @@ module.exports = {
 				//if(req.body.remember_user) {
 				//	res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				//}
+                //console.log( req.session.userLogged.dataValues);
 				return res.redirect('/');
 			}  // ok, usuario logeado 
             
@@ -167,4 +170,34 @@ module.exports = {
         fs.writeFileSync(usersPath, JSON.stringify(userD, null, " "));
         res.redirect ("/");*/
     },
-}
+    updateCategories: (req,res)=> { 
+        console.log(req.params.id);
+        console.log(req.body.categoria_id);
+            db.usuario.update({
+                categoria_id: req.body.categoria_id
+            },{
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(()=> {
+                return res.redirect('/')})            
+            .catch(error => res.send(error));;
+            //let id = Number(req.params.id);
+            //let  userEdit = user.find(element => element.id == id)
+            //let image;
+            //console.log(req.body);
+            //if (req.file != undefined ){
+            //    image = req.file.filename
+            //} else {
+            //    image = userEdit.imagen
+            //}
+            //for (let i = 0; i < user.length; i ++) {
+            //    if (id == user[i].id) {
+            //    user[i] = {id:id,  ...req.body, password : bcryptjs.hashSync(req.body.password, 10) , imagen: image}
+            //   }
+            //}
+            //fs.writeFileSync(usersPath, JSON.stringify(user, null, " "));
+            //res.redirect("/");
+        },
+    }

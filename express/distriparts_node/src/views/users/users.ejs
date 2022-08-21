@@ -24,6 +24,19 @@
                         </div>
                     </div>
             </li>
+            <form action="/user/edit/admin/<%=user[i].id%>?_method=PUT" method="POST" >
+                <select id="categoria_id" name="categoria_id" class="ingresar">
+                    <option disabled selected ><% if(user[i].categoria_id == 1){ %>
+                        <%= "Administrador" %>
+                    <% }else{ %>
+                       <%= "Usuario" %> 
+                    <% } %>
+                    </option><br>
+                    <option value=1>Administrador</option><br>
+                    <option value=2>Usuario</option>     
+                </select>
+                <button type="submit" class="ingresar">Modificar Categoria</button>
+            </form>
             </ul>
         </article>
         <% } %>

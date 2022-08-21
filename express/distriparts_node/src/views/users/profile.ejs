@@ -26,6 +26,10 @@
                     </div>
             </li>
             <a href="/user/edit/<%=userId.id%>"><li>Editar Usuario</li></a>
+            <% if(locals.userId.categoria_id == 1) { %>  
+               <li> <a href="/users">Ver total de Usuarios</a>  </li>
+            <% } %>
+    
             </ul>
         </article>
     </section>    

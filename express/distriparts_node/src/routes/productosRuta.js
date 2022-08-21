@@ -7,6 +7,7 @@ const router = express.Router();
 /*-------CONTROLLERS-------*/
 const productosControllers = require("../controllers/productosControllers");
 const validationProducts = require ("../middleware/validationProducts");
+const adminMiddleware = require ("../middleware/adminMiddleware");
 
 /*-----CONFIGURACION MULTER------*/
 const storage =multer.diskStorage({
@@ -20,7 +21,7 @@ const upload = multer({storage});
 /*-----APLICAR CARRITO------*/
 router.get("/carrito", productosControllers.carrito); 
 /*-----APLICAR CREATE------*/   
-router.get("/create", productosControllers.crear);
+router.get("/create",adminMiddleware, productosControllers.crear);
 router.post("/products", upload.single("imagen"),validationProducts,productosControllers.crearProducto); 
 
 /*-----PRODUCT------*/
@@ -30,7 +31,7 @@ router.get("/:id/detail", productosControllers.detalle);
 /*-----PRODUCTS BY CATEGORY------*/
 router.get("/products/:categoria", productosControllers.productsByCategory);
 /*-----APLICAR EDIT ONE PRODUCT------*/
-router.get("/:id/edit", productosControllers.edit);
+router.get("/:id/edit", adminMiddleware, productosControllers.edit);
 router.put("/:id/edit", validationProducts , upload.single("imagen") , productosControllers.update);
 
 /* ---- APLICAR DELETE ONE PRODUCT ---- */

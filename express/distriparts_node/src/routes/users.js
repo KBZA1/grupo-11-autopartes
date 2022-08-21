@@ -11,6 +11,7 @@ const { check } = require ("express-validator")
 const userControllers = require("../controllers/userControllers");
 
 /*-----CONFIGURACION MIDDLEWARE------*/
+const adminMiddleware = require ("../middleware/adminMiddleware");
 const guestMiddleware = require ("../middleware/guestMiddleware");
 const authMiddleware = require("../middleware/authMiddleware");
 const sessionMiddleware = require("../middleware/sessionMiddleware");
@@ -45,7 +46,8 @@ router.get("/logout/", userControllers.logout)
 router.get("/registro", guestMiddleware, userControllers.register);
 router.post("/", upload.single("imagen"),validationRegister, userControllers.create);
 
-router.get("/users", userControllers.users);
+router.get("/users",adminMiddleware, userControllers.users);
+router.put("/user/edit/admin/:id", userControllers.updateCategories);
 
 //router.get("/user/:id", userControllers.sesion);
 router.get("/user/edit/:id", sessionMiddleware, userControllers.edit);
