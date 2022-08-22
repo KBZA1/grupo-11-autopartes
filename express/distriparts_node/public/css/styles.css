@@ -736,8 +736,15 @@ section .wrapper article div .div1 {
     max-width: 991px;
     margin: 2em auto;
     display: flex;
-    flex-direction: column;
-    
+    justify-content: start;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 4px;    
+}
+.catalogoProductos article{
+    width: 33%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 .catalogo {
     max-width: 991px;
@@ -749,4 +756,12 @@ section .wrapper article div .div1 {
     border: solid 1px #999;
     margin-bottom: 30px;
     padding: 10px;
+}
+@media (max-width: 640px){
+    .catalogoProductos{
+        flex-direction: column;
+    }
+    .catalogoProductos article{
+        width: 100%;
+    }
 }
