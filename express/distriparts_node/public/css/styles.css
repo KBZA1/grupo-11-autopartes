@@ -458,6 +458,24 @@ footer{
     margin: 0 25px;
     font-size: 0.75em;
 }
+.catg{
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    border-color: #FFF;
+    border-style: dashed;
+    flex-wrap: wrap;
+    line-height: 25px;
+    display: none;
+   /* left: 0;
+    left: 100%;
+    transition: left 0.3s;*/
+}
+.catgV{
+    display: block;
+}
 section .wrapper{
     display: flex;
     flex-wrap: wrap;
@@ -539,6 +557,13 @@ section .wrapper article .row .label-antes{
     position: absolute;
     bottom: 0;
 }
+.toggle{
+    display: block;
+    background: none;
+    border: none;
+    color: #003366;
+    font-size: 30px;
+}
 section .wrapper article .row .label-ahora{
     color: black;
     font-size: 22px;
@@ -617,6 +642,15 @@ section .wrapper article div .div1 {
     .hambur{
         display: none;
     } 
+    .toggle{
+        display: none;
+    } 
+    .catg{
+        display: none;
+        flex-direction: row;
+        line-height: 20px;
+    }
+    
     
 }
 @media (min-width: 481px) {
