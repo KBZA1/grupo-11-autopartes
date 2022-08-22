@@ -776,7 +776,7 @@ section .wrapper article div .div1 {
     gap: 4px;    
 }
 .catalogoProductos article{
-    width: 33%;
+    width: 32%;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
