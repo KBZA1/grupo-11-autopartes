@@ -26,8 +26,6 @@ main #textoh3{
 .imagen1 {
     opacity: 88%;
     transition: opacity box-shadow 750ms;
-    width: 25%;
-    height: 15%;
 }
 .imagen1:hover {
     opacity: 100%;

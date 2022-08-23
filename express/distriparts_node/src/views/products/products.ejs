@@ -23,11 +23,18 @@
                                 <!--<button class="eliminarPe" id="eliminado" type="submit"> -<i class="fa-solid fa-cart-shopping"></i></button>-->
                         </div>
                     </div>
+<<<<<<< HEAD
                      <% if (!locals.userLogged ) { %> 
                     
                      <% } else if (locals.userLogged.categoria_id !== 2) { %>
                         <a href="/<%=products[i].id%>/edit"> Editar Producto</a>
                      <% } %> 
+=======
+                     <!-- <% if (locals.userLogged.categoria_id !== 2 ) { %>
+                        <a href="/<%=products[i].id%>/edit"> Editar Producto</a>
+                    
+                     <% } else {}%>  -->
+>>>>>>> 85ea111db05c730f1ef0fb52b0118e324b635ed6
                 </div>
             
         </article>
