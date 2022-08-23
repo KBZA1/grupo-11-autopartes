@@ -22,6 +22,9 @@
                                 <!--<button class="eliminarPe" id="eliminado" type="submit"> -<i class="fa-solid fa-cart-shopping"></i></button>-->
                         </div>
                     </div>
+                     <% if (locals.userLogged.categoria_id !== 1) { %>
+                        <a href="/<%=products[i].id%>/edit"> Editar Producto</a>
+                    <% } %> 
                 </div>
             
         </article>

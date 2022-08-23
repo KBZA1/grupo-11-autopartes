@@ -8,14 +8,16 @@
         <h1>Edición de Productos</h1>
         <div>
         <form action="/<%=producto.id%>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
-            <input id="forma" type="text" value="<%= producto.nombre %>" name="nombre">
             <% if (locals.errors && errors.nombre) { %>
                 <div style="color: red">
                     <%= errors.nombre.msg %> 
                 </div>
             <% } %>
+            <div><p>Edite el nombre del producto</p></div>
+            <input id="forma" type="text" value="<%= producto.nombre %>" name="nombre">
+            <div><p>Edite la categoria</p></div>
             <select id="forma" name="categoria">
-                <option disabled selected><%=categoria.nombreCategoria%></option>
+                <option disabled selected> </option>
                 <option value="1">Arbol de Leva</option>
                 <option value="2">Bomba de aceite</option>
                 <option value="3">Biela</option>
@@ -27,6 +29,7 @@
                     <%= errors.descripcion.msg %> 
                 </div>
             <% } %>
+            <div><p>Edite la descripcion</p></div>
             <textarea id="forma" name="descripcion" rows="10" cols="50"> <%= producto.descripcion %></textarea>
             <div><p>Edite imagen del producto: </p></div>
             <% if (locals.errors && errors.imagen) { %>
@@ -34,24 +37,27 @@
                     <%= errors.imagen.msg %> 
                 </div>
             <% } %>
-            <input id="forma" type="file" value="producto.imagen" name="imagen" >
+            <input id="forma" type="file"  name="imagen" >
             <% if (locals.errors && errors.marca) { %>
                 <div style="color: red">
                     <%= errors.marca.msg %> 
                 </div>
             <% } %>
+            <div><p>Edite la marca</p></div>
             <input id="forma" type="text" value="<%= producto.marca %>" name="marca">
             <% if (locals.errors && errors.precio) { %>
                 <div style="color: red">
                     <%= errors.precio.msg %> 
                 </div>
             <% } %>
+            <div><p>Edite el precio</p></div>
             <input id="forma" type="text" value="<%= producto.precio %>" name="precio">
             <% if (locals.errors && errors.descuento) { %>
                 <div style="color: red">
                     <%= errors.descuento.msg %> 
                 </div>
             <% } %>
+            <div><p>Edite el descuento</p></div>
             <input id="forma" type="text" value="<%= producto.descuento %>" name="descuento">
         <!-- <input id="forma" type="text" value="<%= producto.codigo %>" name="codigo"> -->
             <% if (locals.errors && errors.stock) { %>
@@ -59,6 +65,7 @@
                     <%= errors.stock.msg %> 
                 </div>
             <% } %>  
+            <div><p>Edite la cantidad de stock</p></div>
             <input id="forma" type="text" value="<%= producto.stock %>" name="stock">
             
             <button type="submit">Editar datos de Producto</button>
