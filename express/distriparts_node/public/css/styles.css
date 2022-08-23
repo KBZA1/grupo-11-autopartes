@@ -799,3 +799,16 @@ section .wrapper article div .div1 {
         width: 100%;
     }
 }
+.error{
+    width: 10%;
+    padding: 15px;
+    background-color: #003366;
+    font-size: 18px;
+    border-radius: 7px solid black;
+    cursor: pointer;
+    
+}
+.errorhref{
+    text-decoration: none;
+    color: white;
+}
