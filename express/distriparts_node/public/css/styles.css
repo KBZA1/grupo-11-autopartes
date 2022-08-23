@@ -1,4 +1,9 @@
-
+ul{
+    list-style: none;
+}
+.imagen-perfil{
+    width: 25%;
+}
 .logo{
     display: flex;
     flex-direction: column;
@@ -187,6 +192,7 @@ h4{
     font-weight: bold;
     border-radius: 7px;
     border: solid 1px #003366;
+    text-decoration: none;
 }
 .para-registrarse{
     margin-bottom: 15px;
@@ -208,7 +214,7 @@ h4{
 }
 .top-header img{
     width: 50px;
-    margin: 5px 20px;
+    margin-bottom: 5px;
 }
 .logo-1{
     display: flex;
@@ -225,10 +231,10 @@ h4{
 }
 .user-cart{
     font-size: 1.2em;
-    margin-right: 15px;
+    margin: 10px auto;
 }
 .form{
-    width: 80%;
+    width: 50%;
     height: 25px;
 }
 .input {
@@ -238,6 +244,9 @@ h4{
     background-color: white;
     color: #566573;
     width: 100%;
+}
+.form input{
+    width: 54%;
 }
 .form .input i{
     font-size: 0.75em;
@@ -275,6 +284,7 @@ h4{
 }
 .top-header a{
     color: white;
+    margin-right: 5px;
 }
 
 .footer-principal{
@@ -672,7 +682,6 @@ section .wrapper article div .div1 {
     }
     .top-header img{
         width: 130px;
-        margin: 5px 20px;
     }
     .form-reg{
         width: 400px;
@@ -798,6 +807,17 @@ section .wrapper article div .div1 {
     .catalogoProductos article{
         width: 100%;
     }
+    .form{
+        width: 80%;
+        margin-right: 10px;
+    }
+    .form input{
+        width: 100%;
+    }
+    .top-header{
+        flex-wrap: wrap;
+    }
+    
 }
 .error{
     width: 10%;

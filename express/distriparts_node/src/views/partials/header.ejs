@@ -5,7 +5,7 @@
         <a class ="logo-2" href="/"><img src="/images/logo centralizado v2.png" alt="DistriParts"></a>
          <div class="form">
                 <form action="/search" method="GET">
-                   <input type="search" name="term" placeholder="           ¿Que repuesto estas buscando?" class="fa fa-search"><!-- <i style="margin-right: 15px;" class="fa fa-search"></i> -->
+                   <input type="search" name="term" placeholder="¿Que repuesto estas buscando?" class="fa fa-search"><!-- <i style="margin-right: 15px;" class="fa fa-search"></i> -->
                 </form>
             </div>
         <!-- <div class="form" action="/search" method="GET">
@@ -21,7 +21,7 @@
         
         <% if(locals.userLogin){ %>
             <a href="#" style= "font-size : 12px">
-                <img src="\images\user\<%=locals.userLogged.imagen%>" style="border-radius: 100% ; width: 40px"></img>
+                <img src="\images\user\<%=locals.userLogged.imagen%>" style="border-radius: 100% ; width: 40px; vertical-align: middle;"></img>
                 Hola, <%=locals.userLogged.nombre%>!
             </a>
             <a style= "font-size : 12px" href="/user/profile">Perfil</a>
