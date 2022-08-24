@@ -7,12 +7,20 @@
 </head>
 <body>
     <%- include("../partials/header") %>
-    
+    <% if (!locals.userLogged ) { %>
+                        
+                    
+        <% } else if (locals.userLogged.categoria_id !== 2){ %>
+
+           <h1></h1><a href="/create"> Crear Producto</a>
+
+        <% } %> 
     <section class="catalogoProductos">
+        
         <% if (products.length > 0){ %>
         <% for(let i=0; i < products.length; i++) { %>
         <article class="contenedor-padre1">
-            <img src="../images/<%=products[i].imagen%>" alt="" style= "width: 30%">
+            <img src="../images/<%=products[i].imagen%>" alt="" style= "width: 50%">
             <div class="detallePC">
                 <div id=modificacion>
                 <a href="/<%=products[i].id%>/detail"><h3><%=products[i].nombre%></h3></a>
@@ -23,18 +31,15 @@
                                 <!--<button class="eliminarPe" id="eliminado" type="submit"> -<i class="fa-solid fa-cart-shopping"></i></button>-->
                         </div>
                     </div>
-<<<<<<< HEAD
-                     <% if (!locals.userLogged ) { %> 
+
+                     <% if (!locals.userLogged ) { %>
+                        
                     
-                     <% } else if (locals.userLogged.categoria_id !== 2) { %>
+                     <% } else if (locals.userLogged.categoria_id !== 2){ %>
+
                         <a href="/<%=products[i].id%>/edit"> Editar Producto</a>
+
                      <% } %> 
-=======
-                     <!-- <% if (locals.userLogged.categoria_id !== 2 ) { %>
-                        <a href="/<%=products[i].id%>/edit"> Editar Producto</a>
-                    
-                     <% } else {}%>  -->
->>>>>>> 85ea111db05c730f1ef0fb52b0118e324b635ed6
                 </div>
             
         </article>
